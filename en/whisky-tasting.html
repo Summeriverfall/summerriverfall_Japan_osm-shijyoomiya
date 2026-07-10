@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9K60MCHK88"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9K60MCHK88');
+
+  gtag('config', 'G-FCMYZE0ERW', {
+    store: 'whisky-tasting',
+    page_type: 'landing',
+    content_language: 'en'
+  });
+
+  /* Google tag (gtag.js) — Google Ads AW-18173393152 */
+  gtag('config', 'AW-18173393152');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join our premium Whisky Tasting event in Kyoto Shijo-Omiya. Choose Standard or Premium plans featuring iconic Japanese whiskies.">
+  <title>Whisky Tasting | Shijo-Omiya Exclusive Event</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0f0f12',
+            charcoal: '#18181d',
+            gold: '#c4a46a',
+            goldSoft: '#f2e4c7',
+            line: 'rgba(255, 255, 255, 0.14)'
+          },
+          fontFamily: {
+            sans: ['system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .bg-lux {
+        background:
+          radial-gradient(circle at 20% -10%, rgba(196, 164, 106, 0.22), transparent 35%),
+          radial-gradient(circle at 90% 110%, rgba(196, 164, 106, 0.14), transparent 40%),
+          linear-gradient(145deg, #0f0f12, #15151a 35%, #0d0d10);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(6px);
+      }
+      .gold-divider {
+        background: linear-gradient(90deg, transparent, rgba(196, 164, 106, 0.92), transparent);
+      }
+      .text-glow {
+        text-shadow: 0 0 24px rgba(196, 164, 106, 0.24);
+      }
+      .hero-mask {
+        background: linear-gradient(to top, rgba(15, 15, 18, 0.9) 15%, rgba(15, 15, 18, 0.45) 58%, rgba(15, 15, 18, 0.78) 100%);
+      }
+      #flight-themes .theme-grid > .glass-card {
+        overflow: hidden;
+      }
+      #flight-themes .theme-grid > .glass-card::before {
+        content: "";
+        display: block;
+        height: 150px;
+        margin: -1.5rem -1.5rem 1rem;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: inset 0 -24px 28px rgba(15, 15, 18, 0.3);
+      }
+      #flight-themes .theme-grid > .glass-card:nth-child(1)::before { background-image: url("../images/33.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(2)::before { background-image: url("../images/32.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(3)::before { background-image: url("../images/28.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(4)::before { background-image: url("../images/taketsuru.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(5)::before { background-image: url("../images/26.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(6)::before { background-image: url("../images/31.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(7)::before { background-image: url("../images/saburomaru-sab.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(8)::before { background-image: url("../images/saburomaru-tarot.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(9)::before { background-image: url("../images/27.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(10)::before {
+        height: 168px;
+        margin: -1.5rem -1.5rem 1.05rem;
+        background-image: url("../images/23.webp");
+      }
+      @media (max-width: 640px) {
+        main h1,
+        main h2,
+        main h3 {
+          text-wrap: balance;
+        }
+        .cta-title {
+          font-size: clamp(1.55rem, 7.2vw, 2.25rem);
+          line-height: 1.24;
+        }
+        #flight-themes .theme-grid > .glass-card::before {
+          height: 220px;
+        }
+        #flight-themes .theme-grid > .glass-card:nth-child(7)::before {
+          height: 244px;
+        }
+      }
+      #overview .intro-reveal img {
+        opacity: 0;
+        transform: scale(0.985);
+        transition: opacity 0.52s ease, transform 1s cubic-bezier(.2,.65,.25,1);
+      }
+      #overview .intro-reveal .intro-copy {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.5s ease 0.32s, transform 0.5s ease 0.32s;
+      }
+      #overview .intro-reveal.is-visible img {
+        opacity: 1;
+        transform: scale(1);
+      }
+      #overview .intro-reveal.is-visible .intro-copy {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #overview .intro-reveal img,
+        #overview .intro-reveal .intro-copy {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm {
+        margin-top: 0.95rem;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.9rem;
+        padding-top: 0.7rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div {
+        min-width: 0;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.42rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div:nth-child(2) {
+        padding-left: 0.95rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:first-child {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.56);
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:last-child {
+        margin-top: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.32rem, 2.4vw, 1.62rem);
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        font-variant-numeric: tabular-nums;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: none;
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div:nth-child(2) > p:last-child {
+        color: #d9bf85;
+      }
+      @media (max-width: 640px) {
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0.55rem;
+          margin-left: auto;
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div {
+          justify-content: flex-end;
+          text-align: right;
+          gap: 0.5rem;
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div:nth-child(2) {
+          padding-left: 0;
+          border-left: 0;
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:first-child {
+          font-size: 12px;
+          letter-spacing: 0.18em;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.74);
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:last-child {
+          font-size: clamp(1.7rem, 6vw, 2.05rem);
+          font-weight: 700;
+        }
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-obsidian text-white font-sans">
+  <header class="sticky top-0 z-50 border-b border-line bg-obsidian/85 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 md:px-5 py-3 grid grid-cols-[auto_1fr_auto] items-center gap-2.5 md:gap-3">
+      <a href="./index.html" class="inline-flex items-center justify-center w-10 h-10 text-[#a88a54] hover:text-[#c4a46a] transition-colors shrink-0 rounded-md bg-transparent hover:bg-white/5" aria-label="Back to home">
+        <i class="fa fa-angle-left text-xl leading-none"></i>
+      </a>
+      <div class="text-center min-w-0">
+        <p class="text-[11px] md:text-[12px] tracking-[0.16em] text-white/45 uppercase leading-none">Shijo-Omiya</p>
+        <p class="mt-1 text-[13px] md:text-[15px] tracking-[0.07em] md:tracking-[0.12em] text-gold/90 whitespace-nowrap leading-tight">
+          <span class="min-[360px]:hidden">Whisky Tasting</span>
+          <span class="hidden min-[360px]:inline">Shijo-Omiya ・ Whisky Tasting</span>
+        </p>
+      </div>
+      <div class="flex items-center gap-3 md:gap-4">
+        <div class="hidden md:flex items-center gap-4">
+          <span class="text-xs md:text-sm text-gold">EN</span>
+          <a href="../tw/whisky-tasting.html" class="text-xs md:text-sm text-white/70 hover:text-gold transition-colors">繁中</a>
+          <a href="../cn/whisky-tasting.html" class="text-xs md:text-sm text-white/70 hover:text-gold transition-colors">简中</a>
+          <a href="../jp/whisky-tasting.html" class="text-xs md:text-sm text-white/70 hover:text-gold transition-colors">日文</a>
+        </div>
+        <details class="relative md:hidden">
+          <summary class="list-none cursor-pointer rounded-md border border-white/25 bg-white/5 px-3 py-2 text-sm font-medium text-white/90">
+            Lang <i class="fa fa-caret-down ml-1"></i>
+          </summary>
+          <div class="absolute right-0 mt-2 w-32 rounded-md border border-white/15 bg-obsidian/95 p-1.5 shadow-xl">
+            <span class="block rounded bg-gold/10 px-2 py-1.5 text-sm text-gold">EN</span>
+            <a href="../tw/whisky-tasting.html" class="block rounded px-2 py-1.5 text-sm text-white/80 hover:bg-white/10">繁中</a>
+            <a href="../cn/whisky-tasting.html" class="block rounded px-2 py-1.5 text-sm text-white/80 hover:bg-white/10">简中</a>
+            <a href="../jp/whisky-tasting.html" class="block rounded px-2 py-1.5 text-sm text-white/80 hover:bg-white/10">日文</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-[86vh] flex items-center">
+      <img src="../images/11.webp"
+           alt="Whisky bottles and back bar display"
+           class="absolute inset-0 w-full h-full object-cover">
+      <div class="hero-mask absolute inset-0"></div>
+      <div class="relative max-w-6xl mx-auto px-5 w-full text-center">
+        <p class="text-gold uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Kyoto Shijo-Omiya</p>
+        <h1 class="text-[clamp(2.2rem,8vw,5rem)] font-extrabold leading-tight text-glow">Vintage Japanese Whisky Tasting</h1>
+        <p class="mt-4 text-sm md:text-base lg:text-lg text-gold/80 tracking-wide font-medium [text-wrap:balance]">A Japanese Whisky Journey Through Time</p>
+        <div class="mt-5 max-w-2xl mx-auto space-y-3 text-sm md:text-base text-white/75 leading-relaxed [text-wrap:balance]">
+          <p>Rare old bottles, guided comparison, and a time-structured tasting of Japanese whisky — from heritage, to terroir, to the future.</p>
+          <p>Discover a quieter, rarer side of Japanese whisky in Kyoto Shijo-Omiya.</p>
+          <p>This is more than a whisky flight. It is a guided journey through the past, present, and future of Japanese whisky: from the accumulated heritage of Hibiki, Yamazaki, and Nikka; to the present transformation of coastal terroir in Akkeshi; and toward the living growth of Chichibu and a new generation of Japanese craft distilleries.</p>
+          <p>Each tasting is arranged not only by rarity, but by sequence, contrast, timing, and story.</p>
+        </div>
+        <div class="mt-10">
+          <a href="#overview" class="inline-flex items-center justify-center border border-gold/80 text-gold font-semibold px-8 py-3 rounded-md hover:bg-gold hover:text-obsidian transition-colors">
+            Scroll to Explore
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-14 md:py-16">
+        <div class="text-center mb-10">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">Why This Experience</p>
+          <h2 class="mt-3 text-[clamp(1.8rem,5vw,3rem)] font-bold">Not Just Whisky by the Glass</h2>
+          <p class="text-white/70 mt-3 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">Instead of choosing random single pours, guests are invited into curated tasting routes built around time, lineage, terroir, and continuity.</p>
+          <details class="mt-5 max-w-2xl mx-auto">
+            <summary class="cursor-pointer list-none inline-flex items-center gap-2 text-sm text-gold/80 hover:text-gold transition-colors">
+              Read more <i class="fa fa-angle-down text-xs"></i>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-3 text-sm text-white/65 leading-relaxed text-left">
+              <p>The major houses of Suntory and Nikka reveal how Japanese whisky inherited, refined, and transformed tradition over generations. Newer distilleries such as Akkeshi and Chichibu show how Japanese whisky is still changing — shaped by climate, place, craft, and future possibility.</p>
+              <p>This is not an ordinary whisky flight.</p>
+              <p>It is a tasting journey through the time dimension of Japanese whisky.</p>
+            </div>
+          </details>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="intro-reveal overflow-hidden rounded-2xl border border-white/15 bg-black/20">
+            <img src="../images/15.webp"
+                 alt="Hibiki stock depth"
+                 class="w-full h-56 object-cover">
+            <div class="intro-copy p-5">
+              <p class="text-gold text-xs tracking-[0.2em] mb-2">Why come here to taste Japanese whisky?</p>
+              <h3 class="text-xl font-semibold mb-2">Because our stock runs three times deeper than a typical bar</h3>
+              <p class="text-white/75">Our Hibiki holdings run roughly three times deeper than a standard whisky specialty bar — from vintage Hibiki, Gold Label, and Gold Foil to early 17-Year releases, with multiple rare versions available to open and pour on any given visit.</p>
+            </div>
+          </article>
+          <article class="intro-reveal overflow-hidden rounded-2xl border border-white/15 bg-black/20">
+            <img src="../images/32.webp"
+                 alt="Suntory in Kansai"
+                 class="w-full h-56 object-cover">
+            <div class="intro-copy p-5">
+              <p class="text-gold text-xs tracking-[0.2em] mb-2">Why taste Japanese whisky in Kyoto?</p>
+              <h3 class="text-xl font-semibold mb-2">Because Hibiki and Yamazaki were born right here in Kansai</h3>
+              <p class="text-white/75">The Yamazaki Distillery is less than an hour away. Osaka has been Suntory's most important market since the brand's founding. Drinking Suntory here isn't just tasting whisky — it's experiencing a century of craft in the place where it all began.</p>
+            </div>
+          </article>
+          <article class="intro-reveal overflow-hidden rounded-2xl border border-white/15 bg-black/20">
+            <img src="../images/12.webp"
+                 alt="Your Host"
+                 class="w-full h-56 object-cover">
+            <div class="intro-copy p-5">
+              <p class="text-gold text-xs tracking-[0.2em] mb-2">Who leads the tasting experience?</p>
+              <h3 class="text-xl font-semibold mb-2">More Than a Pour — A Conversation</h3>
+              <p class="text-white/75">With a background in investment banking and private equity, your host approaches whisky with a sharp eye for rarity, structure, and value. He has also worked across tea, dining, and hospitality, and brings together interests in marathon running, collecting, music, tea culture, antiques, vintage bottles, and Showa-era aesthetics. With a distinctly cross-cultural outlook and ease across multiple languages and dialects, he shapes each tasting with both depth and warmth.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flight-themes" class="bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-14 md:py-20">
+        <div class="text-center mb-12">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">Tasting Flights</p>
+          <h2 class="mt-3 text-[clamp(1.8rem,5vw,3rem)] font-bold">Heritage at the Heart of Every Flight</h2>
+          <p class="text-white/60 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">Heritage is central to every flight we design — not just age or rarity. Every flight also holds a surprise bonus pour waiting to be discovered.</p>
+          <details class="mt-4 max-w-2xl mx-auto">
+            <summary class="cursor-pointer list-none inline-flex items-center gap-2 text-xs text-gold/70 hover:text-gold transition-colors">
+              About our design philosophy <i class="fa fa-angle-down text-xs"></i>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-3 text-sm text-white/60 leading-relaxed text-left">
+              <p>For us, heritage means more than age or rarity. It means understanding where Japanese whisky came from, how it developed, how it flourished, how it declined, and how it was revived. It means tracing both the horizontal stories across distilleries and styles, and the vertical stories that unfold across time.</p>
+              <p>This is why our flights are built not only around bottles, but around origins, lineages, transitions, and continuity.</p>
+            </div>
+          </details>
+          <div class="w-40 h-px gold-divider mx-auto mt-5"></div>
+        </div>
+        <div class="theme-grid grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 01</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Blending Artistry</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Hibiki &mdash; Echoes of Time</h3>
+            <p class="text-white/70 text-sm leading-relaxed">The art of blending, shaped by time into harmony. A route through the layered world of Hibiki and Suntory blending &mdash; from vintage Hibiki NAS, Gold Label, and Gold Foil, to older 17-year expressions and Imperial. This flight reveals the quiet depth, balance, and accumulated elegance of Japanese premium blending.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Vintage Hibiki NAS</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">This vintage Hibiki NAS is often the starting point for understanding the old Hibiki style. Soft, rounded, and delicately balanced, it opens with ripe fruit, honey, and gentle wood tones, making it an ideal introduction to the vintage Hibiki journey.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Vintage Hibiki Gold Label</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The vintage Hibiki Gold Label shows a more graceful and polished side of old Hibiki. Floral aromas, ripe fruit, honey, and soft oak come together in a poised, elegant profile that reflects the refined luxury of classic Japanese blended whisky.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Vintage Hibiki Gold Foil</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The vintage Hibiki Gold Label with gold flakes offers more than visual beauty. It captures the celebratory and collectible character of the old Hibiki era, with a delicate palate of ripe fruit, honey, and refined oak that leaves a memorable impression both in appearance and taste.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Vintage Hibiki 17 Year Old</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Vintage Hibiki 17 Year Old represents a deeper and more mature expression of old Hibiki. Layers of dried fruit, honey, spice, and fine wood unfold with greater complexity and a longer finish, making it one of the most iconic bottles for collectors and vintage whisky lovers.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Imperial</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Suntory Imperial stands as one of the classic symbols of Suntory&rsquo;s premium blended whisky era. Rich, stately, and old-fashioned in the best sense, it often shows sherried sweetness, mature fruit, spice, and dignified depth. If Hibiki expresses refinement and harmony, Imperial speaks more of weight, heritage, and grandeur.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥19,800</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Hibiki%20Series%20(THEME%2001)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 02</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Version Evolution</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Yamazaki 12 &mdash; A Century in One Lineage</h3>
+            <p class="text-white/70 text-sm leading-relaxed">From the first Yamazaki to Yamazaki 12, tracing a century of Japanese single malt. A timeline of Yamazaki 12 across generations: transitional labels, Pure Malt bottlings, Green Label 10 Year, Lion Crest vintage bottle (without Tokkyu), and Lion Crest vintage bottle (Tokkyu). This route shows how one of Japanese most iconic single malts evolved through label, era, market perception, and bottle generation.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki 12 Year Old, transitional vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Yamazaki 12 Year Old, transitional vintage bottle. A bridge between eras, carrying both vintage bottle character and historical significance.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki 12 Year Old, Pure Malt vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Yamazaki 12 Year Old, Pure Malt vintage bottle. A more mature old-style release with notable depth, collectibility, and drinking appeal.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki 10 Year Old, Green Label vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Yamazaki 10 Year Old, Green Label vintage bottle. A rare and iconic vintage bottle, representing one of the most classic chapters in Yamazaki&rsquo;s history.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki 12 Year Old, Lion Crest vintage bottle (without Tokkyu)</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Yamazaki 12 Year Old, Lion Crest vintage bottle, without Tokkyu marking. An early-style release with strong identity, high rarity, and distinctive historical appeal.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki 12 Year Old Lion Crest vintage bottle<br>(Tokkyu)</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">This is one of the most iconic early bottlings of Yamazaki 12, featuring the rare "facing lions" label and the former Japanese "Tokkyu" premium-grade classification. Compared with the current Yamazaki 12, this vintage bottle shows a deeper old-style Suntory profile: richer body, mature fruit, gentle oak, and a distinctly Showa-era texture. It is not merely a glass of Yamazaki 12, but a historical snapshot of Japanese whisky before it became a global luxury category.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Old Cask Finished, Bamboo Charcoal Filtered</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">&ldquo;Old Cask Finished&rdquo; is an experimental Suntory Pure Malt expression from an earlier era. The whisky was filtered through bamboo charcoal and then finished in old sherry casks, giving it a clean, mellow profile with subtle smoke and sherry sweetness.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥19,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Yamazaki%2012%20Generations%20(THEME%2002)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 03</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Blended Malt Evolution</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Nikka &mdash; One Flower, Five Leaves</h3>
+            <p class="text-white/70 text-sm leading-relaxed">A Scottish seed of whisky tradition, flowering in northern Japan. Nikka is a story of Scotch tradition transplanted to Japan and flowering into multiple branches: Yoichi&rsquo;s coastal strength, Miyagikyo&rsquo;s gentle fruit, From the Barrel&rsquo;s power, Super Nikka&rsquo;s blended tradition, Maltbase structure, and the mature arc of Taketsuru. This route explores Nikka not as a single style, but as a living system of distilleries, blends, and old bottles.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Black Taketsuru, discontinued</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Black Taketsuru, discontinued release. One of the most representative discontinued Nikka expressions in recent years, valued for both rarity and recognition.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Distillery limited black-label, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Distillery limited black-label vintage bottle. A compact yet highly representative release, standing out as a rare expression from Nikka&rsquo;s distillery-limited range.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Super Premium, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Super Premium, vintage bottle. A richer and more polished upper-tier expression from Nikka&rsquo;s classic blending tradition.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Super Nikka 15 Year Old, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A mature expression from the Super Nikka lineage, bridging Nikka&rsquo;s familiar blended whisky tradition with greater depth and age. This vintage 15-year-old bottle reveals a more composed and layered side of Nikka: gentle malt sweetness, rounded oak, soft fruit, and the quiet strength of Japanese blending.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">The Blend of Nikka Maltbase Whisky 17, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The Blend of Nikka Maltbase Whisky 17, vintage bottle. A mature and full-bodied expression with the classic character of old-style Nikka malt blending.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Tsuru White Porcelain Bottle (Vintage Bottle)</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/80 leading-relaxed">
+                      <div><dt class="text-gold">Background</dt><dd class="mt-0.5">The Tsuru line has always symbolized Nikka&rsquo;s pinnacle blending; the white porcelain bottle adds decorative and collector value.</dd></div>
+                      <div><dt class="text-gold">Flavor</dt><dd class="mt-0.5">Yoichi&rsquo;s gentle peat blended with Miyagikyo&rsquo;s fruity sweetness &mdash; round and silky, with honey, ripe fruit, and understated wood.</dd></div>
+                      <div><dt class="text-gold">Positioning</dt><dd class="mt-0.5">A Showa-era classic. Every pour feels like touching the height of Nikka&rsquo;s blending history.</dd></div>
+                    </dl>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥11,380</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Nikka%20Two%20Distilleries%20(THEME%2003)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+                    <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 04</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Origin &amp; Legacy</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Lifelong Original Spirit &mdash; Taketsuru</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Taketsuru Pure Malt is one of the most founder-symbolic brands within Nikka, named after Masataka Taketsuru, the “father of Japanese whisky.” It is blended from malt whiskies from Yoichi and Miyagikyo, combining Yoichi’s weight and smoke with Miyagikyo’s fruit and softness. By comparison, Super Nikka is a more classic premium blended whisky, round, gentle, and suitable for daily drinking. The Blend of Nikka Maltbase is an old-school malt-driven blend, showing more malt, wood, and smoke. G&amp;G and Black Nikka are closer to popular blended whiskies, positioned more for highballs and everyday consumption. The core value of Taketsuru is not simple drinkability, but its role as a pure malt expression that condenses the styles of Nikka’s two distilleries and Masataka Taketsuru’s blending philosophy.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Taketsuru White Label</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Released on March 31, 2020 as the current revised Taketsuru Pure Malt, and still in circulation today. Compared with the Black Label, it is more modern and clearer in style, with apple, apricot, vanilla, banana, orange peel, malty body, and soft peat. The finish brings a dark-chocolate-like bitterness and woody tone.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Taketsuru Black Label</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Taketsuru Black Label was the previous NAS Taketsuru before the current White Label, and was replaced in March 2020. Its discontinuation was mainly due to malt stock shortages and product restructuring: Nikka needed a more flexible NAS recipe to maintain the Taketsuru brand, instead of continuing to consume limited aged malt stocks. Compared with the White Label, the Black Label is more old-school and rounder, combining fruit, malty sweetness, vanilla oak, and gentle smoke. The texture is smooth, without the stronger Yoichi-driven weight and peated finish of the White Label. It works well as a comparison point for the previous generation of Taketsuru style.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Taketsuru 12</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Taketsuru 12 Year Old was released in 2000 as the first age-statement expression in the Taketsuru series, and was discontinued around 2014 before being replaced by NAS Taketsuru. The main reason was a shortage of malt whiskies aged 12 years or more, requiring Nikka to reduce consumption of age-statement stocks. Its style is light, elegant, and easy-drinking, with bright fruit and soft malty sweetness. The emphasis is balance and smoothness rather than deep, heavy maturation.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Taketsuru 17</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Taketsuru 17 Year Old was discontinued at the end of March 2020 and has not returned as a regular release. The reason was the rapid depletion of mature stock, making it difficult to maintain a stable 17-year-old standard. Compared with the 12-year-old, it has more depth, combining mature fruit, honey, vanilla, aged wood, gentle peat, and soft smoke. It is one of the best expressions of balance within the Taketsuru range.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Taketsuru 21</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Taketsuru 21 Year Old was also discontinued at the end of March 2020 and has not returned as a regular release. The reason is the same as with the 17-year-old, but more severe: Yoichi and Miyagikyo malt whiskies aged 21 years or more are even rarer and could no longer support regular supply. Its style is deeper, softer, and more complex, with ripe fruit, dried fruit, honey, wood, dark chocolate, and light smoke. The long finish emphasizes the depth and harmony of high maturation.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Miyagikyo 10th Anniversary vintage Bottle</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">Miyagikyo Distillery was completed in 1969 as Nikka’s second distillery, built by Masataka Taketsuru in his later years to create malt whisky that was softer, fruitier, and more suitable for blending than Yoichi. In 1979, Miyagikyo reached its 10th anniversary, which was also the year Masataka Taketsuru passed away. This vintage bottle is therefore not only a Miyagikyo anniversary whisky, but also a historical snapshot of Taketsuru’s late-life ideal. It concentrates the Miyagikyo side of delicate fruit, soft body, and old-school Nikka elegance, making the blending philosophy behind Taketsuru Pure Malt more concrete and tangible.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥18,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥3,500</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Taketsuru%20Series%20(THEME%2004)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 05</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Craft Distillery</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Chichibu &mdash; A Living Lineage</h3>
+            <p class="text-white/70 text-sm leading-relaxed">From the memory of Hanyu to the living future of Chichibu, Japanese craft whisky continues to grow. Chichibu represents the new generation of Japanese craft whisky: small-scale, highly regarded, still developing, and full of future possibility. From the memory of Hanyu to the emergence of Chichibu and its expanding distillery story, this route points toward the unfinished future of Japanese whisky.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">White Leaf</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">White Leaf. A delicate and pure expression, standing as one of the early hallmark releases in the Hanyu&ndash;Chichibu lineage.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Black Leaf</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Black Leaf. A deeper and more concentrated expression that highlights the bold character of early Ichiro&rsquo;s Malt.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Blue Leaf</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Blue Leaf. A classic Leaf Series release with strong balance and layered complexity.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Green Leaf</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Green Leaf. A fresher and more lively expression, representing an important facet of early Chichibu spirit character.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Red Leaf</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Red Leaf. A fuller and more assertive release, standing out strongly within the Leaf Series.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Gold Leaf</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Gold Leaf. A more opulent and elevated expression, widely regarded as one of the signature releases of the Leaf Series.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">20th Anniversary Edition</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">20th Anniversary Edition. Created to mark a major milestone, this release offers strong narrative value, collectibility, and symbolic significance.</p>
+                  </details>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Chichibu Second Distillery Single Malt</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">Chichibu Second Distillery Single Malt. A symbolic release marking the next phase of Chichibu, reflecting both continuity and expansion in the new distillery era.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥6,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Chichibu%20Leaf%20Series%20(THEME%2005)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 06</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Seasonal Theme</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Akkeshi &mdash; 24 Solar Terms by the Frigid Sea</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Sea mist, frigid coastal air, and the 24 solar terms of eastern Hokkaido, expressed in whisky. Akkeshi speaks through place and season. Each release in the 24 Solar Terms series reflects a traditional calendar node, shaped by Hokkaido&rsquo;s oceanic climate, sea air, peat, humidity, and cold coastal maturation. This route is a present-tense expression of terroir &mdash; whisky as climate, season, and place in the glass.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Kokuu (Grain Rain)</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">The sixth release in the series, evoking spring rains that nourish all living things.</dd></div>
+                      <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Citrus, honey, malty sweetness, and gentle peat, with sea salt and oak providing a balanced structure.</dd></div>
+                      <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">Hokkaido oceanic maturation delivers a fresh, elegant spring style.</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Rikka (Start of Summer)</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">The seventh release, marking the beginning of summer.</dd></div>
+                      <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Citrus, honey, light peat, and a sea breeze quality. Refreshing and balanced overall.</dd></div>
+                      <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">A crisp summer expression shaped by the oceanic maturing climate.</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Risshu (Start of Autumn)</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">The thirteenth release, marking the arrival of autumn.</dd></div>
+                      <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Ripe fruit, honey, oak, and a hint of peat. Substantial and well-balanced in structure.</dd></div>
+                      <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">A single malt expression that embodies the ripe, full character of autumn.</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">T&ocirc;ji (Winter Solstice)</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">The twenty-second release, evoking the longest night of the year.</dd></div>
+                      <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Rich and full-bodied, with dark chocolate, dried fruit, peat smoke, and sea salt. Deep and complex in structure.</dd></div>
+                      <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">One of the heaviest, most wintry expressions in the Akkeshi series.</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Sh&ocirc;kan (Minor Cold)</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">The twenty-third release, marking the onset of deep winter.</dd></div>
+                      <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Sea salt, peaty smoke, honey, and citrus &mdash; substantial and complex in character.</dd></div>
+                      <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">A defining expression of Hokkaido&rsquo;s oceanic climate and peated distillery style.</dd></div>
+                    </dl>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥11,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Akkeshi%2024%20Solar%20Terms%20(THEME%2006)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+                    <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 07</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Regional Craft</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Mountain, Sea &amp; Fireworks &mdash; Saburomaru SAB.</h3>
+            <p class="text-white/70 text-sm leading-relaxed">SAB. is Saburomaru Distillery’s smoky blended whisky series, inspired by the nature, seasons, and craft culture of the Tonami Plain in Toyama. Compared with the single malt and collectible character of the Tarot Series, SAB. is a more approachable daily gateway into the Saburomaru style. The series includes five distinct blended whiskies: SNOW WHITE, SUNSET RED, NIGHT BLACK, DARK BLACK, and OCEAN BLUE. This flight shows how Saburomaru turns its core smoky style into blended whiskies that are easier to drink and also well suited to highballs.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Snow White</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Fresh and delicate, with white chocolate, mineral notes, and a seaweed-like nuance.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Sunset Red</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Round and sweet, with orange, caramel, red apple, and gentle smoke.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Night Black</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Steady and spicy, with burnt wood, black pepper, and earthy peat standing out.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Dark Black</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Built on NIGHT BLACK, with deeper Spanish oak influence and a darker, denser smoky profile.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Ocean Blue</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The fullest-bodied expression, combining strong peat, honeyed apple, ash, and seaweed into a dark maritime profile.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Hyakuseifuma “LESS IS MORE”</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">Hyakuseifuma is a limited series released by RUDDER to commemorate roughly 100 years of Japanese whisky history. The name suggests value that remains unpolished and undiminished even after a hundred generations. This “LESS IS MORE” is the 10th release in the series, produced and blended by Saburomaru Distillery. It uses 2018 Saburomaru malt as the key malt, from the final year of the old modified stills, blended with Scotch peated malt aged over 5 years and sherry-cask malt aged over 7 years, then further matured for 3 years at Saburomaru Distillery. Compared with the softer and more approachable SAB. series, it is woodier, peatier, more mature, and more fruit-driven, with notes of shaved wood, pine needles, burning wood, cooked apple, apricot candy, ripe banana, seaweed, dry grass, tobacco, tar, and coffee-like aftertaste. It is an ideal upgrade glass for moving from SAB. into Saburomaru’s higher-level blended malt world.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥4,500</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥2,250</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Saburomaru%20SAB.%20Series%20(THEME%2007)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+                    <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 08</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">ZEMON Craft</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Impermanence with a Path &mdash; Saburomaru Tarot</h3>
+            <p class="text-white/70 text-sm leading-relaxed">The Saburomaru Tarot Series is the distillery’s flagship single malt line, with each release named and labelled after the Major Arcana of the tarot. From THE FOOL and THE MAGICIAN to THE STRENGTH, each edition reflects a different distillation year and the technical experiments of the distillery at that time. The standard editions show balance, structure, and maturation more clearly, while the CS editions retain the more direct power of cask-strength whisky. This flight is designed to trace the recent evolution of Saburomaru: smoke, wood, fruit, body, and the experimental character of a new-generation Japanese whisky distillery in Toyama.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tarot VIII THE STRENGTH</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Made with Islay 80 ppm Super Heavily Peated malt, this is the most maritime and intensely smoky release in the Tarot Series. The standard 48% edition is smoother, with notes of vanilla, bekko-ame hard candy, and grapefruit pith.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tarot VII THE CHARIOT</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Made with Highland 80 ppm Super Heavily Peated malt, this is one of the most powerful peated expressions in Saburomaru’s history. The nose shows burnt wood, ash, fern-like peat, orange peel, ripe red apple, and ginger. The palate is round, yet dense ashy peat spreads across the mouth, with a strong smoky finish that lingers over the tongue.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tarot VI THE LOVERS</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Distilled in 2020/2021, this edition combines land-driven Highland peat with maritime Islay peat. Its official theme is “souls that attract and resonate with each other,” making it an experiment in blending two different peat characters. The nose offers turmeric, refined smoke, rich vanilla, faint curry spice, beef jerky, wafers, kanro candy, ripe pineapple, and a subtle charred note. The palate shows elegant smoke, honey, wafers, beef jerky, and ripe pineapple. It is a more complex, umami-driven Saburomaru, where sweetness, smoke, spice, and a jerky-like finish overlap.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tarot V THE HIEROPHANT</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Distilled in 2021. Although still a heavy-peated release, the official profile shifts toward softness, coastal character, and harmony. The nose includes nori, rocky shoreline notes, straw hat, clean cask aroma, elegant smoke, pear, menthol, and a subtle prosciutto-and-cheese nuance. The palate is gentle, with nori, salted kelp, malty sweetness, lemon peel, black-tea candy, prosciutto, pear, and mint. Rather than being a power-driven peated whisky, it balances seaweed notes, malt sweetness, and mild smoke.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tarot IV THE EMPEROR</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Distilled in 2020 and made with Highland heavily peated malt. Compared with the Islay mineral character of Tarot III, Tarot IV places more emphasis on balance and structure. The nose shows ripe apple, pineapple, dense smoke, vanilla oak, hearth ash, pineapple candy, beeswax, apricot, and roasted chestnut. The palate is smooth and slightly oily, with ashy peat smoke supporting a weave of sweetness and smoke. This is a more stable and complete Saburomaru, combining delicate fruit with a firm smoky backbone.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Tarot III THE EMPRESS</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">Distilled in 2020. This is the first Tarot release to clearly express an Islay peat character. The nose shows new oak, vanilla, dry peat, peppercorn, Japanese pear, root vegetables, and pineapple. The palate brings a light saltiness, strong peat smoke, soft sweetness, and minerality. Complex yet clean, it combines smoke, maritime mineral character, and clear spirit quality, making it a key expression for understanding Saburomaru’s “Islay peat × ZEMON distillation” style.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥13,000</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥3,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Saburomaru%20Tarot%20Series%20(THEME%2008)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 09</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Beginner-friendly</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Royal Blended Whisky</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Built around the Royal line, this route introduces the balance, softness, and premium Showa-era aesthetic of classic Japanese blends. Starting with the Royal 60&rsquo; round bottle, moving through Royal 12, the 15 Year Blue and Gold Labels, and the rare Greeting vintage, before closing with the grandeur of Royal Imperial &mdash; a complete journey through the depth and history of Suntory&rsquo;s Royal world.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 60&rsquo; round vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 60&rsquo; round vintage bottle. An early classic with strong Showa-era character, representing one of the starting points of the Royal lineage.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 12 Year Old, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 12 Year Old, vintage bottle. A refined and mature blend, marking an important transitional chapter in the Royal series.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 15 Year Old Blue Label, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 15 Year Old Blue Label, vintage bottle. A poised and balanced mature blend with a distinctly classic old-school character.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 15 Year Old Gold Label, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 15 Year Old Gold Label, vintage bottle. A more opulent and layered expression, standing as one of the hallmark upper-tier Royal vintage bottles.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Greeting, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Greeting, vintage bottle. A rare and distinctive side release, combining gift-like elegance with the classic character of old Royal.</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Royal Imperial, vintage bottle</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">Royal Imperial, vintage bottle. A higher-tier and more historically distinctive release, serving as a luxurious finale to the Royal world.</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥9,300</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Showa%20Blended%20Aesthetics%20(THEME%2009)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6 md:col-span-2 lg:col-span-3">
+            <div class="lg:max-w-sm lg:mx-auto">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-gold text-xs tracking-[0.2em]">THEME 10</p>
+                <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Advanced Storytelling</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Heritage Flight</h3>
+              <p class="text-white/70 text-sm leading-relaxed">This route shifts the focus toward old-bottle character, packaging era, and version story for guests who want more than just an easy drink. Centered on vintage classics and commemorative bottlings &mdash; ideal for guests ready to move beyond easy drinking into whiskies that carry a real story.</p>
+              <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+                <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                  Show bottle details
+                  <span class="text-white/50 text-xs">Click to collapse</span>
+                </summary>
+                <div class="mt-3 grid gap-3 text-sm">
+                  <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Old</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">One of the most recognizable classic blends on the Japanese market.</dd></div>
+                        <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Soft and approachable with caramel, a hint of peaty smoke, and the rounded character typical of Japanese blends.</dd></div>
+                        <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">An essential reference point for understanding mass-market classics and the era&rsquo;s taste memory.</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Taketsuru Pure Malt</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">A classic blended malt named after Nikka founder Masataka Taketsuru.</dd></div>
+                        <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Fruity, malty sweetness with gentle peat smoke.</dd></div>
+                        <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">A key bridge for understanding Nikka&rsquo;s style; also works well as a cross-brand comparison alongside Yamazaki and Hibiki.</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Royal (thick-base early release)</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">A late-Showa classic blend with genuine rarity.</dd></div>
+                        <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Richer and rounder, with honey, caramel, ripe apple, and dried fruit.</dd></div>
+                        <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">Many enthusiasts feel it rivals older Royal 12 bottles &mdash; a defining example of Showa blending.</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Robert Brown Deluxe Whisky</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">A classic blend with a distinct era signature &mdash; more direct in style with a sharper spice edge.</dd></div>
+                        <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Caramel, vanilla, and light grain sweetness.</dd></div>
+                        <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">Ideal as a contrast within the flight against rounder Suntory blends, highlighting different brand aesthetics.</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Imperial</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">Background</dt><dd class="mt-0.5">An imperial-tier old-school blend; both bottle design and brand role speak clearly to their era.</dd></div>
+                        <div><dt class="text-gold/85">Flavor</dt><dd class="mt-0.5">Often shows deeper maturity, waxy texture, and old-wood aroma.</dd></div>
+                        <div><dt class="text-gold/85">Positioning</dt><dd class="mt-0.5">A conversation piece equally suited to collecting and serious tasting.</dd></div>
+                      </dl>
+                    </details>
+                  </div>
+                  <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                    <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold">NYK Line 100th Anniversary Whisky 1985</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/80 leading-relaxed">
+                        <div><dt class="text-gold">Background</dt><dd class="mt-0.5">A special commemorative bottling with strong brand heritage and a compelling era story.</dd></div>
+                        <div><dt class="text-gold">Flavor</dt><dd class="mt-0.5">Honey and ripe fruit, caramel and gentle oak, with a round and substantial body that carries the oily richness of vintage Japanese blends.</dd></div>
+                        <div><dt class="text-gold">Positioning</dt><dd class="mt-0.5">Its value lies not just in flavor but in the way it connects corporate commemoration, Showa-era aesthetics, and old-bottle collecting.</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Suntory Whisky Ageing 15</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/80 leading-relaxed">
+                        <div><dt class="text-gold">Background</dt><dd class="mt-0.5">A more structure- and maturity-focused expression with a fuller body and longer finish.</dd></div>
+                        <div><dt class="text-gold">Flavor</dt><dd class="mt-0.5">Mature honey, caramel, nuts, and oak, with soft spice and cocoa undertones.</dd></div>
+                        <div><dt class="text-gold">Positioning</dt><dd class="mt-0.5">A natural closer for the Heritage Flight &mdash; an elevated endpoint for the old-school premium blend journey.</dd></div>
+                      </dl>
+                    </details>
+                  </div>
+                </div>
+              </details>
+              <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <p class="mt-1 font-semibold text-gold">¥8,800</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                  <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+                </div>
+              </div>
+              <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Theme:%20Heritage%20Journey%20(THEME%2010)%0A-%20Date:%0A-%20Time:%0A-%20Guests:" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-14 md:py-20">
+        <div class="text-center mb-12">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">Who It's For</p>
+          <h2 class="mt-3 text-[clamp(1.8rem,5vw,3rem)] font-bold">Who Should Come</h2>
+          <div class="w-40 h-px gold-divider mx-auto mt-5"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">Just Starting to Take Whisky Seriously</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Start with Showa Blended or Nikka — structurally clear flights that help you map out flavors and styles for the first time.</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">Already Know the Basics</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Jump into Yamazaki's version history, the Hibiki lineup, Chichibu Leaf, or Akkeshi Solar Terms to explore finer distinctions.</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">Here for the Story, Not Just the Drink</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Each flight has a clear narrative arc. The host walks you through aroma, palate, and production background — it's a journey, not a list.</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">Looking for a Memorable Social Experience</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Flight tasting is naturally great for dates, small gatherings, client entertaining, or enthusiast meetups — far more engaging than standard ordering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hidden md:block bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-16">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold">How It Works</h2>
+          <p class="text-white/70 mt-3">Four steps from choosing your theme to discovering your personal preference</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-5">
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 1</p>
+            <h3 class="text-xl font-semibold mb-2">Pick a Theme</h3>
+            <p class="text-white/75">Choose from 7 routes — Showa Blended, Nikka, Yamazaki, Hibiki, Chichibu, Akkeshi, or Rare.</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 2</p>
+            <h3 class="text-xl font-semibold mb-2">Choose Your Tier</h3>
+            <p class="text-white/75">Each theme offers Regular and Premium. Start anywhere — upgrade naturally as your interest grows.</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 3</p>
+            <h3 class="text-xl font-semibold mb-2">Drink & Discover</h3>
+            <p class="text-white/75">The host guides you through aroma, palate, body, and production story as you taste each pour.</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 4</p>
+            <h3 class="text-xl font-semibold mb-2">Find Your Preference</h3>
+            <p class="text-white/75">By the end you'll know whether you lean toward blends, single malts, aged character, or collector editions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-lux">
+      <div class="max-w-5xl mx-auto px-5 py-20 text-center">
+        <img src="../images/11.webp"
+             alt="Liquor Museum Shijo-Omiya branding"
+             class="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 shadow-lg mb-10">
+        <p class="font-['Cormorant_Garamond'] italic text-gold/95 text-[clamp(0.95rem,2vw,1.15rem)] mb-3 leading-relaxed [text-wrap:balance]">If tonight is your last night in Kyoto, don't leave with just another drink. Leave with a Japanese whisky story worth bringing home.</p>
+
+        <h2 class="cta-title text-[clamp(1.8rem,5vw,3rem)] font-['Cormorant_Garamond'] font-semibold text-[#e7d4ac] tracking-[0.04em] leading-[1.45]">
+          <span class="block">Book a Vintage Japanese Whisky Tasting</span>
+          <span class="block mt-3 text-[clamp(1.05rem,3.5vw,1.35rem)] font-medium text-gold/90 leading-relaxed">Explore rare old bottles, historical lineages, and the evolving future of Japanese whisky in Kyoto Shijo-Omiya.</span>
+        </h2>
+        <div class="mt-6 max-w-2xl mx-auto text-sm md:text-base leading-relaxed text-center border border-white/10 rounded-xl p-5 bg-black/25">
+          <p class="text-gold text-base tracking-[0.25em] mb-5">General Framework</p>
+          <div class="space-y-2 text-white/65">
+            <p class="[text-wrap:balance]">Hibiki, Yamazaki, Nikka — heritage of a century</p>
+            <p class="[text-wrap:balance]">Akkeshi — terroir and the 24 solar terms, poured into glass</p>
+            <p class="[text-wrap:balance]">Chichibu — craft whisky reaching toward the future</p>
+          </div>
+          <div class="mt-5 space-y-2 text-white/90">
+            <p class="[text-wrap:balance]">This is not an ordinary whisky flight</p>
+            <p class="[text-wrap:balance]">but a kaiseki journey through the time of Japanese whisky</p>
+          </div>
+        </div>
+        <div class="mt-5 max-w-2xl mx-auto text-white/65 text-sm md:text-base text-center leading-relaxed space-y-1">
+          <p>Seats are limited. Booking 1–3 days in advance is recommended.</p>
+          <p>Solo, duo, and small group reservations are welcome.</p>
+        </div>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello!%20I%20would%20like%20to%20book%20a%20Whisky%20Tasting%20at%20Shijo-Omiya.%0A%0A-%20Date:%0A-%20Time:%0A-%20Number%20of%20guests:%0A-%20Preferred%20theme%20(e.g.%20Hibiki%2C%20Yamazaki%2C%20Akkeshi...):%0A%0APlease%20let%20me%20know%20your%20available%20slots."
+             target="_blank"
+             class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold px-8 py-3 rounded-md transition-colors">
+            <i class="fa fa-whatsapp mr-2"></i>Book via WhatsApp
+          </a>
+          <a href="tel:090-3768-1294"
+             class="inline-flex items-center justify-center border border-white/30 hover:border-gold text-white px-8 py-3 rounded-md transition-colors">
+            <i class="fa fa-phone mr-2 text-gold"></i>Call: 090-3768-1294
+          </a>
+        </div>
+        <p class="mt-8 text-white/45 text-sm">
+          <i class="fa fa-map-marker text-gold/60 mr-1.5"></i>
+          18-10 Shijo-Omiyacho, Shimogyo-ku, Kyoto
+          <span class="mx-2 opacity-50">·</span>
+          5 min walk from Hankyu "Shijo-Omiya" / 8 min from Subway "Shijo"
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line bg-obsidian">
+    <div class="max-w-6xl mx-auto px-5 py-8 text-center text-white/55 text-sm">
+      <p>&copy; 2026 Liquor Museum Shijo-Omiya | Please drink responsibly.</p>
+      <p class="mt-3 text-white/45 text-xs">
+        Powered by <a href="https://reserveinjp.com/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white/90 underline-offset-2 hover:underline">reserveinjp</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var cards = document.querySelectorAll('#overview .intro-reveal');
+      if (!cards.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        cards.forEach(function (card) { card.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.25,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      cards.forEach(function (card) { observer.observe(card); });
+    });
+  </script>
+</body>
+</html>

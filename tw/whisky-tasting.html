@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><!-- ✅ GA4 统计代码开始 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCMYZE0ERW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // ✅ Add your dimensions here (store / page_type / content_language)
+  gtag('config', 'G-FCMYZE0ERW', {
+    store: 'whisky-tasting',
+    page_type: 'landing',
+    content_language: '繁体'
+  });
+</script>
+ <!-- ✅ GA4 统计代码结束 -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCMYZE0ERW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FCMYZE0ERW', {
+      store: 'osm-shijyoomiya',
+      page_type: 'campaign',
+      content_language: 'zh-hant'
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="四條大宮店 Whisky Tasting 活動：體驗日本經典威士忌。多數主題提供 Regular / Premium 兩檔，厚岸主題為單檔，歡迎提前預約。">
+  <title>威士忌主題品鑑 | 四條大宮店限定品酒活動</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0f0f12',
+            charcoal: '#18181d',
+            gold: '#c4a46a',
+            goldSoft: '#f2e4c7',
+            line: 'rgba(255, 255, 255, 0.14)'
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .bg-lux {
+        background:
+          radial-gradient(circle at 20% -10%, rgba(196, 164, 106, 0.22), transparent 35%),
+          radial-gradient(circle at 90% 110%, rgba(196, 164, 106, 0.14), transparent 40%),
+          linear-gradient(145deg, #0f0f12, #15151a 35%, #0d0d10);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(6px);
+      }
+      .gold-divider {
+        background: linear-gradient(90deg, transparent, rgba(196, 164, 106, 0.92), transparent);
+      }
+      .text-glow {
+        text-shadow: 0 0 24px rgba(196, 164, 106, 0.24);
+      }
+      .hero-mask {
+        background: linear-gradient(to top, rgba(15, 15, 18, 0.9) 15%, rgba(15, 15, 18, 0.45) 58%, rgba(15, 15, 18, 0.78) 100%);
+      }
+      #flight-themes .theme-grid > .glass-card {
+        overflow: hidden;
+      }
+      #flight-themes .theme-grid > .glass-card::before {
+        content: "";
+        display: block;
+        height: 150px;
+        margin: -1.5rem -1.5rem 1rem;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: inset 0 -24px 28px rgba(15, 15, 18, 0.3);
+      }
+      #flight-themes .theme-grid > .glass-card:nth-child(1)::before { background-image: url("../images/33.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(2)::before { background-image: url("../images/32.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(3)::before { background-image: url("../images/28.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(4)::before { background-image: url("../images/taketsuru.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(5)::before { background-image: url("../images/26.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(6)::before { background-image: url("../images/31.webp"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(7)::before { background-image: url("../images/saburomaru-sab.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(8)::before { background-image: url("../images/saburomaru-tarot.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(9)::before { background-image: url("../images/27.jpg"); }
+      #flight-themes .theme-grid > .glass-card:nth-child(10)::before {
+        height: 168px;
+        margin: -1.5rem -1.5rem 1.05rem;
+        background-image: url("../images/23.webp");
+      }
+      @media (max-width: 640px) {
+        main h1,
+        main h2,
+        main h3 {
+          text-wrap: balance;
+        }
+        .cta-title {
+          font-size: clamp(1.55rem, 7.2vw, 2.25rem);
+          line-height: 1.24;
+        }
+        #flight-themes .theme-grid > .glass-card::before {
+          height: 152px;
+        }
+        #flight-themes .theme-grid > .glass-card:nth-child(10)::before {
+          height: 176px;
+        }
+      }
+      #overview .intro-reveal img {
+        opacity: 0;
+        transform: scale(0.985);
+        transition: opacity 0.52s ease, transform 1s cubic-bezier(.2,.65,.25,1);
+      }
+      #overview .intro-reveal .intro-copy {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.5s ease 0.32s, transform 0.5s ease 0.32s;
+      }
+      #overview .intro-reveal.is-visible img {
+        opacity: 1;
+        transform: scale(1);
+      }
+      #overview .intro-reveal.is-visible .intro-copy {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #overview .intro-reveal img,
+        #overview .intro-reveal .intro-copy {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm {
+        margin-top: 0.95rem;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.9rem;
+        padding-top: 0.7rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div {
+        min-width: 0;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.42rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div:nth-child(2) {
+        padding-left: 0.95rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:first-child {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.56);
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:last-child {
+        margin-top: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.32rem, 2.4vw, 1.62rem);
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        font-variant-numeric: tabular-nums;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: none;
+      }
+      #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div:nth-child(2) > p:last-child {
+        color: #d9bf85;
+      }
+      @media (max-width: 640px) {
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0.55rem;
+          margin-left: auto;
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div {
+          justify-content: flex-end;
+          text-align: right;
+          gap: 0.5rem;
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div:nth-child(2) {
+          padding-left: 0;
+          border-left: 0;
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:first-child {
+          font-size: 12px;
+          letter-spacing: 0.18em;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.74);
+        }
+        #flight-themes .mt-4.grid.grid-cols-2.gap-3.text-sm > div > p:last-child {
+          font-size: clamp(1.7rem, 6vw, 2.05rem);
+          font-weight: 700;
+        }
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-obsidian text-white font-sans">
+  <header class="sticky top-0 z-50 border-b border-line bg-obsidian/85 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 md:px-5 py-3 grid grid-cols-[auto_1fr_auto] items-center gap-2.5 md:gap-3">
+      <a href="./index.html" class="inline-flex items-center justify-center w-10 h-10 text-[#a88a54] hover:text-[#c4a46a] transition-colors shrink-0 rounded-md bg-transparent hover:bg-white/5" aria-label="返回主頁">
+        <i class="fa fa-angle-left text-xl leading-none"></i>
+      </a>
+      <div class="text-center min-w-0">
+        <p class="text-[11px] md:text-[12px] tracking-[0.16em] text-white/45 uppercase leading-none">Shijo-Omiya</p>
+        <p class="mt-1 text-[13px] md:text-[15px] tracking-[0.07em] md:tracking-[0.12em] text-gold/90 whitespace-nowrap leading-tight">
+          <span class="min-[360px]:hidden">威士忌品鑑</span>
+          <span class="hidden min-[360px]:inline">四條大宮店・威士忌主題品鑑</span>
+        </p>
+      </div>
+      <div class="flex items-center gap-3 md:gap-4">
+        <div class="hidden md:flex items-center gap-4">
+          <a href="../en/whisky-tasting.html" class="text-xs md:text-sm text-white/70 hover:text-gold transition-colors">EN</a>
+          <span class="text-xs md:text-sm text-gold">繁中</span>
+          <a href="../cn/whisky-tasting.html" class="text-xs md:text-sm text-white/70 hover:text-gold transition-colors">簡中</a>
+          <a href="../jp/whisky-tasting.html" class="text-xs md:text-sm text-white/70 hover:text-gold transition-colors">日文</a>
+        </div>
+        <details class="relative md:hidden">
+          <summary class="list-none cursor-pointer rounded-md border border-white/25 bg-white/5 px-3 py-2 text-sm font-medium text-white/90">
+            語言 <i class="fa fa-caret-down ml-1"></i>
+          </summary>
+          <div class="absolute right-0 mt-2 w-32 rounded-md border border-white/15 bg-obsidian/95 p-1.5 shadow-xl">
+            <a href="../en/whisky-tasting.html" class="block rounded px-2 py-1.5 text-sm text-white/80 hover:bg-white/10">EN</a>
+            <span class="block rounded bg-gold/10 px-2 py-1.5 text-sm text-gold">繁中</span>
+            <a href="../cn/whisky-tasting.html" class="block rounded px-2 py-1.5 text-sm text-white/80 hover:bg-white/10">簡中</a>
+            <a href="../jp/whisky-tasting.html" class="block rounded px-2 py-1.5 text-sm text-white/80 hover:bg-white/10">日文</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-[86vh] flex items-center">
+      <img src="../images/11.webp"
+           alt="威士忌酒櫃與酒款陳列"
+           class="absolute inset-0 w-full h-full object-cover">
+      <div class="hero-mask absolute inset-0"></div>
+      <div class="relative max-w-6xl mx-auto px-5 w-full text-center">
+        <p class="text-gold uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Kyoto Shijo-Omiya</p>
+        <h1 class="text-[clamp(2.2rem,8vw,5rem)] font-extrabold leading-tight text-glow">Vintage Japanese Whisky Tasting</h1>
+        <p class="mt-4 text-sm md:text-base lg:text-lg text-gold/80 tracking-wide font-medium [text-wrap:balance]">穿越時間維度的日本威士忌品飲</p>
+        <div class="mt-5 max-w-2xl mx-auto space-y-3 text-sm md:text-base text-white/75 leading-relaxed [text-wrap:balance]">
+          <p>稀有老瓶、導覽式比較，以及以時間為軸的日本威士忌品飲體驗。從傳承，到風土，再到未來。</p>
+          <p>在京都四條大宮，探索日本威士忌更安靜、更稀有的一面。</p>
+          <p>這不只是一套 whisky flight，而是一場穿越日本威士忌過去、現在與未來的品飲旅程：從響、山崎、Nikka 所積累的歷史傳承，到厚岸寒海風土的當下轉化，再到秩父與新世代 craft 蒸餾所尚未完成的生長。</p>
+          <p>每一杯的安排，不只依據稀有度，更依據順序、對比、時機與故事。</p>
+        </div>
+        <div class="mt-10">
+          <a href="#overview" class="inline-flex items-center justify-center border border-gold/80 text-gold font-semibold px-8 py-3 rounded-md hover:bg-gold hover:text-obsidian transition-colors">
+            向下瀏覽
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-14 md:py-16">
+        <div class="text-center mb-10">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">為什麼選擇這裡</p>
+          <h2 class="mt-3 text-[clamp(1.8rem,5vw,3rem)] font-bold">不只是按杯點酒</h2>
+          <p class="text-white/70 mt-3 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">我們不只是提供隨機單杯，而是邀請客人進入一套以時間、系譜、風土與延續性為核心的主題品飲路線。</p>
+          <details class="mt-5 max-w-2xl mx-auto">
+            <summary class="cursor-pointer list-none inline-flex items-center gap-2 text-sm text-gold/80 hover:text-gold transition-colors">
+              探索更多 <i class="fa fa-angle-down text-xs"></i>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-3 text-sm text-white/65 leading-relaxed text-left">
+              <p>Suntory 與 Nikka 這兩大系統，呈現日本威士忌如何繼承、精煉並轉化傳統。</p>
+              <p>而厚岸、秩父等新世代蒸餾所，則展示日本威士忌如何在氣候、土地、工藝與未來可能性之中繼續生長。</p>
+              <p>這不是一套普通的 whisky flight。</p>
+              <p>這是一場穿越日本威士忌時間維度的品飲旅程。</p>
+            </div>
+          </details>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="intro-reveal overflow-hidden rounded-2xl border border-white/15 bg-black/20">
+            <img src="../images/15.webp"
+                 alt="響的存量"
+                 class="w-full h-56 object-cover">
+            <div class="intro-copy p-5">
+              <p class="text-gold text-xs tracking-[0.2em] mb-2">庫存深度</p>
+              <h3 class="text-xl font-semibold mb-2">威士忌存量，是普通店鋪的三倍</h3>
+              <p class="text-white/75">我們持有的響系列版本數量約為同類威士忌專門店的三倍以上——從舊版響、金標、金箔，到早期 17 年，常備多款可直接開瓶品飲的稀有選項。無論哪次來，都能喝到更多不同版本。</p>
+            </div>
+          </article>
+          <article class="intro-reveal overflow-hidden rounded-2xl border border-white/15 bg-black/20">
+            <img src="../images/32.webp"
+                 alt="關西的三得利"
+                 class="w-full h-56 object-cover">
+            <div class="intro-copy p-5">
+              <p class="text-gold text-xs tracking-[0.2em] mb-2">關西的三得利</p>
+              <h3 class="text-xl font-semibold mb-2">三得利，就在這片土地上誕生</h3>
+              <p class="text-white/75">山崎蒸餾所距此不足一小時車程，大阪也是三得利品牌最重要的歷史市場之一。在這裡喝三得利，不只是喝一款威士忌——而是在它的發源地，感受一段跨越百年的釀造故事。</p>
+            </div>
+          </article>
+          <article class="intro-reveal overflow-hidden rounded-2xl border border-white/15 bg-black/20">
+            <img src="../images/12.webp"
+                 alt="東道主"
+                 class="w-full h-56 object-cover">
+            <div class="intro-copy p-5">
+              <p class="text-gold text-xs tracking-[0.2em] mb-2">您的東道主</p>
+              <h3 class="text-xl font-semibold mb-2">不只是導飲，更是一段對話</h3>
+              <p class="text-white/75">投資銀行與私募股權背景，以稀有性與價值視角引導品鑑。兼有茶葉、餐飲與酒店業經驗，融合馬拉松、收藏、音樂、茶文化、古董與昭和美學。多語言與方言流暢溝通。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 新增品鑑主題：請先在 cn/whisky-tasting.html 增卡與內容，再將本檔同區塊改為繁體；HTML 結構與 class 請與 cn 保持一致。 -->
+    <section id="flight-themes" class="bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-14 md:py-20">
+        <div class="text-center mb-12">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">品鑑路線</p>
+          <h2 class="mt-3 text-[clamp(1.8rem,5vw,3rem)] font-bold">每一條 Flight 的核心都是 Heritage</h2>
+          <p class="text-white/60 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">我們設計的每一條品鑑路線，核心都不是單純的年份或稀缺性，而是 heritage。每個主題都藏有一杯「彩蛋」酒款，等你來發現。</p>
+          <details class="mt-4 max-w-2xl mx-auto">
+            <summary class="cursor-pointer list-none inline-flex items-center gap-2 text-xs text-gold/70 hover:text-gold transition-colors">
+              了解我們的設計理念 <i class="fa fa-angle-down text-xs"></i>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-3 text-sm text-white/60 leading-relaxed text-left">
+              <p>對我們來說，heritage 意味著理解日本威士忌從哪裡來、如何發展、如何繁榮、如何沉寂、又如何復興；意味著去追索不同蒸餾所與風格之間的橫向故事，也去理解跨越時代延續下來的縱向脈絡。</p>
+              <p>因此，我們的 flight 不只是圍繞幾瓶酒，而是圍繞起源、系譜、變遷與延續性來設計。</p>
+            </div>
+          </details>
+          <div class="w-40 h-px gold-divider mx-auto mt-5"></div>
+        </div>
+        <div class="theme-grid grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 01</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">調和美學</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">歲月成響 ～ 響</h3>
+            <p class="text-white/70 text-sm leading-relaxed">調和之技，經歲月而成響。從 vintage Hibiki NAS、金標、金箔，到早期17年與 Suntory Imperial，這條路線呈現響與 Suntory 高級調和威士忌的層次。它展示的是日本 premium blended whisky 的沉穩、均衡、細緻，以及經歲月積累而成的優雅。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">老瓶響 NAS</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">舊版響無年份，是許多人理解「老響風格」的起點。口感柔和圓潤，帶有成熟果香、蜂蜜、淡雅木質與和風調和威士忌特有的細膩平衡，適合作為整條響系列的開端。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">老瓶響金標</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">舊版響金標在老響系譜中更顯華麗與細緻。花香、熟果、蜂蜜與柔和橡木彼此交織，酒體優雅流暢，展現出舊時代高級日威特有的精緻感與從容氣質。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">老瓶響金箔</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">舊版響金箔不僅外觀華麗，更承載了老響時代獨有的節慶感與收藏氣息。酒體柔美細膩，帶有熟果、蜂蜜與高雅木香，在視覺與風味之間形成非常鮮明的「舊版響」記憶點。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">老瓶響 17年</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">舊版響17年代表老響世界更成熟、更深層的一面。熟成果乾、蜂蜜、香料與細緻木質交錯展開，層次感與尾韻明顯提升，是許多藏家與老酒愛好者心中極具代表性的經典之一。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Imperial</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Suntory Imperial 是三得利高級調和威士忌時代的重要象徵之一。酒體飽滿而古典，常可感受到雪莉甜感、熟果、香料與沉穩優雅的老派氣息。若說響展現的是和風調和的精緻美感，Imperial 則更像舊時代高級日威的厚度與威儀。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥19,800</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：響系列（THEME%2001）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 02</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">版本演化</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">百年一脈 ～ 山崎12</h3>
+            <p class="text-white/70 text-sm leading-relaxed">從初代山崎到山崎12，百年單麥的一條血脈。這是一條關於山崎12世代變化的時間線：過渡標、Pure Malt、綠標10年、向獅子標（無特級）、向獅子標（特級）。透過不同時代的瓶身、標籤與酒體差異，追溯日本代表性 single malt 如何經歷版本、時代、市場認知與收藏邏輯的變化。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎 12年 老瓶（過渡版）</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">山崎12年老瓶過渡版。新舊時代交會的版本，兼具老瓶風味與過渡時期標誌性。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎 12年 老瓶 Pure Malt</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">山崎12年老瓶 Pure Malt。更具時代感的老版本，香氣成熟，收藏與品飲價值兼備。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎 10年 老瓶綠標</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">山崎10年老瓶綠標。極具代表性的稀少老瓶，風格鮮明，是山崎系譜中的經典一章。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎 12年 老瓶向獅子標（無特級）</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">山崎12年老瓶向獅子標・無特級。早期風格鮮明的老版本，稀缺度高，極具歷史辨識度。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎 12年 老瓶向獅子標（特級）</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">這是山崎12年早期流通時代極具代表性的老瓶版本，瓶標上保留了「向獅子」標識與日本酒稅法舊制度下的「特級」表示。相較於現行山崎12年，它更能呈現早期三得利單一麥芽威士忌的厚度、熟果香、木質感與昭和時代的酒體風格。它不只是一杯山崎12年，更是一段日本威士忌從國內高級酒走向世界品牌之前的歷史切片。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">古樽仕上/竹炭過濾</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">「古樽仕上」是三得利早期 Pure Malt 系列中帶有實驗性的作品。原酒經竹炭濾過後，再以雪莉酒古樽後熟，呈現乾淨、柔和，並帶有淡淡煙燻與雪莉甜感的風格。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥19,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：山崎%2012%20變遷史（THEME%2002）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 03</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">調和麥芽風格演化</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">一花五葉 ～ Nikka</h3>
+            <p class="text-white/70 text-sm leading-relaxed">蘇格蘭正統之花，在日本北國開枝散葉。Nikka 是蘇格蘭威士忌傳統移植到日本後開枝散葉的故事。余市的海風與力量，宮城峽的柔和果香，From the Barrel 的骨架，Super Nikka 的國民調和傳統，Maltbase 的結構，以及竹鶴的成熟軌跡。這條路線呈現的不是單一風格，而是一個由蒸餾所、調和、老瓶與高年份 pure malt 組成的完整系統。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">停產黑竹鶴</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">停產黑竹鶴。兼具話題性與稀缺度，是近年最具代表性的Nikka停產酒款之一。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">蒸餾所限定黑標 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">蒸餾所限定黑標老瓶。小容量卻極具代表性，是Nikka蒸餾所限定系統中的稀少版本。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Super Premium 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Super Premium老瓶。更高階也更圓潤，是Nikka經典調和路線中的華麗延伸。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Super Nikka 15年 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Super Nikka 系譜中的15年熟成版本，連接了 Nikka 國民調和威士忌的親和感與更深層的熟成表現。這支老瓶呈現出較為沉穩、圓潤而有層次的一面：柔和的麥芽甜感、圓熟橡木、細緻果香，以及日本調和技術中內斂而堅實的力量。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">The Blend of Nikka Maltbase Whisky 17 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The Blend of Nikka Maltbase Whisky 17老瓶。酒體成熟而厚實，帶有Nikka老派調和麥芽的經典氣質。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">鶴・白瓷瓶（老瓶）</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/80 leading-relaxed">
+                      <div><dt class="text-gold">背景</dt><dd class="mt-0.5">鶴系列一直帶有 Nikka 頂級調和的象徵意義，白瓷瓶版本更具陳設與收藏價值。</dd></div>
+                      <div><dt class="text-gold">風味</dt><dd class="mt-0.5">融合余市的輕茯薰與宮城峽的果香甜感，口感圓潤細膩，帶有蜂蜜、熟果與淡雅木質氣息。</dd></div>
+                      <div><dt class="text-gold">定位</dt><dd class="mt-0.5">昭和時代的經典日成，每一盅都像是在體驗 Nikka 調和歷史的顛峰。</dd></div>
+                    </dl>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥11,380</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：Nikka%20雙蒸餾所對比（THEME%2003）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+                    <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 04</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">原點與傳承</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">白首初心 ～ 竹鶴</h3>
+            <p class="text-white/70 text-sm leading-relaxed">竹鶴 Taketsuru Pure Malt 是 Nikka 中最具創始人象徵性的品牌，冠以“日本威士忌之父”竹鶴政孝之名，以餘市與宮城峽的麥芽原酒調和而成，兼具餘市的厚實煙燻與宮城峽的果香柔和。相比之下，Super Nikka 是更典型的高階 blended whisky，口感圓潤、柔和、適合日常飲用；The Blend of Nikka Maltbase 則偏麥芽基底的老派調和，麥香、木質與煙燻感更突出；G&amp;G、Black Nikka 等更接近大眾型 blended whisky，定位偏 highball 與日常消費。竹鶴的核心不是單純易飲，而是以 pure malt 形式濃縮 Nikka 兩座蒸餾所的風格與竹鶴政孝的調和哲學。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白標竹鶴</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">2020 年 3 月 31 日作為改版後的現行竹鶴推出，至今仍在流通。風格比黑標更現代、清晰，帶蘋果、杏子、香草、香蕉、橙皮、麥芽厚度與柔和泥煤，收口有黑巧克力般的微苦與木質感。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">黑標竹鶴</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">黑標竹鶴是白標改版前的 NAS 竹鶴，2020 年 3 月被現行白標取代。停產原因主要是原酒不足與產品重整：Nikka 需要用更靈活的 NAS 配方維持竹鶴品牌，而不是繼續消耗有限的熟成年份原酒。相比白標，黑標風格更老派、更圓潤，果香、麥芽甜感、香草桶香與柔和煙燻結合，口感順滑，沒有白標那麼突出餘市系的厚度與泥煤尾韻。適合作為“上一代竹鶴風格”來對比現行白標。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">竹鶴 12</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">竹鶴 12 年於 2000 年推出，是竹鶴系列最早的年代表記款，約 2014 年停產，之後由 NAS 竹鶴接替。停產原因主要是 12 年以上熟成麥芽原酒不足，Nikka 需要降低對年代表記原酒的消耗。風格輕盈、華麗、易飲，果香明亮，麥芽甜感柔和，重點是平衡與順口，而不是深沉厚重。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">竹鶴 17</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">竹鶴 17 年於 2020 年 3 月底停產，至今未作為常規品復產。停產原因是高齡原酒庫存被快速消耗，難以穩定維持 17 年標準。風格比 12 年更有厚度，成熟果香、蜂蜜、香草、熟成木香、淡淡泥煤與柔和煙燻結合，是竹鶴系列中最能體現“平衡感”的一支。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">竹鶴 21</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">竹鶴 21 年同樣於 2020 年 3 月底停產，至今未作為常規品復產。停產原因與 17 年相同，但更嚴重：21 年以上的餘市與宮城峽麥芽原酒更稀缺，已無法支撐常規供應。風格更深、更柔、更復雜，帶熟果、乾果、蜂蜜、木質、黑巧克力與輕微煙燻，餘韻長，重點是高熟成的深度與調和感。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">宮城峽創立十週年老瓶</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">宮城峽蒸餾所於 1969 年竣工，是竹鶴政孝晚年為 Nikka 建立的第二座蒸餾所，目的是創造比餘市更柔和、更果香、更適合調和的麥芽原酒。1979 年，宮城峽迎來創立十週年，也正是竹鶴政孝離世之年。因此這支老瓶不只是宮城峽的週年紀念酒，更像是竹鶴政孝晚年理想的歷史定格：它集中呈現宮城峽一側的細緻果香、柔和酒體與老派 Nikka 的優雅感，也讓竹鶴 Pure Malt 背後的調和哲學變得具體可感。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥18,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥3,500</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：竹鶴系列（THEME%2004）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 05</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">新銳蒸餾廠</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">生生不息 ～ 秩父</h3>
+            <p class="text-white/70 text-sm leading-relaxed">從羽生的記憶到秩父的新生，日本 craft whisky 仍在生長。秩父代表日本新世代 craft whisky 的生命力。它承接羽生的記憶，卻不止於過去；它仍在生長、變化、開新桶、形成新的風格。這條路線指向日本威士忌尚未完成的未來。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白葉</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">白葉。風格純淨而細緻，是羽生與秩父系譜中極具辨識度的早期代表之一。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">黑葉</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">黑葉。酒體更深沉厚實，展現Ichiro's Malt早期作品中鮮明而集中的個性。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">藍葉</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">藍葉。在平衡感與層次感之間取得良好張力，是葉子系列中的經典版本之一。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">綠葉</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">綠葉。風格更顯清新明快，是秩父早期原酒風格中的重要表達之一。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">紅葉</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">紅葉。酒體飽滿、個性鮮明，是葉子系列中極具存在感的一支。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">金葉</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">金葉。更高階也更具華麗感，是葉子系列之中兼具人氣與辨識度的代表作。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">20週年紀念</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">20週年紀念。為紀念重要里程碑而生，兼具故事性、收藏性與象徵意義。</p>
+                  </details>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">秩父第二蒸餾所單一麥芽</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">秩父第二蒸餾所單一麥芽。象徵秩父新階段的重要作品，展現新蒸餾所時代的延續與拓展。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥6,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：秩父%20Leaf%20系列（THEME%2005）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 06</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">節氣主題</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">寒海時節 ～ 厚岸</h3>
+            <p class="text-white/70 text-sm leading-relaxed">北海道東岸，海霧、濕冷與二十四節氣的威士忌表現。厚岸讓風土與時節自己說話。二十四節氣系列的每一支酒，都以傳統曆法中的節氣命名，並在北海道海洋性氣候、海風、泥煤、濕氣與寒冷熟成環境中成形。這是一條關於當下風土轉化的路線——讓氣候、季節與土地在杯中呈現。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">穀雨</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">繁列第六款作品，象徵春季降雨滋養萬物的時節。</dd></div>
+                      <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">柑橘、蜂蜜、麥芽甜味與輕柔泥煤氣息，並帶有海鹽與橡木的平衡結構。</dd></div>
+                      <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">北海道海洋氣候熟成，清新而優雅的春季風格。</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">立夏</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">繁列第七款作品，象徵夏季開始。</dd></div>
+                      <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">柑橘、蜂蜜、輕泥煤與海風氣息，整體風格清爽平衡。</dd></div>
+                      <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">海洋氣候熟成帶來的清新夏季風格。</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">立秋</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">繁列第十三款作品，象徵秋季開始。</dd></div>
+                      <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">香氣包括成熟水果、蜂蜜、橡木與淡淡泥煤，結構厚實而平衡。</dd></div>
+                      <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">秋季成熟風格的單一麥芽版本。</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">冬至</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">繁列第二十二款作品，象徵一年中黑夜最長的時節。</dd></div>
+                      <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">酒體風格濃郁，帶有黑巧克力、乾果、茯薰與海鹽氣息，結構深沉而複雜。</dd></div>
+                      <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">厚岸繁列中最具冬季厚重感的版本之一。</dd></div>
+                    </dl>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">小寒</summary>
+                    <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                      <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">繁列第二十三款作品，象徵嚴冬開始。</dd></div>
+                      <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">酒體展現海鹽、茯薰泥煤、蜂蜜與柑橘氣息，風格厚實而複雜。</dd></div>
+                      <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">北海道海洋氣候與泥煤風格的代表作品。</dd></div>
+                    </dl>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥11,800</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：厚岸二十四節氣（THEME%2006）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+                    <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 07</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">地方風土</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">山海花火 ～ 三郎丸SAB.</h3>
+            <p class="text-white/70 text-sm leading-relaxed">SAB. 是三郎丸蒸餾所打造的煙燻型調和威士忌系列，以富山礪波平野的自然、四季與手工藝文化為背景。相比塔羅系列的單一麥芽與收藏屬性，SAB. 更接近三郎丸風格的日常入口，包括雪國、晚霞、暗夜、暗黑和碧海五支風格迥異的調和威士忌。這組 flight 適合理解三郎丸如何把核心煙燻風格轉化為更容易飲用、也更適合 highball 的調和威士忌。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">雪國 SNOW WHITE</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">清爽細膩，帶白巧克力、礦物與海藻感。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">晚霞 Sunset Red</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">圓潤甜美，有橙、焦糖、紅蘋果與柔和煙燻。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">暗夜 Night Black</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">穩重辛香，燃木、黑胡椒與土質泥煤突出。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">暗黑 Dark Black</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">在 NIGHT BLACK 基礎上加入更深沉的西班牙橡木風味，煙燻更暗、更濃。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">碧海 Ocean Blue</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">酒體最厚，強泥煤、蜂蜜蘋果、灰感與海藻構成深色海洋感。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">百世不磨</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">“百世不磨”是 RUDDER 為紀念日本威士忌約 100 年曆史而推出的限定系列，意為即使歷經百代也不被磨滅、長久保有價值。這支 “LESS IS MORE” 是系列第 10 彈，由三郎丸蒸餾所仕込み與調和，以 2018 年蒸餾、舊改造蒸餾器最後年份的三郎丸原酒為 key malt，加入蘇格蘭 5 年以上泥煤麥芽與 7 年以上雪莉桶麥芽，之後再於三郎丸蒸餾所熟成 3 年。相比 SAB. 系列的柔和易飲，它更木質、更泥煤、更有熟成感與果實感，帶削木、松葉、燃木、煮蘋果、杏子糖、熟香蕉、海藻、乾草、菸草、焦油與咖啡般的餘韻，是從 SAB. 進入三郎丸高階調和世界的理想升級杯。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥4,500</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥2,250</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：三郎丸SAB.系列（THEME%2007）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+                    <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 08</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">青銅蒸餾</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">無常有道 ～ 三郎丸塔羅</h3>
+            <p class="text-white/70 text-sm leading-relaxed">三郎丸塔羅系列是三郎丸蒸餾所最具代表性的單一麥芽作品線，以塔羅牌大阿爾卡那為命名與標籤設計主軸。從 THE FOOL、THE MAGICIAN 到 THE STRENGTH，每一版都對應不同蒸餾年份與酒廠當時的技術嘗試。普通版更能觀察酒體平衡與熟成表現，CS 則保留更直接的原酒力量。這組 flight 適合從縱向角度理解三郎丸近年風格的進化：煙燻、木質、果香、酒體厚度與富山新世代日威的實驗性。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">塔羅 VIII 力量</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">使用艾雷島 80ppm Super Heavily Peated 麥芽，是塔羅系列中最突出海洋感與強煙燻的一版。普通版 48% 較滑順，帶香草、鼈甲糖與葡萄柚白瓤。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">塔羅 VII 戰車</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">使用 Highland 80ppm Super Heavily Peated 麥芽，是三郎丸史上極強泥煤表現的一版。香氣帶燃木、灰、蕨類、橙皮、熟紅蘋果與姜；口感圓潤，但灰感泥煤厚實鋪開，收口有覆蓋舌面的強烈煙燻感。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">塔羅 VI 戀人</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">2020/2021 年蒸餾，由陸地感的 Highland peat 與海洋感的 Islay peat 融合而成。官方主題是“彼此吸引、相互共鳴的靈魂”，也是三郎丸對兩種泥煤風格的一次結合實驗。香氣帶薑黃、上品煙燻、豐富香草、微弱咖哩香料、牛肉乾、威化餅、甘露糖、熟菠蘿與細微炭感；口感則有優雅煙燻、蜂蜜、威化餅、牛肉乾與熟菠蘿。 這是一版更復雜、更有旨味的三郎丸，甜感、煙燻、香料與肉乾般的餘韻相互交疊。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">塔羅 V 教皇</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">2021 年蒸餾。這一版雖然仍是 heavy peated，但官方描述明顯轉向柔和、海岸與調和感。香氣有海苔、磯岸、麥稈帽、乾淨桶香、優雅煙燻、洋梨、薄荷腦，以及微微的生火腿起司感；口感柔和，有海苔、鹽漬海帶、麥芽甜感、檸檬皮、紅茶糖、生火腿、洋梨與薄荷。整體不是力量型泥煤，而是海味、麥芽甜感與溫和煙燻取得平衡的一版。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">塔羅 IV 皇帝</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">2020 年蒸餾，使用 Highland heavily peated malt。相比 III 的艾雷礦物感，IV 更強調平衡與結構。香氣有熟蘋果、菠蘿、較厚的煙燻、香草木質、薪爐灰、菠蘿糖、蜂蠟、杏子與天津甘栗；口感滑順，略帶油脂感，灰感與甜感交織的泥煤煙支撐全體。這是一版更穩定、更完整的三郎丸，細緻果香與煙燻骨架並存。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">塔羅 III 女帝</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">2020 年蒸餾。這是三郎丸塔羅系列中首次明確展現艾雷島泥煤個性的一版。香氣帶新桶木質、香草、乾燥泥煤、粒胡椒、和梨、根菜與菠蘿，口感則有輕微鹽感、強泥煤煙、柔和甜感與礦物感。整體複雜但雜味少，煙燻、海洋礦物感與清澈酒質結合，是理解三郎丸“艾雷泥煤 × ZEMON 蒸餾”的重要作品。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥13,000</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥3,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：三郎丸塔羅系列（THEME%2008）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 09</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">入門友好</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">昭和調和美學</h3>
+            <p class="text-white/70 text-sm leading-relaxed">以 Royal 系列為核心，先理解經典日式調和的平衡感、柔和度與昭和時期的高級審美。從 Royal 60' 圓瓶出發，依次走入 Royal 12、15 年藍標與金標，再經由稀少的 Greeting 老瓶，以 Royal Imperial 的華麗氣質收束——完整呈現三得利 Royal 世界的深度與歷史脈絡。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                點擊展開酒款明細
+                <span class="text-white/50 text-xs">點擊可收起</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 60' 老瓶圓瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 60'老瓶圓瓶。早期經典造型與昭和氣息兼備，是Royal系譜的起點之一。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 12 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 12老瓶。在優雅調和之中展現成熟酒體，是Royal系列的重要過渡版本。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 15 藍標老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 15藍標老瓶。風格沉穩而均衡，帶有更鮮明的熟成感與老派調和魅力。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Royal 15 金標老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Royal 15金標老瓶。香氣更華麗，層次更飽滿，是Royal高階老版本中的代表作。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Greeting 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Greeting老瓶。稀少而獨特的支線版本，兼具禮品感與老Royal時代氣質。</p>
+                  </details>
+                </div>
+                <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                  <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Royal Imperial 老瓶</summary>
+                    <p class="mt-2 text-xs text-white/80 leading-relaxed">Royal Imperial老瓶。更高階也更具歷史辨識度，是Royal世界中的華麗壓軸。</p>
+                  </details>
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥9,300</p>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：昭和調和美學（THEME%2009）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+          </div>
+          <div class="glass-card rounded-xl p-6 md:col-span-2 lg:col-span-3">
+            <div class="lg:max-w-sm lg:mx-auto">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-gold text-xs tracking-[0.2em]">THEME 10</p>
+                <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">故事進階</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">經典傳承路線</h3>
+              <p class="text-white/70 text-sm leading-relaxed">聚焦老酒風格、包裝年代與版本故事，適合不只想喝得順口、還想深入了解背景的客人。這一組更強調舊時代經典與紀念裝瓶，適合從「好喝」進一步走向「有故事的老酒」。</p>
+              <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45–75 分鐘</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+                <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                  點擊展開酒款明細
+                  <span class="text-white/50 text-xs">點擊可收起</span>
+                </summary>
+                <div class="mt-3 grid gap-3 text-sm">
+                  <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Old</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">日本市場最具辨識度的經典調和之一。</dd></div>
+                        <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">酒體柔和順口，兼具焦糖、輕微茯薰與日式調和的圓潤感。</dd></div>
+                        <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">是理解大眾經典與時代記憶的重要樣本。</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">竹鶴 Pure Malt</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">以 Nikka 創辦人竹鶴政孝命名的經典調和麥芽威士忌。</dd></div>
+                        <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">兼具果香、麥芽甜感與溫和茯薰。</dd></div>
+                        <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">是理解 Nikka 風格的關鍵橋樑，也適合與山崎、響做橫向比較。</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Royal 厚底早期版</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">昭和末期的經典調和威士忌，具有一定稀有度。</dd></div>
+                        <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">酒體更加濃郁圓潤，帶有蜂蜜、焦糖、熟蘋果與乾果氣息。</dd></div>
+                        <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">不少愛好者認為甚至超過部分老瓶 Royal 12，是昭和調和風格的重要代表。</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Robert Brown Deluxe Whisky</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">帶有明顯時代標籤的經典調和，風格更直接，辛香更鮮明。</dd></div>
+                        <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">帶有焦糖、香草與輕微穀物甜感。</dd></div>
+                        <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">適合在 flight 中與三得利調和對照，體會不同品牌的審美差異。</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Imperial</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/75 leading-relaxed">
+                        <div><dt class="text-gold/85">背景</dt><dd class="mt-0.5">帝王級老派調和作品，瓶型與定位都帶有明顯的時代象徵意味。</dd></div>
+                        <div><dt class="text-gold/85">風味</dt><dd class="mt-0.5">通常擁有更深的陳年感、蠟質感與舊木香。</dd></div>
+                        <div><dt class="text-gold/85">定位</dt><dd class="mt-0.5">是收藏與品鑑兼具的話題型酒款。</dd></div>
+                      </dl>
+                    </details>
+                  </div>
+                  <div class="rounded-lg border border-gold/30 bg-gold/10 p-4 space-y-2">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-white/55">Premium</p>
+                    <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold">NYK Line 100th Anniversary Whisky 1985</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/80 leading-relaxed">
+                        <div><dt class="text-gold">背景</dt><dd class="mt-0.5">帶有強烈紀念品牌性與時代故事的特殊裝瓶。</dd></div>
+                        <div><dt class="text-gold">風味</dt><dd class="mt-0.5">蜂蜜與熟果香氣、焦糖與輕柔橡木感，酒體圓潤厚實，帶有舊時日本調和威士忌特有的油潤感。</dd></div>
+                        <div><dt class="text-gold">定位</dt><dd class="mt-0.5">其價值不僅在風味，更在於連接了企業紀念、昭和審美與老瓶收藏三條線索。</dd></div>
+                      </dl>
+                    </details>
+                    <details class="rounded-lg border border-gold/25 bg-black/20 p-3">
+                      <summary class="cursor-pointer list-none text-sm font-semibold text-gold">Suntory Whisky Ageing 15</summary>
+                      <dl class="mt-2 space-y-2 text-xs text-white/80 leading-relaxed">
+                        <div><dt class="text-gold">背景</dt><dd class="mt-0.5">更強調熟成感與結構感的作品，擁有更厚的酒體與更長的尾韻。</dd></div>
+                        <div><dt class="text-gold">風味</dt><dd class="mt-0.5">成熟蜂蜜、焦糖、核果與橡木香氣，伴隨柔和香料與可可風味。</dd></div>
+                        <div><dt class="text-gold">定位</dt><dd class="mt-0.5">適合放在 Heritage Flight 中收尾，作為老派高端調和的收升點。</dd></div>
+                      </dl>
+                    </details>
+                  </div>
+                </div>
+              </details>
+              <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <p class="mt-1 font-semibold text-gold">¥8,800</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Premium</p>
+                  <p class="mt-1 font-semibold text-gold">+¥5,000</p>
+                </div>
+              </div>
+              <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店%20Whisky%20Tasting%20活動。%0A%0A-%20主題：經典傳承路線（THEME%2010）%0A-%20預約日期：%0A-%20預約時間：%0A-%20人數：" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>預約此主題</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-14 md:py-20">
+        <div class="text-center mb-12">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">適合人群</p>
+          <h2 class="mt-3 text-[clamp(1.8rem,5vw,3rem)] font-bold">適合哪些客人</h2>
+          <div class="w-40 h-px gold-divider mx-auto mt-5"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">剛開始系統接觸威士忌的人</h3>
+            <p class="text-white/70 text-sm leading-relaxed">建議從昭和調和或 Nikka 這類結構清晰的路線入門，先建立自己的風味座標。</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">已經熟悉基礎款的人</h3>
+            <p class="text-white/70 text-sm leading-relaxed">可以直接進入山崎版本演化、響系列、秩父 Leaf 或厚岸節氣，理解更細的版本差異。</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">想邊喝邊聽故事的人</h3>
+            <p class="text-white/70 text-sm leading-relaxed">每組酒的編排都帶有明確敘事線，可由店員現場講解，從香氣到版本背景逐步展開。</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-2">想為聚會安排體驗活動的人</h3>
+            <p class="text-white/70 text-sm leading-relaxed">品酒會天然適合約會、小型社交、客戶接待或同好聚會，內容感與參與感都比普通點單更強。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hidden md:block bg-charcoal border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 py-16">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold">體驗方式</h2>
+          <p class="text-white/70 mt-3">四步帶你從選擇主題到找到自己的風味偏好</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-5">
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 1</p>
+            <h3 class="text-xl font-semibold mb-2">選擇主題</h3>
+            <p class="text-white/75">從 7 條路線中選擇昭和調和、Nikka、山崎、響、秩父或厚岸，按興趣開始。</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 2</p>
+            <h3 class="text-xl font-semibold mb-2">決定層級</h3>
+            <p class="text-white/75">多數主題提供 Regular 與 Premium 兩檔；厚岸二十四節氣僅提供 Regular，可按預算與興趣靈活選擇。</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 3</p>
+            <h3 class="text-xl font-semibold mb-2">邊喝邊講</h3>
+            <p class="text-white/75">從香氣、口感、酒體到版本背景循序講解，讓品鑑兼顧風味與故事。</p>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <p class="text-gold font-semibold mb-2">STEP 4</p>
+            <h3 class="text-xl font-semibold mb-2">形成偏好</h3>
+            <p class="text-white/75">最終你會更清楚自己偏愛調和風格、單一麥芽、老酒氣質還是收藏向版本。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-lux">
+      <div class="max-w-5xl mx-auto px-5 py-20 text-center">
+        <img src="../images/11.webp"
+             alt="酒的美術館 四條大宮店 品牌資訊"
+             class="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 shadow-lg mb-10">
+        <p class="font-['Noto_Serif_TC'] italic text-gold/95 text-[clamp(0.9rem,1.9vw,1.1rem)] mb-3 leading-relaxed [text-wrap:balance]">如果今晚是您在京都的最後一晚，不妨藉由一場日本威士忌品飲，帶走一段被時間醞釀出的百年故事。</p>
+
+        <h2 class="cta-title text-[clamp(1.8rem,5vw,3rem)] font-['Noto_Serif_TC'] font-bold text-[#e7d4ac] tracking-[0.06em] leading-[1.45]">
+          <span class="block">預約 Vintage Japanese Whisky Tasting</span>
+          <span class="block mt-3 text-[clamp(1.05rem,3.5vw,1.35rem)] font-medium text-gold/90 leading-relaxed">在京都四條大宮，品飲稀有老瓶、歷史系譜，以及仍在演化中的日本威士忌未來。</span>
+        </h2>
+        <div class="mt-6 max-w-2xl mx-auto text-sm md:text-base leading-relaxed text-center border border-white/10 rounded-xl p-5 bg-black/25 overflow-x-auto">
+          <p class="text-gold text-base tracking-[0.25em] mb-5">總綱</p>
+          <div class="space-y-2 text-white/65">
+            <p class="whitespace-nowrap">響、山崎、Nikka，是日本威士忌過去的沉積與傳承</p>
+            <p class="whitespace-nowrap">厚岸，是當下寒海風土與二十四節氣在杯中的轉化</p>
+            <p class="whitespace-nowrap">秩父，是新世代日本 craft whisky 面向未來的生長</p>
+          </div>
+          <div class="mt-5 space-y-2 text-white/90">
+            <p class="whitespace-nowrap">這不是一套普通的 whisky flight</p>
+            <p class="whitespace-nowrap">而是一場穿越日本威士忌時間維度的懷石式品飲</p>
+          </div>
+        </div>
+        <div class="mt-5 max-w-2xl mx-auto text-white/65 text-sm md:text-base text-center leading-relaxed space-y-1">
+          <p>席位有限，建議提前 1-3 天預約。</p>
+          <p>支援單人、雙人及小團體包場洽詢。</p>
+        </div>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://api.whatsapp.com/send/?phone=85290744644&text=您好！我想預約四條大宮店Whisky%20Tasting%20活動。"
+             target="_blank"
+             class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold px-8 py-3 rounded-md transition-colors">
+            <i class="fa fa-whatsapp mr-2"></i>WhatsApp 立即預約
+          </a>
+          <a href="tel:070-7595-0001"
+             class="inline-flex items-center justify-center border border-white/30 hover:border-gold text-white px-8 py-3 rounded-md transition-colors">
+            <i class="fa fa-phone mr-2 text-gold"></i>電話洽詢：070-7595-0001
+          </a>
+        </div>
+        <p class="mt-8 text-white/45 text-sm">
+          <i class="fa fa-map-marker text-gold/60 mr-1.5"></i>
+          京都府京都市下京區四條大宮町 18-10
+          <span class="mx-2 opacity-50">·</span>
+          阪急「四條大宮站」步行 5 分鐘 / 地鐵「四條站」步行 8 分鐘
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line bg-obsidian">
+    <div class="max-w-6xl mx-auto px-5 py-8 text-center text-white/55 text-sm">
+      <p>&copy; 2026 酒的美術館 四條大宮店 | 請理性飲酒。</p>
+      <p class="mt-3 text-white/45 text-xs">
+        技術支援：<a href="https://reserveinjp.com/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white/90 underline-offset-2 hover:underline">reserveinjp</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var cards = document.querySelectorAll('#overview .intro-reveal');
+      if (!cards.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        cards.forEach(function (card) { card.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.25,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      cards.forEach(function (card) { observer.observe(card); });
+    });
+  </script>
+</body>
+</html>

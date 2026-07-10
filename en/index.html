@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ✅ GA4 统计代码开始 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCMYZE0ERW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // ✅ Add your dimensions here (store / page_type / content_language)
+  gtag('config', 'G-FCMYZE0ERW', {
+    store: 'osm-shijyoomiya',
+    page_type: 'landing',
+  });
+</script>
+ <!-- ✅ GA4 统计代码结束 -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liquor Museum Shijo-Omiya in Kyoto offers world-class whisky from ¥500 near Shijo Station. Private rooms 2-8 people, English/Chinese friendly. Book via WhatsApp.">
+    <title>Liquor Museum Shijo-Omiya – Whisky & Spirits Bar Kyoto Near Shijo Station</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: '#8B4513',
+                        wine: '#800020',
+                        cream: '#FFF8E1',
+                        dark: '#2D2424'
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream text-dark font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-wood/90 text-white z-50 bg-blur">
+        <div class="container mx-auto px-4 py-3">
+            <div class="grid grid-cols-[auto_1fr_auto] items-center gap-3 md:hidden">
+                <a href="#banner" class="inline-flex items-center gap-1.5 text-base font-semibold">
+                    <i class="fa fa-home text-sm"></i>
+                    <span>Home</span>
+                </a>
+                <div class="text-center min-w-0">
+                    <p class="text-[10px] tracking-[0.2em] text-white/55">KYOTO SHIJO-OMIYA</p>
+                    <p class="text-xs tracking-[0.2em] text-cream/90 truncate">Liquor Museum ・ Shijo-Omiya</p>
+                </div>
+                <button id="menuBtn" class="inline-flex items-center rounded-md border border-white/30 px-2.5 py-1.5 text-xs text-white/90">
+                    Menu <i class="fa fa-bars ml-1.5"></i>
+                </button>
+            </div>
+
+            <div class="hidden md:flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold flex items-center">
+                    <i class="fa fa-glass mr-2"></i>
+                    <span>Liquor Museum</span>
+                </a>
+                <div class="flex space-x-8 items-center">
+                    <a href="#banner" class="hover:text-cream transition-colors">Home</a>
+                    <a href="#second-floor" class="hover:text-cream transition-colors">2F Rooms</a>
+                    <a href="#first-floor" class="hover:text-cream transition-colors">1F Hall</a>
+                    <a href="#info" class="hover:text-cream transition-colors">Info</a>
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 ml-4 pl-4 border-l border-white/30">
+                        <i class="fa fa-globe text-sm"></i>
+                        <span class="text-cream font-semibold">EN</span>
+                        <span class="text-white/30">|</span>
+                        <a href="../tw/index.html" class="hover:text-cream transition-colors opacity-70 hover:opacity-100">繁中</a>
+                        <span class="text-white/30">|</span>
+                        <a href="../cn/index.html" class="hover:text-cream transition-colors opacity-70 hover:opacity-100">简中</a>
+                        <span class="text-white/30">|</span>
+                        <a href="../jp/index.html" class="hover:text-cream transition-colors opacity-70 hover:opacity-100">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-wood/95 bg-blur">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#banner" class="py-2 hover:text-cream transition-colors">Home</a>
+                <a href="#second-floor" class="py-2 hover:text-cream transition-colors">2F Rooms</a>
+                <a href="#first-floor" class="py-2 hover:text-cream transition-colors">1F Hall</a>
+                <a href="#info" class="py-2 hover:text-cream transition-colors">Info</a>
+                
+                <!-- Mobile Language Switcher -->
+                <div class="pt-3 mt-3 border-t border-white/30">
+                    <p class="text-xs text-cream/70 mb-2 flex items-center">
+                        <i class="fa fa-globe mr-2"></i>Language / 言語
+                    </p>
+                    <div class="flex space-x-4">
+                        <span class="text-cream font-semibold">English</span>
+                        <a href="../tw/index.html" class="hover:text-cream transition-colors opacity-70 hover:opacity-100">繁中</a>
+                        <a href="../cn/index.html" class="hover:text-cream transition-colors opacity-70 hover:opacity-100">简中</a>
+                        <a href="../jp/index.html" class="hover:text-cream transition-colors opacity-70 hover:opacity-100">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="banner" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="../images/3.jpg" alt="Liquor Museum Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/50"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10 text-center text-white">
+            <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold mb-4 text-shadow">Liquor Museum</h1>
+            <p class="text-[clamp(1rem,3vw,1.5rem)] mb-8 max-w-2xl mx-auto text-shadow">
+                Enjoy world-class spirits from ¥500. Standing bar, day drinking, free charging - all welcome!
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello! I'd like to inquire about Liquor Museum." 
+                   target="_blank"
+                   class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>WhatsApp Booking</span>
+                </a>
+                <a href="./whisky-tasting.html"
+                   class="inline-flex items-center justify-center border border-cream/80 text-cream font-semibold py-3 px-8 rounded-lg transition-all hover:bg-cream hover:text-wood">
+                    <i class="fa fa-star mr-2"></i>
+                    <span>Discover Vintage Japanese Whisky</span>
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fa fa-angle-double-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- 2F Private Rooms Section -->
+    <section id="second-floor" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">2F Private Rooms - Exclusive Gathering Space</h2>
+                <div class="w-24 h-1 bg-wine mx-auto"></div>
+            </div>
+
+            <!-- Video for mobile - shown below title on mobile, hidden on desktop -->
+            <div class="mb-8 md:hidden rounded-xl overflow-hidden shadow-xl relative">
+                <video 
+                    id="roomVideoMobile"
+                    src="../images/1.mp4" 
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    webkit-playsinline
+                    x5-playsinline="true"
+                    x5-video-player-type="h5"
+                    preload="auto"
+                    class="w-full h-auto transform hover:scale-105 transition-transform duration-700 bg-black"
+                    style="display: block; width: 100%; height: auto; object-fit: cover;"
+                    aria-label="2F Private Room Interior">
+                </video>
+
+                <!-- Overlay prompt (for Android when autoplay is blocked) -->
+                <div id="roomVideoMobileOverlay"
+                     class="absolute inset-0 flex items-center justify-center text-white text-sm bg-black/40 transition-opacity duration-300">
+                    <span>Tap to play video</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-home text-wine mr-3 text-xl"></i> Atmosphere
+                        </h3>
+                        <p class="text-lg">
+                            Private spaces for 2-8 people, blending Japanese elegance with modern comfort, away from the bustle.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-yen text-wine mr-3 text-xl"></i> Pricing
+                        </h3>
+                        <div class="bg-wine/10 rounded-lg p-4 mb-4">
+                            <div class="flex justify-between items-center mb-3 pb-3 border-b border-wine/20">
+                                <span class="text-lg font-medium">Per Person</span>
+                                <span class="text-2xl font-bold text-wine">¥1,500/hour</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-medium">Private Booking</span>
+                                <span class="text-2xl font-bold text-wine">¥6,000/hour</span>
+                            </div>
+                            <p class="text-sm text-wood/70 mt-2">
+                                <i class="fa fa-gift text-wine mr-1"></i>
+                                Includes 2 complimentary snacks with private booking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-glass text-wine mr-3 text-xl"></i> All-You-Can-Drink
+                        </h3>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span><strong>Over 50 types</strong> of whisky, brandy, and gin</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Red & white wines, plum wine, and more</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Ice, soda water, tonic water, cola, ginger ale provided</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile image - below All-You-Can-Drink -->
+                    <div class="mb-8 md:hidden">
+                        <img src="../images/6.webp" alt="All-You-Can-Drink Service" class="w-full h-auto rounded-xl shadow-lg">
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-star text-wine mr-3 text-xl"></i> Special Services
+                        </h3>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Exclusive tasting sets of rare old bottles & original blends</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Perfect for conversations & celebrations, decorations available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Priority service for seamless experience</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile image - below Special Services -->
+                    <div class="mb-8 md:hidden">
+                        <img src="../images/7.webp" alt="Special Services" class="w-full h-auto rounded-xl shadow-lg">
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-phone text-wine mr-3 text-xl"></i> Booking Info
+                        </h3>
+                        <p class="text-lg mb-6">
+                            Private booking requires advance reservation. Contact us via WhatsApp or phone.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello! I'd like to book a 2F private room at Liquor Museum." 
+                               target="_blank"
+                               class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span>WhatsApp Booking</span>
+                            </a>
+                            
+                            <a href="#info" class="inline-flex items-center justify-center bg-wine hover:bg-wine/80 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                                <i class="fa fa-info-circle mr-2"></i>
+                                <span>Contact Info</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video for desktop - hidden on mobile, shown on desktop -->
+                <div class="hidden md:block rounded-xl overflow-hidden shadow-xl relative">
+                    <video 
+                        id="roomVideo"
+                        src="../images/1.mp4" 
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        webkit-playsinline
+                        x5-playsinline="true"
+                        x5-video-player-type="h5"
+                        preload="auto"
+                        class="w-full h-auto transform hover:scale-105 transition-transform duration-700 bg-black"
+                        style="display: block; width: 100%; height: auto; object-fit: cover;"
+                        aria-label="2F Private Room Interior">
+                    </video>
+
+                    <!-- Overlay prompt (for Android when autoplay is blocked) -->
+                    <div id="roomVideoOverlay"
+                         class="absolute inset-0 flex items-center justify-center text-white text-sm md:text-base bg-black/40 transition-opacity duration-300">
+                        <span>Tap to play video</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1F Hall Section -->
+    <section id="first-floor" class="py-20 bg-wood/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">1F Main Hall - Relaxed Social Space</h2>
+                <div class="w-24 h-1 bg-wine mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-xl overflow-hidden shadow-xl">
+                    <img src="../images/2.jpg" alt="1F Hall Interior" class="w-full h-auto transform hover:scale-105 transition-transform duration-700">
+                </div>
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-lightbulb-o text-wine mr-3 text-xl"></i> Atmosphere
+                        </h3>
+                        <p class="text-lg">
+                            Open layout with warm lighting and vintage sake racks. Perfect for solo drinking, small gatherings, or after-work stops.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-glass text-wine mr-3 text-xl"></i> Drink Selection
+                        </h3>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Japanese whisky, Scotch whisky, brandy and world spirits</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>Rare old bottles & original blended whisky (sommelier-supervised)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>From ¥500, no cover charge</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-calendar text-wine mr-3 text-xl"></i> Perfect For
+                        </h3>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">Weekday Lunch Drinks</span>
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">After Work</span>
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">Friends Gathering</span>
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">Weekend Relaxation</span>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello! I'd like to inquire about the 1F Main Hall at Liquor Museum." 
+                               target="_blank"
+                               class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span>WhatsApp Booking</span>
+                            </a>
+                            
+                            <a href="#info" class="inline-flex items-center justify-center bg-wine hover:bg-wine/80 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                                <i class="fa fa-info-circle mr-2"></i>
+                                <span>Contact Info</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Info Section -->
+    <section id="info" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">Business Information</h2>
+                <div class="w-24 h-1 bg-wine mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-wood/5 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fa fa-clock-o text-4xl text-wine mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-wood">Opening Hours</h3>
+                    </div>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex justify-between border-b border-wood/20 pb-3">
+                            <span class="font-medium">Mon - Wed, Fri - Sun</span>
+                            <span class="text-wine font-semibold">5:30 PM - 12:00 AM</span>
+                        </li>
+                        <li class="flex justify-between border-b border-wood/20 pb-3">
+                            <span class="font-medium">Thursday</span>
+                            <span class="text-wine font-semibold">Closed</span>
+                        </li>
+                        <li class="flex justify-between border-b border-wood/20 pb-3">
+                            <span class="font-medium">Holidays</span>
+                            <span>Hours may vary</span>
+                        </li>
+                        <li class="text-center pt-3 border-t border-wood/20">
+                            <span class="text-wine font-semibold text-xl">Closed: Thursdays</span>
+                        </li>
+                        <li class="text-center text-sm text-wood/70 pt-2">
+                            <i class="fa fa-info-circle mr-1"></i>
+                            Open 5:30 PM to midnight, except Thursdays
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-wood/5 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fa fa-phone text-4xl text-wine mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-wood">Contact</h3>
+                    </div>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start border-b border-wood/20 pb-3">
+                            <i class="fa fa-phone text-wine mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium mb-1">Phone</p>
+                                <a href="tel:070-7595-0001" class="text-wine hover:underline">070-7595-0001</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start border-b border-wood/20 pb-3">
+                            <i class="fa fa-map-marker text-wine mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium mb-1">Address</p>
+                                <p>18-10 Shijoomiyacho, Shimogyo Ward<br>Kyoto, 600-8389</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start pb-3">
+                            <div class="w-full">
+                                <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello! I'd like to inquire about Liquor Museum." 
+                                   target="_blank"
+                                   class="inline-flex items-center justify-center w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                    <span>WhatsApp Booking</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-wood/5 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fa fa-star text-4xl text-wine mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-wood">Features</h3>
+                    </div>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                            <span>Free Wi-Fi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                            <span>Free Charging Outlets</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                            <span>Standing & Seated Options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                            <span>No Cover Charge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                            <span>Solo Drinkers Welcome</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                            <span>Cashless Payment Accepted</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Map Section -->
+    <section class="py-20 bg-wood/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">Access</h2>
+                <div class="w-24 h-1 bg-wine mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <div class="bg-white rounded-xl p-8 shadow-lg mb-6">
+                        <h3 class="text-2xl font-semibold text-wood mb-6 flex items-center">
+                            <i class="fa fa-subway text-wine mr-3"></i> Transportation
+                        </h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-lg text-wood mb-3">By Train</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-circle text-wine text-xs mt-2 mr-3"></i>
+                                        <span class="text-lg">5 min walk from Hankyu Kyoto Line "Shijo-Omiya Station"</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-circle text-wine text-xs mt-2 mr-3"></i>
+                                        <span class="text-lg">8 min walk from Kyoto Municipal Subway "Shijo Station"</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-circle text-wine text-xs mt-2 mr-3"></i>
+                                        <span class="text-lg">15 min bus ride from JR "Kyoto Station"</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-wine/10 rounded-xl p-6 border-l-4 border-wine">
+                        <p class="text-lg">
+                            <i class="fa fa-info-circle text-wine mr-2"></i>
+                            <strong>Note:</strong> Private rooms require advance reservation. Please book by phone or social media.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="aspect-[4/3] w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6536.293286167098!2d135.7396046935791!3d35.003034099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001074cc46a536f%3A0x29ba1c2bcec44ac7!2z44GK6YWS44Gu576O6KGT6aSoIOWbm-adoeWkp-WuruW6lw!5e0!3m2!1szh-CN!2sus!4v1761717712904!5m2!1szh-CN!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                    <div class="p-6 bg-wood/5">
+                        <a href="https://maps.app.goo.gl/jmpJM4n38yM5uQZh6" 
+                           target="_blank" 
+                           class="flex items-center justify-center text-wine hover:text-wine/80 font-semibold text-lg transition-colors">
+                            <i class="fa fa-map-marker mr-2"></i>
+                            Open in Google Maps
+                            <i class="fa fa-external-link ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-glass text-wine text-3xl mr-3"></i>
+                        <h3 class="text-2xl font-bold">Liquor Museum</h3>
+                    </div>
+                    <p class="text-cream/80 mb-4">
+                        Enjoy world-class spirits from ¥500 at Kyoto's hidden gem. From standing bar to private rooms, drink your way.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-wine">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#banner" class="text-cream/80 hover:text-cream transition-colors">Home</a></li>
+                        <li><a href="#second-floor" class="text-cream/80 hover:text-cream transition-colors">2F Rooms</a></li>
+                        <li><a href="#first-floor" class="text-cream/80 hover:text-cream transition-colors">1F Hall</a></li>
+                        <li><a href="#info" class="text-cream/80 hover:text-cream transition-colors">Info</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-wine">Contact</h4>
+                    <ul class="space-y-3 text-cream/80">
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-3 text-wine"></i>
+                            <a href="tel:070-7595-0001" class="hover:text-cream transition-colors">070-7595-0001</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mr-3 text-wine mt-1"></i>
+                            <span>18-10 Shijoomiyacho, Shimogyo Ward, Kyoto, 600-8389</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o mr-3 text-wine"></i>
+                            <span>5:30 PM - 12:00 AM (Closed Thursdays)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="text-cream/60">
+                    &copy; 2024 Liquor Museum Shijo-Omiya. All rights reserved. | 
+                    <span class="text-wine">Drink Responsibly</span>
+                </p>
+                <p class="text-cream/50 text-sm mt-3">
+                    Powered by <a href="https://reserveinjp.com/" target="_blank" rel="noopener noreferrer" class="text-cream/70 hover:text-cream underline-offset-2 hover:underline">reserveinjp</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-wine text-white p-4 rounded-full shadow-lg hover:bg-wine/80 transition-all transform hover:scale-110 z-40 hidden">
+        <i class="fa fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- Right Floating Booking Button -->
+    <div class="social-icons collapsed">
+        <button class="toggle-button" onclick="toggleSocial()">
+            <span class="button-text">Book</span>
+        </button>
+        <div class="icons-container">
+            <a href="tel:070-7595-0001" class="social-icon phone" target="_self">
+                <div class="icon-wrapper">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDQzYzNjIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0yMiAxNi45MnYzYTIgMiAwIDAxLTIuMTggMiAxOS43OSAxOS43OSAwIDAxLTguNjMtMy4wNyAxOS41IDE5LjUgMCAwMS02LTYgMTkuNzkgMTkuNzkgMCAwMS0zLjA3LTguNjdBMiAyIDAgMDE0LjExIDJoM2EyIDIgMCAwMTIgMS43MmMuMTMgMSAuNCAxLjk4LjggMi45MWEyIDIgMCAwMS0uNDUgMi4xMUw4LjA5IDkuOTFhMTYgMTYgMCAwMDYgNmwxLjE3LTEuMzdhMiAyIDAgMDEyLjExLS40NWMuOTQuNCAxLjkyLjY3IDIuOTEuOGEyIDIgMCAwMTEuNzIgMnoiLz48L3N2Zz4=" alt="Phone">
+                </div>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hello! I'd like to inquire about Liquor Museum." class="social-icon whatsapp" target="_blank">
+                <div class="icon-wrapper">
+                    <svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://line.me/ti/p/wYkGJY8QKx" class="social-icon line" target="_blank">
+                <div class="icon-wrapper">
+                    <svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="social-icon wechat" onclick="showWechatQR(event)" target="_self">
+                <div class="icon-wrapper">
+                    <svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- WeChat QR Code Modal -->
+    <div id="wechat-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeWechatQR()">&times;</span>
+            <h3 style="margin-bottom: 15px; color: #333;">Scan to Add WeChat</h3>
+            <img src="../../../images/wechat-qrcode.jpg" alt="WeChat QR Code" class="qr-image">
+        </div>
+    </div>
+
+    <style>
+        .social-icons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease, right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .toggle-button {
+            width: auto;
+            height: auto;
+            border: none;
+            background-color: #800020;
+            cursor: pointer;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .toggle-button:hover {
+            background-color: #660019;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .button-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .icons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
+        .social-icons.collapsed .icons-container {
+            max-height: 0;
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        .social-icons.expanded .icons-container {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .icon-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        .social-icon .icon-wrapper img,
+        .social-icon .icon-wrapper svg {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        
+        .social-icon:hover .icon-wrapper img,
+        .social-icon:hover .icon-wrapper svg {
+            filter: grayscale(70%);
+        }
+        
+        .social-icon.phone.active .icon-wrapper img {
+            filter: grayscale(0) sepia(100%) saturate(5000%) hue-rotate(330deg);
+        }
+        
+        .social-icon.whatsapp.active .icon-wrapper svg {
+            filter: grayscale(0);
+            color: #25D366;
+        }
+        
+        .social-icon.line.active .icon-wrapper svg {
+            filter: grayscale(0);
+            color: #00B900;
+        }
+        
+        .social-icon.wechat.active .icon-wrapper svg {
+            filter: grayscale(0);
+            color: #09B83E;
+        }
+        
+        .social-icon.active:hover .icon-wrapper img,
+        .social-icon.active:hover .icon-wrapper svg {
+            transform: scale(1.1);
+        }
+
+        .social-icons.docked {
+            right: -20px;
+        }
+
+        .social-icons.docked:hover {
+            right: 20px;
+        }
+
+        /* WeChat Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+            max-width: 300px;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 100000;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s;
+            z-index: 100001;
+        }
+
+        .close-button:hover {
+            color: #333;
+        }
+
+        .qr-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+        // Booking button functionality
+        window.toggleSocial = function() {
+            const socialIcons = document.querySelector('.social-icons');
+            socialIcons.classList.toggle('collapsed');
+            socialIcons.classList.toggle('expanded');
+        };
+
+        // WeChat QR code modal functions
+        window.showWechatQR = function(event) {
+            event.preventDefault();
+            const modal = document.getElementById('wechat-modal');
+            modal.style.display = 'flex';
+            event.currentTarget.classList.add('active');
+        };
+
+        window.closeWechatQR = function() {
+            const modal = document.getElementById('wechat-modal');
+            modal.style.display = 'none';
+        };
+
+        // Add click events to social icons
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.social-icon:not(.wechat)').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    this.classList.add('active');
+                });
+            });
+
+            // Close on outside click
+            document.addEventListener('click', function(event) {
+                const socialIcons = document.querySelector('.social-icons');
+                const isClickInside = socialIcons.contains(event.target);
+                
+                if (!isClickInside && socialIcons.classList.contains('expanded')) {
+                    socialIcons.classList.remove('expanded');
+                    socialIcons.classList.add('collapsed');
+                }
+            });
+
+            document.querySelector('.social-icons').addEventListener('click', function(event) {
+                event.stopPropagation();
+                this.classList.remove('docked');
+            });
+
+            // Close WeChat modal on outside click
+            const wechatModal = document.getElementById('wechat-modal');
+            wechatModal.addEventListener('click', function(event) {
+                if (event.target === wechatModal) {
+                    closeWechatQR();
+                }
+            });
+
+            // Add docked effect after 3 seconds
+            setTimeout(() => {
+                const socialIcons = document.querySelector('.social-icons');
+                socialIcons.classList.add('docked');
+            }, 3000);
+        });
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        nav.style.transition = 'transform 0.3s ease-in-out';
+
+        // WeChat browser video autoplay handling (with overlay prompt)
+        // Function to handle video autoplay for both mobile and desktop videos
+        function setupVideoAutoplay(videoId, overlayId) {
+            var video = document.getElementById(videoId);
+            var overlay = document.getElementById(overlayId);
+            if (!video) return;
+
+            function hideOverlayOnPlay() {
+                if (!overlay) return;
+                overlay.style.opacity = '0';
+                overlay.style.pointerEvents = 'none';
+            }
+
+            function doPlay() {
+                video.muted = true; // Double check muted flag
+                var p = video.play();
+                if (p && p.then) {
+                    p.then(function () {
+                        hideOverlayOnPlay();
+                    }).catch(function (e) {
+                        console.log('play blocked:', e);
+                    });
+                } else {
+                    // Old browsers
+                    hideOverlayOnPlay();
+                }
+            }
+
+            function tryPlay() {
+                // In WeChat, prioritize getNetworkType trigger (critical for Android)
+                if (typeof WeixinJSBridge !== 'undefined' &&
+                    typeof WeixinJSBridge.invoke === 'function') {
+                    WeixinJSBridge.invoke('getNetworkType', {}, function () {
+                        doPlay();
+                    });
+                } else {
+                    doPlay();
+                }
+            }
+
+            // 1) Try once after page loads (iOS / normal browsers)
+            window.addEventListener('load', function () {
+                tryPlay();
+            });
+
+            // 2) WeChat: try again when WeixinJSBridgeReady fires (especially for Android)
+            document.addEventListener('WeixinJSBridgeReady', function () {
+                tryPlay();
+            }, false);
+
+            // 3) Try again when video is ready (prevent slow buffering)
+            ['loadedmetadata', 'canplay', 'canplaythrough'].forEach(function (evt) {
+                video.addEventListener(evt, function () {
+                    tryPlay();
+                });
+            });
+
+            // 4) Fallback: force play when clicking video area
+            if (overlay) {
+                overlay.addEventListener('click', function () {
+                    tryPlay();
+                });
+            }
+            video.addEventListener('click', function () {
+                tryPlay();
+            });
+
+            // 5) Remove overlay when actually playing
+            video.addEventListener('playing', hideOverlayOnPlay);
+        }
+
+        // Setup autoplay for desktop video
+        setupVideoAutoplay('roomVideo', 'roomVideoOverlay');
+        // Setup autoplay for mobile video
+        setupVideoAutoplay('roomVideoMobile', 'roomVideoMobileOverlay');
+    </script>
+</body>
+</html>
