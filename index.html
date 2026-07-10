@@ -13,10 +13,10 @@
   :root{--wood:#8B4513;--wine:#800020;--cream:#FFF8E1;--charcoal:#241a15;--gold:#c9a24a;--ink:#140f0b}
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{min-height:100%}
-  body{min-height:100vh;background:var(--ink);color:var(--cream);font-family:'Noto Serif JP','Noto Serif SC',serif;display:flex;align-items:center;justify-content:center;padding:2.4rem 1.3rem;position:relative;overflow:hidden;text-align:center}
+  body{min-height:100vh;background:var(--ink);color:var(--cream);font-family:'Noto Serif JP','Noto Serif SC',serif;display:flex;padding:2.4rem 1.3rem;position:relative;text-align:center}
   .bg{position:absolute;inset:0;background:url("images/3.jpg") center/cover no-repeat;filter:grayscale(.2) brightness(.5)}
   .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 20%,rgba(20,15,11,.55) 0%,rgba(20,15,11,.86) 70%,var(--ink) 100%)}
-  .wrap{position:relative;z-index:1;width:100%;max-width:680px}
+  .wrap{position:relative;z-index:1;width:100%;max-width:680px;margin:auto}
   .kicker{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:.78rem;color:var(--gold)}
   h1{font-size:clamp(2.4rem,8vw,4.2rem);font-weight:600;margin:.65rem 0 .2rem;color:#fff;letter-spacing:.05em;text-shadow:0 2px 20px rgba(0,0,0,.6)}
   .en{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,3vw,1.3rem);letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
