@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="お酒の美術館 四条大宮店 — Whisky Tasting 预约">
+<title>预约 — 酒的美术馆 四条大宫店</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{--wood:#8B4513;--wine:#800020;--cream:#FFF8E1;--gold:#c9a24a;--gold-soft:#d8b877;--ink:#140f0b;--ink-2:#1e1712;--line:rgba(201,162,74,.22);--muted:rgba(255,248,225,.62)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{min-height:100%}
+  body{font-family:'Noto Serif SC','Noto Serif JP',serif;background:var(--ink);color:var(--cream);min-height:100vh;padding:40px 20px;-webkit-font-smoothing:antialiased;position:relative}
+  body::before{content:"";position:fixed;inset:0;background:radial-gradient(120% 80% at 50% 0%,rgba(201,162,74,.10) 0%,rgba(20,15,11,0) 55%);pointer-events:none;z-index:0}
+  .booking-container{max-width:620px;margin:0 auto;position:relative;z-index:1;animation:fadeInUp .7s ease-out}
+  @keyframes fadeInUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  .booking-top-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:2rem}
+  .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .3s}
+  .back-link:hover{color:var(--gold)}
+  .lang-switch{display:flex;align-items:center;gap:.3rem;flex-shrink:0}
+  .lang-switch button{font-size:.7rem;letter-spacing:.06em;color:var(--muted);padding:.35rem .5rem;border:none;border-radius:4px;background:transparent;cursor:pointer;font-family:inherit;transition:all .3s}
+  .lang-switch button:hover{color:var(--gold)}
+  .lang-switch button.active{color:var(--gold);background:rgba(201,162,74,.12)}
+  .booking-header{text-align:center;margin-bottom:2.2rem}
+  .brand-badge{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:50px;padding:7px 20px;margin-bottom:1rem;font-size:.72rem;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-family:'Cormorant Garamond',serif}
+  .booking-title{font-size:clamp(1.9rem,5vw,2.4rem);font-weight:600;letter-spacing:.05em;color:#fff;margin-bottom:.5rem}
+  .booking-subtitle{font-size:.98rem;color:var(--muted)}
+  .booking-card{background:linear-gradient(180deg,var(--ink-2),rgba(30,23,18,.6));border:1px solid var(--line);border-radius:16px;padding:2.4rem;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+  .form-group{margin-bottom:1.6rem}
+  .form-label{display:block;font-size:.84rem;font-weight:500;color:var(--cream);margin-bottom:.5rem;letter-spacing:.04em}
+  .form-input,.form-select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-size:1rem;font-family:inherit;color:var(--cream);background:rgba(20,15,11,.65);transition:all .3s}
+  .form-select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23c9a24a' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+  .form-input:focus,.form-select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.14);background:rgba(20,15,11,.9)}
+  .form-input::placeholder{color:rgba(255,248,225,.4)}
+  input[type="date"]{color-scheme:dark}
+  .form-hint{font-size:.78rem;color:var(--muted);margin-top:.5rem}
+  .form-error{color:#e57373;font-size:.82rem;margin-top:.5rem;display:none}
+  .form-group.error .form-error{display:block}
+  .form-group.error .form-input,.form-group.error .form-select,.form-group.error .time-picker-display{border-color:#e57373}
+  .time-picker{position:relative}
+  .time-picker-display{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
+  .time-placeholder{color:rgba(255,248,225,.4)}
+  .time-picker-panel{display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--ink-2);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.5);z-index:200;overflow:hidden}
+  .time-picker-panel.open{display:block}
+  .time-col-header{display:flex;border-bottom:1px solid var(--line);background:rgba(201,162,74,.06)}
+  .time-col-header span{flex:1;text-align:center;padding:8px;font-size:.7rem;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+  .time-cols{display:flex}
+  .time-col{flex:1;max-height:210px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .time-col-sep{width:1px;background:var(--line)}
+  .time-option{padding:11px 8px;text-align:center;cursor:pointer;font-size:1rem;transition:background .15s}
+  .time-option:hover{background:rgba(201,162,74,.14)}
+  .time-option.selected{background:var(--gold);color:var(--ink);font-weight:600}
+  .message-preview{margin-top:.5rem;margin-bottom:1.5rem;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(20,15,11,.5)}
+  .message-preview-header{display:flex;align-items:center;gap:8px;padding:.7rem 1rem;background:rgba(201,162,74,.1);border-bottom:1px solid var(--line);font-size:.76rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+  .message-preview-icon{width:18px;height:18px;color:#25D366;flex-shrink:0}
+  .message-preview-icon svg{width:100%;height:100%;fill:currentColor}
+  .message-preview-body{display:none;margin:0;padding:1rem 1.1rem;font-family:inherit;font-size:.9rem;line-height:1.7;color:var(--cream);white-space:pre-wrap;word-break:break-word;background:rgba(37,211,102,.06);border-left:3px solid #25D366}
+  .message-preview-hint{margin:0;padding:1rem 1.1rem;font-size:.86rem;line-height:1.6;color:var(--muted);font-style:italic}
+  .message-preview.ready .message-preview-body{display:block}
+  .message-preview.ready .message-preview-hint{display:none}
+  .submit-button{width:100%;padding:15px;background:#25D366;color:#0b2e18;border:none;border-radius:50px;font-size:1.02rem;font-weight:600;font-family:inherit;cursor:pointer;transition:all .3s;margin-top:.4rem;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 2px 12px rgba(37,211,102,.28)}
+  .submit-button:hover{background:#2ee06f;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
+  .submit-button:active{transform:translateY(0)}
+  .submit-button:disabled{opacity:.6;cursor:not-allowed;transform:none}
+  .whatsapp-icon{width:20px;height:20px;display:inline-flex}
+  .whatsapp-icon svg{width:100%;height:100%;fill:currentColor}
+  .info-note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:1.2rem;line-height:1.7}
+  .success-message{display:none;background:rgba(37,211,102,.1);border:1px solid #25D366;border-radius:9px;padding:1rem;margin-bottom:1.4rem;color:#7ee2a5;font-size:.93rem;text-align:center}
+  .success-message.show{display:block;animation:fadeInUp .5s ease-out}
+  html[lang="ja"]{font-family:'Noto Serif JP',serif}
+  html[lang="zh-CN"]{font-family:'Noto Serif SC',serif}
+  html[lang="zh-TW"]{font-family:'Noto Serif TC','Noto Serif SC',serif}
+  html[lang="en"]{font-family:'Cormorant Garamond','Noto Serif JP',serif}
+  @media (max-width:768px){body{padding:24px 15px}.booking-card{padding:1.9rem 1.4rem}.booking-top-bar{flex-wrap:wrap;gap:.75rem}}
+  @media (max-width:568px){.booking-card{padding:1.6rem 1.2rem}.form-input,.form-select{padding:12px 14px;font-size:.95rem}}
+</style>
+</head>
+<body>
+  <div class="booking-container">
+    <div class="booking-top-bar">
+      <a href="index.html" class="back-link" id="backLink">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="backLinkText">返回首页</span>
+      </a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="jp">日本語</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="cn">简体</button>
+        <button type="button" data-lang="tw">繁體</button>
+      </div>
+    </div>
+
+    <div class="booking-header">
+      <div class="brand-badge" id="brandBadge">RESERVATION</div>
+      <h1 class="booking-title" id="bookingTitle">Whisky Tasting 预约</h1>
+      <p class="booking-subtitle" id="bookingSubtitle">填写以下信息，一键生成 WhatsApp 预约消息</p>
+    </div>
+
+    <div class="booking-card">
+      <div class="success-message" id="successMessage"></div>
+      <form id="bookingForm" novalidate>
+        <div class="form-group" id="themeGroup">
+          <label for="theme" class="form-label" id="labelTheme">品鉴主题</label>
+          <select id="theme" name="theme" class="form-select"></select>
+          <div class="form-hint" id="hintTheme">可选。也可在店内由侍酒师为您推荐。</div>
+        </div>
+        <div class="form-group" id="dateGroup">
+          <label for="date" class="form-label" id="labelDate">日期 *</label>
+          <input type="date" id="date" name="date" class="form-input" required>
+          <div class="form-error" id="errorDate">请选择日期</div>
+        </div>
+        <div class="form-group" id="timeGroup">
+          <label class="form-label" id="labelTime">时间 *</label>
+          <div class="time-picker" id="timePicker">
+            <div class="time-picker-display form-input" id="timePickerDisplay">
+              <span id="timePickerText" class="time-placeholder">请选择时间</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="opacity:.5;flex-shrink:0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="time-picker-panel" id="timePickerPanel">
+              <div class="time-col-header"><span id="hourColHeader">时</span><span id="minuteColHeader">分</span></div>
+              <div class="time-cols"><div class="time-col" id="hourCol"></div><div class="time-col-sep"></div><div class="time-col" id="minuteCol"></div></div>
+            </div>
+          </div>
+          <input type="hidden" id="time" name="time" required>
+          <div class="form-hint" id="hintTime"></div>
+          <div class="form-error" id="errorTime">请选择时间</div>
+        </div>
+        <div class="form-group" id="guestsGroup">
+          <label for="guests" class="form-label" id="labelGuests">人数 *</label>
+          <select id="guests" name="guests" class="form-select" required></select>
+          <div class="form-error" id="errorGuests">请选择人数</div>
+        </div>
+        <div class="form-group" id="nameGroup">
+          <label for="name" class="form-label" id="labelName">姓名 *</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="请输入您的姓名" required>
+          <div class="form-error" id="errorName">请输入姓名</div>
+        </div>
+        <div class="message-preview" id="messagePreview">
+          <div class="message-preview-header">
+            <span class="message-preview-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.884-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+            <span id="previewTitle">WhatsApp 消息预览</span>
+          </div>
+          <pre class="message-preview-body" id="previewBody"></pre>
+          <p class="message-preview-hint" id="previewHint">填写上方必填项后，可在发送前预览消息内容。</p>
+        </div>
+        <p class="info-note" id="infoNote"></p>
+        <button type="submit" class="submit-button" id="submitButton">
+          <span class="whatsapp-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.884-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+          <span id="submitButtonText">提交并打开 WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var WHATSAPP_NUMBER = '85290744644';
+    fetch('whatsapp-config.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(c){var num=c&&c[c.use];if(num&&/^\d{8,15}$/.test(num))WHATSAPP_NUMBER=num;}).catch(function(){});
+    var DEFAULT_LANG = 'en';
+    var THEMES = [
+      {nn:"01",jp:"響シリーズ",en:"Hibiki Series",cn:"响系列",tw:"響系列"},
+      {nn:"02",jp:"山崎12 変遷史",en:"Yamazaki 12 Generations",cn:"山崎 12 变迁史",tw:"山崎 12 變遷史"},
+      {nn:"03",jp:"Nikka 二つの蒸溜所",en:"Nikka Two Distilleries",cn:"Nikka 双蒸馏所对比",tw:"Nikka 雙蒸餾所對比"},
+      {nn:"04",jp:"竹鶴シリーズ",en:"Taketsuru Series",cn:"竹鹤系列",tw:"竹鶴系列"},
+      {nn:"05",jp:"秩父リーフシリーズ",en:"Chichibu Leaf Series",cn:"秩父 Leaf 系列",tw:"秩父 Leaf 系列"},
+      {nn:"06",jp:"厚岸 二十四節気",en:"Akkeshi 24 Solar Terms",cn:"厚岸二十四节气",tw:"厚岸二十四節氣"},
+      {nn:"07",jp:"三郎丸SAB.シリーズ",en:"Saburomaru SAB. Series",cn:"三郎丸SAB.系列",tw:"三郎丸SAB.系列"},
+      {nn:"08",jp:"三郎丸タロットシリーズ",en:"Saburomaru Tarot Series",cn:"三郎丸塔罗系列",tw:"三郎丸塔羅系列"},
+      {nn:"09",jp:"昭和ブレンドの美学",en:"Showa Blended Aesthetics",cn:"昭和调和美学",tw:"昭和調和美學"},
+      {nn:"10",jp:"ヘリテージ フライト",en:"Heritage Journey",cn:"传承主题路线",tw:"經典傳承路線"}
+    ];
+    var OPEN_HOURS = [17,18,19,20,21,22,23];
+    var MINUTES = [0,15,30,45];
+    var SHOP = {jp:"お酒の美術館 四条大宮店",en:"Liquor Museum Shijo-Omiya",cn:"酒的美术馆 四条大宫店",tw:"酒的美術館 四條大宮店"};
+    var i18n = {
+      jp:{htmlLang:'ja',title:'ご予約 — お酒の美術館 四条大宮店',backLink:'ホームに戻る',brandBadge:'RESERVATION',bookingTitle:'Whisky Tasting ご予約',bookingSubtitle:'以下をご記入いただくと、WhatsApp 予約メッセージを自動生成します',successMessage:'予約内容を作成しました。まもなく WhatsApp へ移動します…',labelTheme:'テイスティングテーマ',hintTheme:'任意。店内でソムリエがおすすめすることも可能です。',labelDate:'日付 *',labelTime:'時間 *',labelGuests:'人数 *',labelName:'お名前 *',errorDate:'日付を選択してください',errorTime:'時間を選択してください',errorGuests:'人数を選択してください',errorName:'お名前を入力してください',namePlaceholder:'お名前を入力',submitButton:'送信して WhatsApp を開く',redirecting:'移動中…',previewTitle:'WhatsApp メッセージプレビュー',previewHint:'必須項目をご記入いただくと、送信前に内容を確認できます。',themeGeneral:'指定なし（おまかせ）',timePlaceholder:'時間を選択',hourLabel:'時',minuteLabel:'分',selectGuests:'人数を選択',guestUnit:'名',hoursHint:'営業時間 17:30〜24:00 ／ 木曜定休',waIntro:'こんにちは！四条大宮店の Whisky Tasting を予約したいです。\n\n',waTheme:'テーマ',waName:'お名前',waDate:'日付',waTime:'時間',waGuests:'人数',dateLocale:'ja-JP'},
+      en:{htmlLang:'en',title:'Reservation — Liquor Museum Shijo-Omiya',backLink:'Back to Home',brandBadge:'RESERVATION',bookingTitle:'Whisky Tasting Reservation',bookingSubtitle:'Fill in the details below to generate your WhatsApp booking message',successMessage:'Your booking has been prepared. Redirecting to WhatsApp shortly…',labelTheme:'Tasting Theme',hintTheme:'Optional — our sommelier can also recommend one in store.',labelDate:'Date *',labelTime:'Time *',labelGuests:'Guests *',labelName:'Name *',errorDate:'Please select a date',errorTime:'Please select a time',errorGuests:'Please select number of guests',errorName:'Please enter your name',namePlaceholder:'Enter your name',submitButton:'Submit & Open WhatsApp',redirecting:'Redirecting…',previewTitle:'WhatsApp Message Preview',previewHint:'Complete the required fields above to preview your message before sending.',themeGeneral:'No preference (sommelier’s choice)',timePlaceholder:'Select a time',hourLabel:'Hour',minuteLabel:'Min',selectGuests:'Select number of guests',guestUnit:'',hoursHint:'Open 5:30 PM – 12:00 AM · Closed Thursdays',waIntro:'Hello! I would like to book a Whisky Tasting at Shijo-Omiya.\n\n',waTheme:'Theme',waName:'Name',waDate:'Date',waTime:'Time',waGuests:'Guests',dateLocale:'en-US'},
+      cn:{htmlLang:'zh-CN',title:'预约 — 酒的美术馆 四条大宫店',backLink:'返回首页',brandBadge:'RESERVATION',bookingTitle:'Whisky Tasting 预约',bookingSubtitle:'填写以下信息，一键生成 WhatsApp 预约消息',successMessage:'预约信息已生成，即将跳转至 WhatsApp…',labelTheme:'品鉴主题',hintTheme:'可选。也可在店内由侍酒师为您推荐。',labelDate:'日期 *',labelTime:'时间 *',labelGuests:'人数 *',labelName:'姓名 *',errorDate:'请选择日期',errorTime:'请选择时间',errorGuests:'请选择人数',errorName:'请输入姓名',namePlaceholder:'请输入您的姓名',submitButton:'提交并打开 WhatsApp',redirecting:'跳转中…',previewTitle:'WhatsApp 消息预览',previewHint:'填写上方必填项后，可在发送前预览消息内容。',themeGeneral:'不指定（交给侍酒师推荐）',timePlaceholder:'请选择时间',hourLabel:'时',minuteLabel:'分',selectGuests:'请选择人数',guestUnit:' 人',hoursHint:'营业时间 17:30〜24:00 ／ 周四定休',waIntro:'您好！我想预约四条大宫店 Whisky Tasting。\n\n',waTheme:'主题',waName:'姓名',waDate:'日期',waTime:'时间',waGuests:'人数',dateLocale:'zh-CN'},
+      tw:{htmlLang:'zh-TW',title:'預約 — 酒的美術館 四條大宮店',backLink:'返回首頁',brandBadge:'RESERVATION',bookingTitle:'Whisky Tasting 預約',bookingSubtitle:'填寫以下資訊，一鍵產生 WhatsApp 預約訊息',successMessage:'預約資訊已產生，即將跳轉至 WhatsApp…',labelTheme:'品飲主題',hintTheme:'可選。亦可於店內由侍酒師為您推薦。',labelDate:'日期 *',labelTime:'時間 *',labelGuests:'人數 *',labelName:'姓名 *',errorDate:'請選擇日期',errorTime:'請選擇時間',errorGuests:'請選擇人數',errorName:'請輸入姓名',namePlaceholder:'請輸入您的姓名',submitButton:'提交並開啟 WhatsApp',redirecting:'跳轉中…',previewTitle:'WhatsApp 訊息預覽',previewHint:'填寫上方必填項後，可於傳送前預覽訊息內容。',themeGeneral:'不指定（交給侍酒師推薦）',timePlaceholder:'請選擇時間',hourLabel:'時',minuteLabel:'分',selectGuests:'請選擇人數',guestUnit:' 人',hoursHint:'營業時間 17:30〜24:00 ／ 週四定休',waIntro:'您好！我想預約四條大宮店 Whisky Tasting。\n\n',waTheme:'主題',waName:'姓名',waDate:'日期',waTime:'時間',waGuests:'人數',dateLocale:'zh-TW'}
+    };
+
+    var currentLang = DEFAULT_LANG;
+    function t(k){return i18n[currentLang][k];}
+    function pad(n){return n<10?'0'+n:String(n);}
+
+    function buildThemeOptions(sel){
+      var html = '<option value="">'+t('themeGeneral')+'</option>';
+      THEMES.forEach(function(x){
+        var s = x.nn===sel ? ' selected' : '';
+        html += '<option value="'+x.nn+'"'+s+'>THEME '+x.nn+' · '+x[currentLang]+'</option>';
+      });
+      return html;
+    }
+    function buildGuestsOptions(sel){
+      var html = '<option value="">'+t('selectGuests')+'</option>';
+      for(var i=1;i<=8;i++){ var s=String(i)===sel?' selected':''; html+='<option value="'+i+'"'+s+'>'+i+t('guestUnit')+'</option>'; }
+      return html;
+    }
+
+    var timeState={selH:null,selM:null};
+    function initTimePicker(){
+      var display=document.getElementById('timePickerDisplay'),panel=document.getElementById('timePickerPanel'),textEl=document.getElementById('timePickerText'),hourCol=document.getElementById('hourCol'),minCol=document.getElementById('minuteCol'),hidden=document.getElementById('time');
+      OPEN_HOURS.forEach(function(h){var hs=pad(h);var d=document.createElement('div');d.className='time-option';d.textContent=hs;d.addEventListener('click',function(e){e.stopPropagation();hourCol.querySelectorAll('.time-option').forEach(function(o){o.classList.remove('selected');});d.classList.add('selected');timeState.selH=hs;commit();});hourCol.appendChild(d);});
+      MINUTES.forEach(function(m){var ms=pad(m);var d=document.createElement('div');d.className='time-option';d.textContent=ms;d.addEventListener('click',function(e){e.stopPropagation();minCol.querySelectorAll('.time-option').forEach(function(o){o.classList.remove('selected');});d.classList.add('selected');timeState.selM=ms;commit();});minCol.appendChild(d);});
+      function commit(){if(timeState.selH===null||timeState.selM===null)return;hidden.value=timeState.selH+':'+timeState.selM;textEl.textContent=hidden.value;textEl.classList.remove('time-placeholder');document.getElementById('timeGroup').classList.remove('error');setTimeout(function(){panel.classList.remove('open');},220);updatePreview();}
+      display.addEventListener('click',function(e){e.stopPropagation();panel.classList.toggle('open');});
+      panel.addEventListener('click',function(e){e.stopPropagation();});
+      document.addEventListener('click',function(){panel.classList.remove('open');});
+    }
+    function updateTimeLabels(){
+      document.getElementById('hourColHeader').textContent=t('hourLabel');
+      document.getElementById('minuteColHeader').textContent=t('minuteLabel');
+      var textEl=document.getElementById('timePickerText');
+      if(!document.getElementById('time').value){textEl.textContent=t('timePlaceholder');textEl.classList.add('time-placeholder');}
+    }
+
+    function getInitialLang(){
+      var p=new URLSearchParams(location.search);var l=p.get('lang');
+      if(l==='cn'||l==='jp'||l==='en'||l==='tw')return l;
+      return DEFAULT_LANG;
+    }
+    function applyLang(lang){
+      currentLang=lang;var o=i18n[lang];
+      var tv=document.getElementById('theme').value,gv=document.getElementById('guests').value;
+      document.documentElement.lang=o.htmlLang;document.title=o.title;
+      document.getElementById('backLinkText').textContent=o.backLink;
+      document.getElementById('brandBadge').textContent=o.brandBadge;
+      document.getElementById('bookingTitle').textContent=o.bookingTitle;
+      document.getElementById('bookingSubtitle').textContent=o.bookingSubtitle;
+      document.getElementById('successMessage').textContent=o.successMessage;
+      document.getElementById('labelTheme').textContent=o.labelTheme;
+      document.getElementById('hintTheme').textContent=o.hintTheme;
+      document.getElementById('labelDate').textContent=o.labelDate;
+      document.getElementById('labelTime').textContent=o.labelTime;
+      document.getElementById('labelGuests').textContent=o.labelGuests;
+      document.getElementById('labelName').textContent=o.labelName;
+      document.getElementById('hintTime').textContent=o.hoursHint;
+      document.getElementById('errorDate').textContent=o.errorDate;
+      document.getElementById('errorTime').textContent=o.errorTime;
+      document.getElementById('errorGuests').textContent=o.errorGuests;
+      document.getElementById('errorName').textContent=o.errorName;
+      document.getElementById('name').placeholder=o.namePlaceholder;
+      document.getElementById('submitButtonText').textContent=o.submitButton;
+      document.getElementById('previewTitle').textContent=o.previewTitle;
+      document.getElementById('previewHint').textContent=o.previewHint;
+      document.getElementById('infoNote').textContent=o.hoursHint;
+      document.getElementById('theme').innerHTML=buildThemeOptions(tv);
+      document.getElementById('guests').innerHTML=buildGuestsOptions(gv);
+      updateTimeLabels();
+      document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-lang')===lang);});
+      var url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);
+      updatePreview();
+    }
+
+    function formatDate(ds){var d=new Date(ds+'T00:00:00');return d.toLocaleDateString(t('dateLocale'),{year:'numeric',month:'long',day:'numeric'});}
+    function themeLabel(){var v=document.getElementById('theme').value;if(!v)return t('themeGeneral');for(var i=0;i<THEMES.length;i++){if(THEMES[i].nn===v)return 'THEME '+v+' · '+THEMES[i][currentLang];}return t('themeGeneral');}
+    function isComplete(){return document.getElementById('name').value.trim()&&document.getElementById('date').value&&document.getElementById('time').value&&document.getElementById('guests').value;}
+    function buildMessage(){
+      var name=document.getElementById('name').value.trim();
+      var sep=currentLang==='en'?': ':'：';
+      var m=t('waIntro');
+      m+='- '+t('waTheme')+sep+themeLabel()+'\n';
+      m+='- '+t('waName')+sep+name+'\n';
+      m+='- '+t('waDate')+sep+formatDate(document.getElementById('date').value)+'\n';
+      m+='- '+t('waTime')+sep+document.getElementById('time').value+'\n';
+      m+='- '+t('waGuests')+sep+document.getElementById('guests').value+(currentLang==='en'?'':t('guestUnit'));
+      return m;
+    }
+    function updatePreview(){
+      var ps=document.getElementById('messagePreview'),pb=document.getElementById('previewBody');
+      if(!isComplete()){ps.classList.remove('ready');pb.textContent='';return;}
+      pb.textContent=buildMessage();ps.classList.add('ready');
+    }
+    function validate(){
+      var ok=true;document.querySelectorAll('.form-group').forEach(function(g){g.classList.remove('error');});
+      if(!document.getElementById('date').value){document.getElementById('dateGroup').classList.add('error');ok=false;}
+      if(!document.getElementById('time').value){document.getElementById('timeGroup').classList.add('error');ok=false;}
+      if(!document.getElementById('guests').value){document.getElementById('guestsGroup').classList.add('error');ok=false;}
+      if(!document.getElementById('name').value.trim()){document.getElementById('nameGroup').classList.add('error');ok=false;}
+      return ok;
+    }
+
+    document.getElementById('date').setAttribute('min',new Date().toISOString().split('T')[0]);
+    initTimePicker();
+    applyLang(getInitialLang());
+    (function(){var p=new URLSearchParams(location.search);var th=p.get('theme');if(th){th=('0'+th).slice(-2);var sel=document.getElementById('theme');for(var i=0;i<sel.options.length;i++){if(sel.options[i].value===th){sel.selectedIndex=i;break;}}}updatePreview();})();
+    document.querySelectorAll('.lang-switch button').forEach(function(b){b.addEventListener('click',function(){applyLang(this.getAttribute('data-lang'));});});
+    document.getElementById('bookingForm').addEventListener('input',updatePreview);
+    document.getElementById('bookingForm').addEventListener('change',updatePreview);
+    document.querySelectorAll('.form-input,.form-select').forEach(function(inp){
+      inp.addEventListener('blur',function(){var g=this.closest('.form-group');if(this.hasAttribute('required')&&!this.value.trim())g.classList.add('error');});
+      inp.addEventListener('input',function(){var g=this.closest('.form-group');if(g.classList.contains('error')&&this.value.trim())g.classList.remove('error');});
+    });
+    document.getElementById('bookingForm').addEventListener('submit',function(e){
+      e.preventDefault();if(!validate())return;
+      var url='https://api.whatsapp.com/send/?phone='+WHATSAPP_NUMBER+'&text='+encodeURIComponent(buildMessage())+'&type=phone_number&app_absent=0';
+      document.getElementById('successMessage').classList.add('show');
+      document.getElementById('submitButton').disabled=true;
+      document.getElementById('submitButtonText').textContent=t('redirecting');
+      setTimeout(function(){window.open(url,'_blank');},500);
+    });
+    updatePreview();
+  </script>
+</body>
+</html>
