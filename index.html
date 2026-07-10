@@ -3,34 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>お酒の美術館 — 四条大宮 | OSM Whisky &amp; Spirits Bar Kyoto</title>
-<meta name="description" content="お酒の美術館 四条大宮店。ワンコインで世界の佳酿を。京都・四条大宮のウイスキー＆スピリッツバー。Liquor Museum, Shijo-Omiya, Kyoto.">
+<title>お酒の美術館 四条大宮店 — 京都 | OSM Liquor Museum Shijo-Omiya</title>
+<meta name="description" content="お酒の美術館 四条大宮店。ワンコインで世界の佳酿を。京都・四条大宮のウイスキー＆スピリッツバー。阪急大宮駅より徒歩1分。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-  :root{--bg:#15110d;--bg2:#0c0a07;--gold:#c9a227;--gold-soft:#d9bd76;--cream:#efe6d2;--line:rgba(201,162,39,.28)}
+  :root{--wood:#8B4513;--wine:#800020;--cream:#FFF8E1;--charcoal:#241a15;--gold:#c9a24a;--ink:#140f0b}
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{height:100%}
-  body{min-height:100vh;background:radial-gradient(130% 100% at 50% -10%,#261c10 0%,var(--bg) 46%,var(--bg2) 100%);color:var(--cream);font-family:'Noto Serif JP','Noto Serif SC',serif;display:flex;align-items:center;justify-content:center;padding:2.2rem 1.4rem;text-align:center;position:relative;overflow:hidden}
-  body::before{content:"";position:absolute;inset:0;background:url("images/6.webp") center/cover no-repeat;opacity:.12;filter:grayscale(.35) contrast(1.05)}
-  body::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 30%,transparent 40%,rgba(8,6,4,.72) 100%)}
-  .wrap{position:relative;z-index:1;max-width:660px;width:100%}
+  html,body{min-height:100%}
+  body{min-height:100vh;background:var(--ink);color:var(--cream);font-family:'Noto Serif JP','Noto Serif SC',serif;display:flex;align-items:center;justify-content:center;padding:2.4rem 1.3rem;position:relative;overflow:hidden;text-align:center}
+  .bg{position:absolute;inset:0;background:url("images/3.jpg") center/cover no-repeat;filter:grayscale(.2) brightness(.5)}
+  .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 20%,rgba(20,15,11,.55) 0%,rgba(20,15,11,.86) 70%,var(--ink) 100%)}
+  .wrap{position:relative;z-index:1;width:100%;max-width:680px}
   .kicker{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:.78rem;color:var(--gold)}
-  h1{font-size:clamp(2.4rem,8vw,4.1rem);font-weight:600;margin:.7rem 0 .25rem;color:#fff;letter-spacing:.06em}
-  .en{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,3vw,1.25rem);letter-spacing:.24em;color:var(--gold-soft);text-transform:uppercase}
-  .rule{width:66px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.5rem auto}
-  .tagline{font-size:clamp(.95rem,2.6vw,1.08rem);color:var(--cream);opacity:.82;line-height:2}
-  .langs{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin:2.3rem auto 0;max-width:440px}
-  .lang{display:block;padding:1.05rem .8rem;border:1px solid var(--line);border-radius:11px;background:rgba(201,162,39,.05);color:var(--cream);text-decoration:none;transition:border-color .25s,background .25s,transform .25s}
-  .lang:hover{border-color:var(--gold);background:rgba(201,162,39,.14);transform:translateY(-2px)}
-  .lang .n{display:block;font-size:1.16rem;color:#fff;font-weight:500}
-  .lang .s{display:block;font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.18em;color:var(--gold-soft);text-transform:uppercase;margin-top:.25rem}
-  .meta{margin-top:2.1rem;font-size:.8rem;color:var(--cream);opacity:.55;letter-spacing:.09em}
-  @media(max-width:430px){.langs{grid-template-columns:1fr;max-width:280px}}
+  h1{font-size:clamp(2.4rem,8vw,4.2rem);font-weight:600;margin:.65rem 0 .2rem;color:#fff;letter-spacing:.05em;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+  .en{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,3vw,1.3rem);letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
+  .rule{width:66px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.4rem auto}
+  .tagline{font-size:clamp(.95rem,2.6vw,1.08rem);color:var(--cream);opacity:.9;line-height:1.9}
+  .langs{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:2rem auto 0;max-width:560px}
+  .lang{display:block;padding:.95rem .5rem;border:1px solid rgba(201,162,74,.35);border-radius:11px;background:rgba(201,162,74,.06);color:var(--cream);text-decoration:none;transition:border-color .25s,background .25s,transform .25s}
+  .lang:hover{border-color:var(--gold);background:rgba(201,162,74,.16);transform:translateY(-2px)}
+  .lang .n{display:block;font-size:1.02rem;color:#fff;font-weight:500}
+  .lang .s{display:block;font-family:'Cormorant Garamond',serif;font-size:.66rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-top:.25rem}
+  .info{margin:2.2rem auto 0;max-width:520px;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);padding:1.3rem 0;display:grid;gap:.6rem;font-size:.9rem;color:var(--cream);opacity:.9}
+  .info .row{display:flex;align-items:flex-start;justify-content:center;gap:.6rem;line-height:1.6}
+  .info i{color:var(--gold);width:1.1em;margin-top:.15rem;flex-shrink:0}
+  .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:1.6rem}
+  .act{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.1rem;border-radius:999px;text-decoration:none;font-size:.85rem;letter-spacing:.04em;transition:transform .2s,filter .2s}
+  .act:hover{transform:translateY(-2px);filter:brightness(1.1)}
+  .act.tel{background:var(--gold);color:#20160c;font-weight:500}
+  .act.map{border:1px solid rgba(255,255,255,.3);color:var(--cream)}
+  .act.line{background:#06C755;color:#fff;font-weight:500}
+  .foot{margin-top:2rem;font-size:.74rem;color:var(--cream);opacity:.5;letter-spacing:.08em}
+  @media(max-width:520px){.langs{grid-template-columns:repeat(2,1fr);max-width:320px}}
 </style>
 </head>
 <body>
+  <div class="bg"></div>
   <main class="wrap">
     <p class="kicker">Kyoto · Shijo-Omiya</p>
     <h1>お酒の美術館</h1>
@@ -38,12 +49,23 @@
     <div class="rule"></div>
     <p class="tagline">ワンコインで、世界の佳酿を。<br>500日圓起，暢飲世界佳釀 · World spirits from one coin.</p>
     <nav class="langs" aria-label="Language">
-      <a class="lang" href="jp/index.html"><span class="n">日本語</span><span class="s">Japanese</span></a>
-      <a class="lang" href="en/index.html"><span class="n">English</span><span class="s">English</span></a>
-      <a class="lang" href="cn/index.html"><span class="n">简体中文</span><span class="s">Simplified</span></a>
-      <a class="lang" href="tw/index.html"><span class="n">繁體中文</span><span class="s">Traditional</span></a>
+      <a class="lang" href="jp/index.html"><span class="n">日本語</span><span class="s">JP</span></a>
+      <a class="lang" href="en/index.html"><span class="n">English</span><span class="s">EN</span></a>
+      <a class="lang" href="cn/index.html"><span class="n">简体</span><span class="s">CN</span></a>
+      <a class="lang" href="tw/index.html"><span class="n">繁體</span><span class="s">TW</span></a>
     </nav>
-    <p class="meta">京都市 · 四条大宮 — Whisky &amp; World Spirits Bar</p>
+    <div class="info">
+      <div class="row"><i class="fa-solid fa-location-dot"></i><span>〒600-8389 京都市下京区四条大宮町18-10</span></div>
+      <div class="row"><i class="fa-solid fa-clock"></i><span>17:00 – 翌1:00 ／ 年中無休</span></div>
+      <div class="row"><i class="fa-solid fa-train-subway"></i><span>阪急「大宮」駅より徒歩1分</span></div>
+      <div class="row"><i class="fa-solid fa-phone"></i><span>070-7595-0001</span></div>
+    </div>
+    <div class="actions">
+      <a class="act tel" href="tel:070-7595-0001"><i class="fa-solid fa-phone"></i>電話する</a>
+      <a class="act map" href="https://maps.app.goo.gl/jmpJM4n38yM5uQZh6" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i>地図・Map</a>
+      <a class="act line" href="https://line.me/ti/p/wYkGJY8QKx" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i>LINE</a>
+    </div>
+    <p class="foot">© お酒の美術館 四条大宮店 — Whisky &amp; World Spirits Bar, Kyoto</p>
   </main>
 </body>
 </html>
