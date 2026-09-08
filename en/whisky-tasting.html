@@ -67,10 +67,12 @@
         background: linear-gradient(to top, rgba(15, 15, 18, 0.9) 15%, rgba(15, 15, 18, 0.45) 58%, rgba(15, 15, 18, 0.78) 100%);
       }
       #flight-themes .theme-grid > .glass-card,
+      #flight-themes .theme-grid-nagisa > .glass-card,
       #flight-themes .theme-grid-prehistory > .glass-card {
         overflow: hidden;
       }
       #flight-themes .theme-grid > .glass-card::before,
+      #flight-themes .theme-grid-nagisa > .glass-card::before,
       #flight-themes .theme-grid-prehistory > .glass-card::before {
         content: "";
         display: block;
@@ -81,7 +83,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.14);
         box-shadow: inset 0 -24px 28px rgba(15, 15, 18, 0.3);
       }
-      #flight-themes .theme-grid > .glass-card[style*="--theme-img"]::before,
+      #flight-themes .theme-grid-nagisa > .glass-card::before,
       #flight-themes .theme-grid-prehistory > .glass-card::before {
         background-image: var(--theme-img);
       }
@@ -105,7 +107,7 @@
           line-height: 1.24;
         }
         #flight-themes .theme-grid > .glass-card::before,
-
+        #flight-themes .theme-grid-nagisa > .glass-card::before,
         #flight-themes .theme-grid-prehistory > .glass-card::before {
           height: 220px;
         }
@@ -826,6 +828,21 @@
             </div>
             <a href="booking.html?theme=08" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
           </div>
+        </div>
+        <div id="nagisa" class="mt-16 mb-10 text-center max-w-3xl mx-auto">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">THEME 09–20</p>
+          <h2 class="mt-3 text-[clamp(1.6rem,4vw,2.4rem)] font-bold">Prologue | Shells Gathered by the Shore</h2>
+          <div class="mt-5 space-y-3 text-sm md:text-base text-white/65 leading-relaxed" style="text-wrap:wrap">
+            <p>Some things once existed, some are in their moment, and some are still unfolding—too new to be defined by the present.</p>
+            <p>The world of whisky is as vast as the ocean. Distilleries, brands, bottlings, people, terroirs, and techniques gather and disperse with time; no one can hope to exhaust them all.</p>
+            <p>We stand only on the shore of time, picking up a few shells we love and following the paths by which they were born, grew, changed, and disappeared, trying to piece together fragments of history.</p>
+            <p>What Was · What Is · What Is Yet to Come.</p>
+            <p>This is not a tasting list, but an unfinished chart of the ocean of whisky.</p>
+            <p class="text-gold/80">With finite sight, we trace an endless sea. — Shells Gathered by the Shore</p>
+          </div>
+          <div class="w-40 h-px gold-divider mx-auto mt-6"></div>
+        </div>
+        <div class="theme-grid-nagisa grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-09-hakushu.jpg')">
             <div class="flex items-center justify-between mb-3">
               <p class="text-gold text-xs tracking-[0.2em]">THEME 09</p>
