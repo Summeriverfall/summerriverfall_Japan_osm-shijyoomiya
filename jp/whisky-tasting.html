@@ -76,10 +76,12 @@
       .hero-mask {
         background: linear-gradient(to top, rgba(15, 15, 18, 0.9) 15%, rgba(15, 15, 18, 0.45) 58%, rgba(15, 15, 18, 0.78) 100%);
       }
-      #flight-themes .theme-grid > .glass-card {
+      #flight-themes .theme-grid > .glass-card,
+      #flight-themes .theme-grid-prehistory > .glass-card {
         overflow: hidden;
       }
-      #flight-themes .theme-grid > .glass-card::before {
+      #flight-themes .theme-grid > .glass-card::before,
+      #flight-themes .theme-grid-prehistory > .glass-card::before {
         content: "";
         display: block;
         height: 150px;
@@ -89,6 +91,10 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.14);
         box-shadow: inset 0 -24px 28px rgba(15, 15, 18, 0.3);
       }
+      #flight-themes .theme-grid > .glass-card[style*="--theme-img"]::before,
+      #flight-themes .theme-grid-prehistory > .glass-card::before {
+        background-image: var(--theme-img);
+      }
       #flight-themes .theme-grid > .glass-card:nth-child(1)::before { background-image: url("../images/33.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(2)::before { background-image: url("../images/32.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(3)::before { background-image: url("../images/28.webp"); }
@@ -97,12 +103,7 @@
       #flight-themes .theme-grid > .glass-card:nth-child(6)::before { background-image: url("../images/31.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(7)::before { background-image: url("../images/saburomaru-sab.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(8)::before { background-image: url("../images/saburomaru-tarot.webp"); }
-      #flight-themes .theme-grid > .glass-card:nth-child(9)::before { background-image: url("../images/27.webp"); }
-      #flight-themes .theme-grid > .glass-card:nth-child(10)::before {
-        height: 168px;
-        margin: -1.5rem -1.5rem 1.05rem;
-        background-image: url("../images/23.webp");
-      }
+
       @media (max-width: 640px) {
         main h1,
         main h2,
@@ -113,7 +114,9 @@
           font-size: clamp(1.55rem, 7.2vw, 2.25rem);
           line-height: 1.24;
         }
-        #flight-themes .theme-grid > .glass-card::before {
+        #flight-themes .theme-grid > .glass-card::before,
+
+        #flight-themes .theme-grid-prehistory > .glass-card::before {
           height: 152px;
         }
         #flight-themes .theme-grid > .glass-card:nth-child(10)::before {
@@ -266,12 +269,20 @@
       <div class="relative max-w-6xl mx-auto px-5 w-full text-center">
         <p class="text-gold uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Kyoto Shijo-Omiya</p>
         <h1 class="text-[clamp(2.2rem,8vw,5rem)] font-extrabold leading-tight text-glow">ヴィンテージ・ジャパニーズウイスキー テイスティング</h1>
-        <p class="mt-4 text-sm md:text-base lg:text-lg text-gold/80 tracking-wide font-medium [text-wrap:balance]">時空をめぐるジャパニーズウイスキー・テイスティング</p>
-        <div class="mt-5 max-w-2xl mx-auto space-y-3 text-sm md:text-base text-white/75 leading-relaxed [text-wrap:balance]">
-          <p>希少なヴィンテージボトル、ガイド付きの比較体験、そして時間と風土を軸に構成したジャパニーズウイスキーのテイスティング。歴史の継承から、厚岸の寒海が育む風土、三郎丸の山海花火、そして秩父が象徴する新世代の未来へ。</p>
-          <p>京都・四条大宮で、ジャパニーズウイスキーのより静かで、より希少な一面をお楽しみください。</p>
-          <p>これは単なるウイスキー・フライトではありません。ジャパニーズウイスキーの過去・現在・未来をめぐるテイスティングの旅です。過去は、歳月成響、百年一脈、一葉五花、白首初心の中に沈み、現在は、寒海時節に息づき、山海花火として咲きます。未来は、秩父によって開かれていく。そして無常有道は、運命の輪のように、そのすべてを貫いています。</p>
-          <p>一杯一杯の構成は、希少性だけではなく、順序、対比、タイミング、そして物語によって組み立てられています。グラスの中に、クラシックな大手ウイスキーメーカーの蓄積、地方の風土が生み出す現代的な表現、そしてまだ完成されていないクラフトウイスキーの成長を感じていただけます。</p>
+        <p class="mt-4 text-sm md:text-base lg:text-lg text-gold/80 tracking-wide font-medium" style="text-wrap:wrap">序｜渚の拾貝</p>
+        <div class="mt-5 max-w-2xl mx-auto space-y-3 text-sm md:text-base text-white/75 leading-relaxed" style="text-wrap:wrap">
+          <p>かつて存在したものがあり、今まさに息づいているものがあり、そして、まだこの時代の言葉では捉えきれないものがあります。</p>
+          <p>ウイスキーの世界は、海のように果てしなく広がっています。</p>
+          <p>蒸溜所、ブランド、銘柄、人、風土、そして技法。</p>
+          <p>それらは歳月の中で生まれ、交わり、姿を変え、ときに消えてゆきます。</p>
+          <p>そのすべてを見渡し、知り尽くすことは、誰にもかないません。</p>
+          <p>私たちはただ、時間の渚に立ち、心惹かれた幾つかの貝殻を拾い上げます。</p>
+          <p>そして、それぞれが生まれ、育ち、変わり、あるいは消えてゆく軌跡をたどりながら、歴史の断片を少しずつつなぎ合わせてゆきます。</p>
+          <p>かつて・いま・まだ見ぬ先。</p>
+          <p>これは、ただのテイスティングリストではありません。</p>
+          <p>まだ描き終えていない、ウイスキーの海の海図です。</p>
+          <p>限りある眼差しで、果てなき海をたどる。</p>
+          <p class="text-gold/70">—— 渚の拾貝</p>
         </div>
         <div class="mt-10">
           <a href="#overview" class="inline-flex items-center justify-center border border-gold/80 text-gold font-semibold px-8 py-3 rounded-md hover:bg-gold hover:text-obsidian transition-colors">
@@ -833,8 +844,616 @@
             </div>
             <a href="booking.html?theme=08" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
           </div>
-
-          
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-09-hakushu.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 09</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">白州</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">森の精霊 ～ 白州</h3>
+            <p class="text-white/70 text-sm leading-relaxed">1973年、サントリーは南アルプスの麓に白州蒸溜所を開設しました。森、清冽な天然水、そして山崎とは異なる製造環境が、清新で軽やか、ほのかにスモーキーな白州の個性を形づくっています。このテイスティングでは、現行の白州から歴史的な蒸溜所限定品、熟成年数表記のあるボトルへと進み、「森」の表情が時間とともにどう展開してゆくかをたどります。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州 NAS</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">清新・軽やか・淡いスモーク</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">すだちやミントを思わせる爽やかさ。口当たりは軽快で、余韻には淡いスモークと甘みが残ります。現代の白州を知る基準点です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州蒸溜所限定</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">濃醇・芳醇・ほろ苦さ</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">蒸溜所限定ボトル。現行の白州よりも濃く、芳醇なボディの中に輪郭のはっきりした心地よいほろ苦さがあります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州東蒸溜所限定</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">果実・クリーム・香ばしさ・厚み</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">特殊酵母、木桶発酵、直火蒸溜が残した歴史的なスタイル。果実とクリームの香りの奥に、香ばしさとより厚みのあるボディが現れます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州 12年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">青りんご・ジャスミン・爽やかなスモーク</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">若葉のような清新さが、次第に熟した果実とやわらかな甘みへ変わり、スモークはより繊細で長く続きます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州 18年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">熟した果実・蜂蜜・スモーク・長い余韻</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">長期熟成によって深い果実の甘み、複雑なボディ、長く続くスモーキーな余韻が生まれ、森の個性は成熟と深みへ進みます。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥14,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=09" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-10-tsuru.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 10</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">ニッカ 鶴</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">調和の美 ～ ニッカ 鶴</h3>
+            <p class="text-white/70 text-sm leading-relaxed">「鶴」は1976年に発売され、竹鶴政孝の名に由来する、ニッカの高級ブレンデッドウイスキーを代表する系譜です。初期の陶器ボトル、Slim Bottle、現行の蒸溜所限定、17年へと進み、最後に宮城峡の記念旧ボトルを置くことで、ニッカが時代ごとに「調和の美」をどのように再解釈してきたかを見てゆきます。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">鶴 陶器ボトル</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">古典・重厚・熟成・均衡</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">初期の高級ボトリング。熟した果実、甘み、木質、やわらかなスモークが重なり、往年の「鶴」を理解する歴史的な基準となります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">鶴 Slim Bottle</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">まろやか・果実・やわらか・均衡</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">高級ブレンデッドの系譜を受け継ぎつつ、陶器ボトルよりも輪郭が明快で軽やか。古典的な「鶴」から現代化へ向かう過渡期の表現です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">鶴 NAS 蒸溜所限定</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">華やか・やわらか・甘み・現代の調和</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">現行の蒸溜所限定版。現在のニッカの原酒によって、「鶴」のブレンディング美学をあらためて表現しています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">鶴 17年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">熟した果実・濃醇・深み・長い余韻</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">17年以上熟成した原酒が、より成熟した果実感、厚み、深さをもたらしながら、「鶴」の核にある完全な調和を保っています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">宮城峡 10年記念 旧ボトル</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">果実・モルト・やわらか・歴史的記念</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">竹鶴政孝が自ら築いた宮城峡で締めくくります。完成されたブレンデッドから、ニッカの体系を支える重要な原酒と創業者へと視線を戻します。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥14,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=10" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-11-nikka.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 11</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">二つの蒸溜所</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">ニッカの源流 ～ 二つの蒸溜所</h3>
+            <p class="text-white/70 text-sm leading-relaxed">ニッカは、性格の異なる二つのモルト蒸溜所、余市と宮城峡の上に築かれています。余市は厚く力強くスモーキー、宮城峡はやわらかく華やかで果実豊か。本組では NAS × 10年を二組で比較し、最後に終売の黒ラベル竹鶴によって二つの流れを再び一つに戻します。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">宮城峡 NAS</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">果実・花・やわらか・清雅</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">りんご、洋梨、繊細な甘み。現代の宮城峡を知る基準座標です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">宮城峡 10年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">熟した果実・甘み・まろやか・成熟</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">終売となった年数表記ボトル。10年の熟成によって、清新な果実香がより成熟したまろやかな甘みと樽の層へ変わります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">余市 NAS</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">厚み・モルト・スモーク・力強さ</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">石炭直火蒸溜が鮮明な個性を生みます。宮城峡に比べ、ボディはより厚く力強く、モルト、果実、スモークを伴います。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">余市 10年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">熟した果実・重厚・スモーク・長い余韻</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">熟成によって熟した果実、甘み、木質の層が増しながら、余市の力強さとスモーキーな性格は保たれます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">終売 黒ラベル竹鶴</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">融合・芳醇・果実・均衡</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Pure Malt は、異なるニッカのモルト原酒を再び一つに融合します。二つの蒸溜所を飲み分けた後、ブレンドの中にそれぞれの痕跡を探します。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥7,500</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=11" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-12-fuji.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 12</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">富士</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">神山雲海 ～ 富士</h3>
+            <p class="text-white/70 text-sm leading-relaxed">富士御殿場蒸溜所は1973年に設立され、Malt と複数タイプの Grain 原酒を同時に製造できます。富士を理解するには Single Malt だけを見るのではなく、Malt、Grain、Blended Whisky を一度分解し、もう一度組み直してみる必要があります。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">富士雲海</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">比較的初期の富士御殿場系製品。時間を、現在の「富士」ブランドが形づくられる以前へ戻します。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">蒸溜所限定 Pure Malt</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">モルト・濃醇・まろやか・限定</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">モルト原酒の組み合わせによって御殿場のスタイルを表現し、現行 Single Malt との第一の対照をつくります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">富士 Single Malt</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">果実・蜂蜜・やわらか・明瞭</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">やわらかな果実香、甘み、クリーンなボディが、現代の御殿場 Malt の基準となります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">蒸溜所限定 Single Grain</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">甘み・まろやか・豊か・限定</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">本来ブレンドを支える Grain を単独で主役に据え、御殿場が持つ穀物原酒製造の幅を示します。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">富士 Single Grain</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">甘やか・繊細・まろやか・長い余韻</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">現行 Single Grain の基準。蒸溜所限定版との第二の対照です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">富士山麓</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">融合・厚み・甘み・均衡</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">最後に Blended Whisky へ戻ります。Malt と Grain をいったん分けてから、それらが一杯の富士としてどう再構成されるかを味わいます。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥4,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=12" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-13-mars.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 13</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">MARS</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">五灯会元 ～ MARS</h3>
+            <p class="text-white/70 text-sm leading-relaxed">MARS のウイスキーは、ひとつの場所に固定された一本の直線ではありません。駒ヶ岳と津貫が南北二つの蒸溜スタイルを示し、さらに異なる熟成地が気候という変数を加えます。本組は「どこで蒸溜したか」から「どこで熟成したか」へ進みます。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">駒ヶ岳 Edition 2023</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">信州蒸溜 × 信州熟成</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">果実、甘み、繊細なボディによって、駒ヶ岳の信州における基準をつくります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">津貫 Edition 2022</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">津貫蒸溜 × 津貫熟成</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">長野から鹿児島へ。より濃く力強い南方の性格によって第二の座標をつくります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">津貫蒸溜所 6周年記念 52%</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">濃醇・力強さ・高強度</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">高いアルコール度数が、津貫のボディ、香り、原酒の力を凝縮して見せる、高解像度の津貫スタイルです。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">駒ヶ岳 シングルカスク Calvados Cask・信州熟成</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">変数をシングルカスクと Calvados Cask に絞り、りんご、果実、樽が駒ヶ岳原酒をどう形づくるかを拡大して見ます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">駒ヶ岳 シングルカスク 武蔵屋・屋久島熟成</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">熱帯熟成・シングルカスク・気候変数</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">駒ヶ岳原酒はそのままに、熟成地を温暖多湿な屋久島へ移します。信州熟成と並べることで、同じ起源の原酒を気候がどう変えるかを直接観察できます。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥9,900</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=13" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-14-shadow.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 14</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">見えざるサントリー</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">光と影のあいだ ～ 見えざるサントリー</h3>
+            <p class="text-white/70 text-sm leading-relaxed">山崎、白州、響の外側にも、サントリーは多くの終売品、改訂品、特殊作品を残してきました。「光と影のあいだ」は、現在の製品体系の陰に隠れたボトルを再び並べ、問いかけます。今日の秩序が形づくられる以前、サントリーは高級ウイスキーをどのように捉えていたのでしょうか。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">サントリー Pure Malt 8年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Pure Malt・8年・旧ボトル・消えた分類</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">主流の製品体系から姿を消した Pure Malt。8年という熟成年数によって、サントリーのモルトウイスキーに存在した別の歴史的表現を残しています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">古樽仕上</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">竹炭ろ過・古樽後熟・優雅・長い余韻</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">竹炭ろ過の後、さらに古樽で後熟。ボディはやわらかく、木質と香りが細く長く伸び、ほとんど消えてしまった製造の支流を伝えます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">謎（2005・福井晴敏）</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">限定企画・文化・時代の作品</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">福井晴敏と2005年の特別企画に関わる一本。山崎、白州、響のいずれかに無理に分類する必要はなく、特定の時代にだけ属する作品です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">1899 創業</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">創業記念・高級ブレンデッド・歴史的象徴</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">鳥井信治郎の創業年にちなむ名称。響とは別に、サントリーがかつて高級ブレンデッドウイスキーと自社の歴史をどう表現したかを示します。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">総裁の選択</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">非売品の系譜・最高級ブレンデッド・希少</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">非売品と販売品の双方が存在し、通常の量産品の外側にあった高級ブレンデッドの世界を示します。1899と並べることで、現在のブランド秩序に隠れた頂点が再び見えてきます。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥28,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=14" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-15-karuizawa.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 15</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">消えた蒸溜所</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">軽井沢 ～ 消えた蒸溜所</h3>
+            <p class="text-white/70 text-sm leading-relaxed">軽井沢は、日本ウイスキーを代表する閉鎖蒸溜所のひとつです。終売品は再現できても、消えた蒸溜所と同じ出自の原酒を再び造ることはできません。本組ではオークション価格を中心に置かず、旗艦ブレンデッド、12年 Single Malt、17年と20年の樽出原酒へと進み、軽井沢の歴史と感覚の座標を組み直します。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">浅見</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">旗艦ブレンデッド・専用ボトル・優雅で長い残り香</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">三楽 Ocean が軽井沢 Malt と川崎 Grain の双方を擁していた時代に生まれた一本。明瞭なシェリー香が繊細に広がり、ドライフルーツ、甘み、熟した木質がゆっくりと現れます。最も印象的なのは、非常に長く優雅な残り香です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">軽井沢 12年</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">古い革・古い木・古書・非常に長い残り香</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">長く閉ざされていた書斎に入るような香り。革、木、紙が重なり、空いたグラスには12時間を超えても淡く遠い香りが残ります。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">軽井沢 16年 樽出原酒</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">63.6%・爆発的シェリー・高濃度</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">16年 × 63.6%。濃厚なシェリー、熟した果実、木質、アルコールの力が同時に噴き出し、軽井沢の極めて高強度な一面を見せます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">軽井沢 20年 樽出原酒</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">58.1%・衝撃的シェリー・深み・長い余韻</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">巨大な衝撃力を保ちながら、さらに深さと伸びを加えます。16年が爆発なら、20年はその衝撃のあとにより長い余韻を残します。 浅見の優雅さから、樽出原酒のほとんど暴力的ともいえるシェリーまで。四杯を貫く一本の見えない線は、残り香です。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥66,900</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=15" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-16-guangling.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 16</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">一期一会</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">広陵の約 ～ 一期一会</h3>
+            <p class="text-white/70 text-sm leading-relaxed">待てる酒もあれば、一度の出会いにしか属さない酒もあります。シングルカスクはいずれ飲み尽くされ、旧ボトルは減る一方で、閉鎖蒸溜所の原酒は二度と生まれません。「広陵の約」が集めるのは単なる希少性ではなく、完全には複製できない時間の断片です。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">知多蒸溜所 特製</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">12年以上 Grain・連続式蒸溜・やわらかくクリーン</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">12年以上熟成した Grain 原酒を厳選。やわらかく、まろやかで、甘み豊か、余韻はクリーン。サントリーのブレンディング体系における「地の色」を理解する一杯です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎蒸溜所 秘蔵モルト</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">1985年蒸溜・Straight Head Pot Still・近江熟成</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1985年に山崎で蒸溜され、近江 Aging Cellar 58号棟で長期熟成。華やかで複雑、果実感は滑らかで、ほのかな甘みと厚みを持ち、原酒の履歴が完全な形で残されています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州蒸溜所 秘蔵モルト</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">白州東・1984・木桶発酵・直火蒸溜・Sherry Cask</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1984年の白州東原酒。木桶発酵、直火蒸溜、シェリー樽、八ヶ岳熟成。甘く華やかで、バニラを思わせる木の甘みと香ばしい余韻を持ち、「白州東」時代の歴史的断片を保存しています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">山崎 15年 樽出原酒</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">15年・56%・山崎</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">56%という高い度数で、山崎熟成原酒の香り、油分、木質の構造、力強さを直接示します。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">白州 15年 樽出原酒</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">15年・56%・白州</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">山崎と同じ15年、56%。熟成年数と度数をそろえると、残る最も重要な変数は蒸溜所そのものです。稀有な山崎 × 白州の対照となります。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥75,000</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=16" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+        </div>
+        <div class="mt-14 mb-8 text-center max-w-3xl mx-auto">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">THEME 17–20</p>
+          <h2 class="mt-3 text-[clamp(1.4rem,3.6vw,2rem)] font-bold">名を得る前に</h2>
+          <p class="text-white/60 mt-3 text-sm leading-relaxed">名前が定まる以前から、歴史はすでに始まっていました。「名を得る前に」は、富士、秩父、厚岸、三郎丸の前史をたどり、現在のブランドとスタイルがまだ完全には形を成していなかった時代へ戻ります。</p>
+          <div class="w-40 h-px gold-divider mx-auto mt-5"></div>
+        </div>
+        <div class="theme-grid-prehistory grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-17-gotemba.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 17</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">富士前史</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">風起御殿場 ～ 富士前史</h3>
+            <p class="text-white/70 text-sm leading-relaxed">1970年代、キリンはウイスキー市場へ参入し、富士御殿場は誕生時から Malt、Grain、Blended Whisky の製造思想を同時に取り込みました。初期のキリン製品から Robert Brown まで、「富士」が今日の富士になる前に、御殿場がどこから始まったのかをたどります。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Emblem 特級</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">キリン初期のブレンデッドウイスキーのひとつ。初期御殿場体系の製品像を残しています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Crescent 特級</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">旧酒類等級制度の「特級」時代に属する Crescent。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Crescent</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">「特級」表示廃止後のバージョン。前の一杯と並べることで、同一製品が制度変更の前後をまたぐ違いを観察できます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Robert Brown 陶器</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1974年に誕生したキリンを代表するブレンデッドウイスキー。陶器ボトルは、当時の高級贈答酒の製品形態も伝えています。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">日航100年記念 陶器</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">キリン系の記念陶器ボトル。日本ウイスキーが高級な記念品・贈答品として果たしたもう一つの役割を示します。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥4,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=17" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-18-goldenhorse.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 18</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">秩父前史</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">金戈鉄馬 ～ 秩父前史</h3>
+            <p class="text-white/70 text-sm leading-relaxed">現在の秩父蒸溜所は2008年に始まりましたが、物語はさらに早く、東亜酒造、Golden Horse、羽生へとつながっています。Golden Horse のブレンデッドから初期の「秩父」Single Malt まで、後の羽生と秩父の物語の前奏を探します。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse ブレンデッド 一級</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">42%。淡い黒糖水と蜂蜜水のような甘み。ボディは軽く、口当たりはやわらかで心地よく、非常に飲みやすい一本です。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse ブレンデッド 特級</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">43%。黒糖水を思わせる濃い甘みで、一級よりもふくよかで濃厚。二杯を並べると、等級と時代の差が直接見えてきます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse Precious</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">43%。ストレートではやや強く、加水するとやわらかく変化します。黒糖、バーボン樽、ドライフルーツ、フルーツキャンディ、Rum を思わせるサトウキビの風味。後半にはサトウキビの繊維と青草が現れ、残り香は甘く、優雅で長く続きます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse 秩父 8年 Single Malt</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">ブレンデッドから Single Malt への転換点。ここでいう「秩父」は、2008年設立の現代の秩父蒸溜所ではなく、より古い Golden Horse／東亜酒造の歴史的文脈に属します。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥6,250</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=18" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-19-akkeshi.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 19</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">厚岸前史</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">瀚海初瀾 ～ 厚岸前史</h3>
+            <p class="text-white/70 text-sm leading-relaxed">厚岸蒸溜所は北海道東部の厚岸町に位置し、2016年に蒸溜を開始しました。冷涼で湿潤な海洋性環境、北海道産大麦、水楢、ピート、さまざまな樽が、徐々にそのスタイルを形づくります。2018年からの NEW BORN FOUNDATIONS は原酒の成長を記録し、2020年の Sarorunkamuy で物語は正式な Single Malt へ進み、その後「寒露」から二十四節気シリーズが始まります。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 1</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">60%。ノンピート Malt × Bourbon Cask 5～14か月。レモン、ナッツ、蜂蜜。余韻にはバニラの甘みとコーヒーの苦み。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 2</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">58%。50 ppm ピーテッド Malt × Bourbon Cask 8～17か月。ピート、柑橘、ほのかな塩味、ビターチョコレート、黒胡椒。後の厚岸らしさが現れ始めます。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 3</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">55%。ノンピート Malt × 北海道産水楢樽 8～23か月。黒糖、バニラ、メロン、ナツメグ、香木。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 4</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">48%。Malt &amp; Grain 13～30か月、Malt 60%以上。シェリー樽原酒を多く使用し、みかん、レーズン、バナナ、メープルシロップ、塩キャラメル、ビターチョコレート。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Sarorunkamuy Single Malt</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">3年以上熟成した原酒で構成された厚岸初の Single Malt。名称はアイヌ語に由来し、湿地に棲むタンチョウを意味します。NEW BORN の実験期は、ここで成熟した Single Malt の段階へ移ります。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥9,000／10ml</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=19" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-20-moonglow.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 20</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">三郎丸前史</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">月下初章 ～ 三郎丸前史</h3>
+            <p class="text-white/70 text-sm leading-relaxed">若鶴酒造は1952年にウイスキー製造免許を取得。Moon Glow は、旧若鶴と新しい三郎丸が交差する時代に位置します。三本はいずれも貴重な1960年蒸溜の三郎丸 Malt 原酒を使用し、WWA 2018、2019、2020で3年連続、日本地区の同カテゴリー最高位を獲得しました。</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>約 45〜75 分</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                ボトル詳細を開く
+                <span class="text-white/50 text-xs">クリックで閉じる</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Moon Glow First Release</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1960年 Malt × 10年以上熟成原酒。古い杉、檜、オレンジ、バニラ、ピート。WWA 2018 日本地区 Best Whisky。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Moon Glow 2018 Crescent</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">若鶴酒造100周年記念。1960年 Malt × 富山県産水楢で後熟した Grain。バニラクリーム、スモーク、ピート、栗。WWA 2019 日本地区 Best Whisky。</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Moon Glow 2019 Half Moon</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1960年 Malt × 10年以上熟成原酒 × PX樽 Marriage。赤りんご、キャラメル、蜂蜜、灰、葡萄の皮。WWA 2020 日本地区 Category Winner。 First Release → Crescent → Half Moon。月は満ちてゆき、新しい三郎丸もまた形を成してゆきます。</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥6,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=20" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>このテーマを予約</a>
+          </div>
         </div>
       </div>
     </section>
@@ -878,7 +1497,7 @@
           <div class="glass-card rounded-xl p-6">
             <p class="text-gold font-semibold mb-2">STEP 1</p>
             <h3 class="text-xl font-semibold mb-2">テーマを選ぶ</h3>
-            <p class="text-white/75">響、山崎、ニッカ、竹鶴、秩父、厚岸、三郎丸SAB.、三郎丸タロットの8つのルートから好みに合わせて選びます。</p>
+            <p class="text-white/75">20のテーマから、クラシックな系譜、地方の風土、そして「名を得る前に」の前史まで、好みに合わせて選びます。</p>
           </div>
           <div class="glass-card rounded-xl p-6">
             <p class="text-gold font-semibold mb-2">STEP 2</p>

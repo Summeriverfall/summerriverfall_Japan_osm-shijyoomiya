@@ -66,10 +66,12 @@
       .hero-mask {
         background: linear-gradient(to top, rgba(15, 15, 18, 0.9) 15%, rgba(15, 15, 18, 0.45) 58%, rgba(15, 15, 18, 0.78) 100%);
       }
-      #flight-themes .theme-grid > .glass-card {
+      #flight-themes .theme-grid > .glass-card,
+      #flight-themes .theme-grid-prehistory > .glass-card {
         overflow: hidden;
       }
-      #flight-themes .theme-grid > .glass-card::before {
+      #flight-themes .theme-grid > .glass-card::before,
+      #flight-themes .theme-grid-prehistory > .glass-card::before {
         content: "";
         display: block;
         height: 150px;
@@ -79,6 +81,10 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.14);
         box-shadow: inset 0 -24px 28px rgba(15, 15, 18, 0.3);
       }
+      #flight-themes .theme-grid > .glass-card[style*="--theme-img"]::before,
+      #flight-themes .theme-grid-prehistory > .glass-card::before {
+        background-image: var(--theme-img);
+      }
       #flight-themes .theme-grid > .glass-card:nth-child(1)::before { background-image: url("../images/33.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(2)::before { background-image: url("../images/32.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(3)::before { background-image: url("../images/28.webp"); }
@@ -87,12 +93,7 @@
       #flight-themes .theme-grid > .glass-card:nth-child(6)::before { background-image: url("../images/31.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(7)::before { background-image: url("../images/saburomaru-sab.webp"); }
       #flight-themes .theme-grid > .glass-card:nth-child(8)::before { background-image: url("../images/saburomaru-tarot.webp"); }
-      #flight-themes .theme-grid > .glass-card:nth-child(9)::before { background-image: url("../images/27.webp"); }
-      #flight-themes .theme-grid > .glass-card:nth-child(10)::before {
-        height: 168px;
-        margin: -1.5rem -1.5rem 1.05rem;
-        background-image: url("../images/23.webp");
-      }
+
       @media (max-width: 640px) {
         main h1,
         main h2,
@@ -103,7 +104,9 @@
           font-size: clamp(1.55rem, 7.2vw, 2.25rem);
           line-height: 1.24;
         }
-        #flight-themes .theme-grid > .glass-card::before {
+        #flight-themes .theme-grid > .glass-card::before,
+
+        #flight-themes .theme-grid-prehistory > .glass-card::before {
           height: 220px;
         }
         #flight-themes .theme-grid > .glass-card:nth-child(7)::before {
@@ -255,12 +258,14 @@
       <div class="relative max-w-6xl mx-auto px-5 w-full text-center">
         <p class="text-gold uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Kyoto Shijo-Omiya</p>
         <h1 class="text-[clamp(2.2rem,8vw,5rem)] font-extrabold leading-tight text-glow">Vintage Japanese Whisky Tasting</h1>
-        <p class="mt-4 text-sm md:text-base lg:text-lg text-gold/80 tracking-wide font-medium [text-wrap:balance]">A Japanese Whisky Journey Across Time and Place</p>
-        <div class="mt-5 max-w-2xl mx-auto space-y-3 text-sm md:text-base text-white/75 leading-relaxed [text-wrap:balance]">
-          <p>Rare vintage bottles, guided comparisons, and a tasting experience built around the dimensions of time, place, and terroir. From historical inheritance, to the cold maritime character of Akkeshi and the mountain-and-sea fireworks of Saburomaru, onward to the future represented by Chichibu and the new generation of Japanese craft whisky.</p>
-          <p>In Kyoto Shijo-Omiya, discover a quieter and rarer side of Japanese whisky.</p>
-          <p>This is not simply a whisky flight. It is a journey through the past, present, and future of Japanese whisky. The past settles in the echoes of time, century-old lineage, layered expressions, and Taketsuru’s lifelong original spirit. The present lives in Akkeshi’s cold-sea seasons and blooms through Saburomaru’s mountain, sea, smoke, and fire. The future opens through Chichibu. And beyond them all, impermanence has its own order, turning like the Wheel of Fortune.</p>
-          <p>Each pour is arranged not only by rarity, but also by sequence, contrast, timing, and story. Through the glass, guests can trace the accumulation of Japan’s classic whisky houses, the contemporary expression of local terroir, and the unfinished growth of the new craft whisky era.</p>
+        <p class="mt-4 text-sm md:text-base lg:text-lg text-gold/80 tracking-wide font-medium" style="text-wrap:wrap">Prologue | Shells Gathered by the Shore</p>
+        <div class="mt-5 max-w-2xl mx-auto space-y-3 text-sm md:text-base text-white/75 leading-relaxed" style="text-wrap:wrap">
+          <p>Some things once existed, some are in their moment, and some are still unfolding—too new to be defined by the present.</p>
+          <p>The world of whisky is as vast as the ocean. Distilleries, brands, bottlings, people, terroirs, and techniques gather and disperse with time; no one can hope to exhaust them all.</p>
+          <p>We stand only on the shore of time, picking up a few shells we love and following the paths by which they were born, grew, changed, and disappeared, trying to piece together fragments of history.</p>
+          <p>What Was · What Is · What Is Yet to Come.</p>
+          <p>This is not a tasting list, but an unfinished chart of the ocean of whisky.</p>
+          <p class="text-gold/80">With finite sight, we trace an endless sea. — Shells Gathered by the Shore</p>
         </div>
         <div class="mt-10">
           <a href="#overview" class="inline-flex items-center justify-center border border-gold/80 text-gold font-semibold px-8 py-3 rounded-md hover:bg-gold hover:text-obsidian transition-colors">
@@ -821,8 +826,615 @@
             </div>
             <a href="booking.html?theme=08" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
           </div>
-
-          
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-09-hakushu.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 09</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Hakushu</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Spirit of the Forest — Hakushu</h3>
+            <p class="text-white/70 text-sm leading-relaxed">In 1973, Suntory established the Hakushu Distillery at the foot of the Southern Japanese Alps. Forests, pristine natural water, and a production environment distinct from Yamazaki shaped Hakushu’s fresh, light, gently smoky character. This flight moves from modern Hakushu through historical distillery bottlings to age-stated releases, tracing how the “forest” unfolds over time.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu NAS</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Fresh · Light · Delicate smoke</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Sudachi citrus and mint-like freshness, a light palate, and a finish of gentle smoke and sweetness. The benchmark for modern Hakushu.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu Distillery Limited</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Rich · Aromatic · Gently bitter</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A distillery-exclusive bottling. Richer than the current Hakushu, with a fuller aromatic body and a distinct but pleasant bitterness.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu East Distillery Limited</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Fruity · Creamy · Toasted · Full-bodied</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A historical style shaped by special yeast, wooden-vat fermentation, and direct-fire distillation. Beneath the fruit and cream are toasted notes and a fuller body.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu 12</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Green apple · Jasmine · Clean smoke</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Leafy freshness gradually develops into ripe fruit and gentle sweetness, with smoke becoming finer and more persistent.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu 18</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Ripe fruit · Honey · Smoke · Long finish</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Long maturation brings deep fruit sweetness, greater complexity, and an extended smoky finish, taking the forest character into maturity and depth.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥14,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=09" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-10-tsuru.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 10</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Nikka Tsuru</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">The Art of Blending — Nikka Tsuru</h3>
+            <p class="text-white/70 text-sm leading-relaxed">“Tsuru” was introduced in 1976 and named for Masataka Taketsuru. It is an important lineage in Nikka’s premium blended whisky history. From the early ceramic bottle and Slim Bottle to the current distillery-exclusive NAS and the 17 Year Old, the flight closes with an old Miyagikyo commemorative bottle to show how Nikka has reinterpreted the “art of blending” across different eras.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tsuru Ceramic Bottle</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Classical · Weighty · Mature · Balanced</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">An early premium bottling. Mature fruit, sweetness, wood, and gentle smoke overlap, providing a historical reference point for old-style Tsuru.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tsuru Slim Bottle</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Round · Fruity · Soft · Balanced</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Continuing the premium blended lineage, it is clearer and lighter than the ceramic bottle—a transition from classical Tsuru toward a more modern expression.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tsuru NAS Distillery Limited</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Floral · Soft · Sweet · Modern blend</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The current distillery-exclusive version, re-expressing Tsuru’s blending aesthetic with Nikka’s present-day stocks.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tsuru 17</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Mature fruit · Rich · Deep · Long</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Whiskies matured for at least 17 years bring greater ripeness, weight, and depth while retaining Tsuru’s core of complete harmony.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Miyagikyo 10-Year Commemorative Old Bottle</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Fruity · Malty · Soft · Historical commemorative</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The flight ends at Miyagikyo, the distillery built by Masataka Taketsuru himself: from a finished blended whisky back to one of the key sources and the founder behind the Nikka system.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥14,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=10" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-11-nikka.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 11</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Two Distilleries</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Origins of Nikka — Two Distilleries</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Nikka rests on two malt distilleries with sharply different personalities: Yoichi is weighty, forceful, and smoky; Miyagikyo is soft, elegant, and fruit-driven. This flight compares NAS with 10-year expressions from each, then reunites the two paths in the discontinued black-label Taketsuru.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Miyagikyo NAS</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Fruit · Flowers · Soft · Refined</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Apple, pear, and delicate sweetness establish the benchmark coordinates of modern Miyagikyo.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Miyagikyo 10 Year Old</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Ripe fruit · Sweetness · Round · Mature</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A discontinued age-stated release. Ten years of maturation turn fresh fruit into rounder, more mature sweetness and deeper cask layers.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yoichi NAS</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Weighty · Malty · Smoky · Powerful</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Coal-fired direct distillation creates a distinct personality. Compared with Miyagikyo, the body is heavier and more forceful, with malt, fruit, and smoke.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yoichi 10 Year Old</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Ripe fruit · Weighty · Smoky · Long</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Maturation adds ripe fruit, sweetness, and woody layers while preserving Yoichi’s power and smoky character.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Discontinued Black-Label Taketsuru</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Integrated · Mellow · Fruity · Balanced</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Pure Malt brings different Nikka malt whiskies back together. After tasting the two distilleries separately, return to the blend and look for their traces within it.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥7,500</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=11" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-12-fuji.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 12</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Fuji</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Cloud Sea of the Sacred Mountain — Fuji</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Fuji Gotemba Distillery was established in 1973 and can produce both malt whisky and multiple styles of grain whisky. To understand Fuji, Single Malt alone is not enough: Malt, Grain, and Blended Whisky need to be taken apart and assembled again.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Fuji Unkai</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">An earlier Fuji Gotemba-line product that takes the timeline back to before the modern “Fuji” brand was fully formed.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Distillery Limited Pure Malt</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Malty · Rich · Round · Limited</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A combination of malt whiskies presenting the Gotemba style, forming the first comparison with today’s Single Malt.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Fuji Single Malt</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Fruity · Honeyed · Soft · Clear</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Soft fruit, sweetness, and a clean body provide the benchmark for modern Gotemba malt.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Distillery Limited Single Grain</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Sweet · Round · Rich · Limited</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Grain whisky, normally made to serve blending, is brought to center stage to demonstrate the full breadth of Gotemba’s grain-whisky capability.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Fuji Single Grain</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Sweet · Delicate · Round · Long</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The current Single Grain benchmark, forming the second comparison with the distillery-exclusive version.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Fuji-Sanroku</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Integrated · Weighty · Sweet · Balanced</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Finally, return to Blended Whisky: first separate Malt and Grain, then taste how they come back together in a glass of Fuji.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥4,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=12" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-13-mars.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 13</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">MARS</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Five Lights, One Source — MARS</h3>
+            <p class="text-white/70 text-sm leading-relaxed">MARS whisky is not a single straight line fixed to one place. Komagatake and Tsunuki provide northern and southern distillation styles, while different maturation sites add climate as another variable. This flight moves from “where it is distilled” to “where it is matured.”</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Komagatake Edition 2023</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Shinshu distillation × Shinshu maturation</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Fruit, sweetness, and a delicate body establish Komagatake’s Shinshu benchmark.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tsunuki Edition 2022</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Tsunuki distillation × Tsunuki maturation</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Moving from Nagano to Kagoshima, a richer and more forceful southern character establishes the second coordinate.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Tsunuki Distillery 6th Anniversary 52%</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Rich · Powerful · High intensity</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The higher strength concentrates Tsunuki’s body, aroma, and spirit power—a high-resolution view of the Tsunuki style.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Komagatake Single Cask Calvados Cask · Shinshu Maturation</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The variables are narrowed to a single cask and a Calvados cask, magnifying how apple, fruit, and oak shape the Komagatake spirit.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Komagatake Single Cask Musashiya · Yakushima Maturation</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Tropical maturation · Single cask · Climate variable</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The Komagatake spirit remains the same, but maturation moves to warm, humid Yakushima. Placed beside Shinshu maturation, it lets us observe directly how climate changes spirit from the same origin.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥9,900</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=13" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-14-shadow.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 14</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">The Unseen Suntory</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Between Light and Shadow — The Unseen Suntory</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Beyond Yamazaki, Hakushu, and Hibiki, Suntory left behind many discontinued, reformulated, and special releases. “Between Light and Shadow” places these bottles, now obscured by the current portfolio, side by side and asks: before today’s order took shape, how did Suntory understand premium whisky?</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Suntory Pure Malt 8 Year Old</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Pure Malt · 8 years · Old bottle · A vanished category</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Pure Malt has largely disappeared from the mainstream portfolio. This 8-year-old bottling preserves another historical expression of Suntory malt whisky.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Kofuru Shiage / Ancient Cask Finish</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Bamboo-charcoal filtration · Old-cask finishing · Elegant · Long</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">After bamboo-charcoal filtration, the whisky is further finished in old casks. The body is soft, with wood and aroma stretching out gracefully—an almost vanished branch of production history.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Nazo (2005 · Harutoshi Fukui)</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Limited project · Culture · Work of its era</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Connected with Harutoshi Fukui and a special 2005 project. It does not need to be forced into Yamazaki, Hakushu, or Hibiki; it belongs to a particular moment in time.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">1899 Founding</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Founding commemoration · Premium blend · Historical symbol</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Named for the year Shinjiro Torii founded the business, it shows another way—outside Hibiki—in which Suntory once expressed premium blended whisky and its own history.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">President’s Choice</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Non-commercial lineage · Top-tier blend · Rare</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Both non-commercial and retail versions once existed, representing a world of premium blending beyond ordinary mass-market products. Placed beside 1899, it reveals a summit later obscured by today’s brand hierarchy.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥28,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=14" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-15-karuizawa.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 15</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">The Lost Distillery</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Karuizawa — The Lost Distillery</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Karuizawa is one of the most representative closed distilleries in Japanese whisky. A discontinued product can be recreated; spirit from a vanished distillery cannot be produced again from the same source. Rather than centering auction prices, this flight moves from a flagship blend to a 12-year Single Malt and then 17- and 20-year cask-strength spirit, rebuilding Karuizawa’s historical and sensory coordinates.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">淺見</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Flagship blend · Dedicated bottle design · Elegant and lingering</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Born in the era when Sanraku Ocean owned both Karuizawa Malt and Kawasaki Grain. A pronounced sherry profile unfolds with restraint: dried fruit, sweetness, and mature wood emerge slowly, while the most striking feature is the exceptionally long and elegant residual aroma.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Karuizawa 12</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Old leather · Old wood · Old books · Exceptionally long residual aroma</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Like entering a study sealed for many years: leather, wood, and paper overlap. Even after more than 12 hours, the empty glass retains a faint, distant fragrance.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Karuizawa 16Year Old Cask-Strength Spirit</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">63.6% · Explosive sherry · High concentration</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">16years × 63.6%: dense sherry, ripe fruit, wood, and alcohol power erupt at once, showing Karuizawa at extreme intensity.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Karuizawa 20 Year Old Cask-Strength Spirit</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">58.1% · Sherry impact · Deep · Long</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">It retains enormous impact while adding depth and extension. The 16-year is an explosion; the 20-year leaves a much longer wake after the impact. From the elegance of 淺見 to the almost violent sherry of the cask-strength spirits, one hidden thread runs through all four glasses: the lingering aroma.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥44,600/10ml</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=15" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-16-guangling.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 16</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Ichigo Ichie</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">The Guangling Encounter — Ichigo Ichie</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Some whiskies can wait; others belong to a single encounter. Single casks are consumed, old bottles only diminish, and spirit from closed distilleries can never be reborn. “The Guangling Encounter” collects not rarity for its own sake, but slices of time that cannot be perfectly reproduced.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Chita Distillery Special Selection</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">12+ year Grain · Continuous distillation · Soft and clean</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Selected Grain whiskies matured for at least 12 years. Soft, round, richly sweet, and clean on the finish—one glass for understanding the “base color” of Suntory’s blending system.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki Distillery Hizō Malt</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">Distilled 1985 · Straight Head Pot Still · Omi maturation</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Distilled at Yamazaki in 1985 and matured long-term in Building 58 of the Omi Aging Cellar. Elegant and complex, fruity and smooth, gently sweet and substantial, with a complete record of the spirit’s provenance.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu Distillery Hizō Malt</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Hakushu East · 1984 · Wooden-vat fermentation · Direct-fire distillation · Sherry Cask 1984 Hakushu East spirit: wooden-vat fermentation, direct-fire distillation, sherry cask, and maturation at Yatsugatake. Sweet and elegant, with vanilla-like woody sweetness and a toasted finish, preserving a historical slice of the “Hakushu East” era.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Yamazaki 15 Year Old Cask-Strength Spirit</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">15 years · 56% · Yamazaki</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">At 56% ABV, it presents the aroma, oily texture, woody structure, and power of mature Yamazaki spirit directly.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Hakushu 15 Year Old Cask-Strength Spirit</summary>
+                    <p class="mt-2 text-[11px] tracking-wide text-gold/70">15 years · 56% · Hakushu</p>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Like Yamazaki, it is 15 years old and 56%. With age and strength controlled, the most important remaining variable is the distillery itself—a rare Yamazaki × Hakushu comparison.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥75,000</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=16" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+        </div>
+        <div class="mt-14 mb-8 text-center max-w-3xl mx-auto">
+          <p class="text-gold uppercase tracking-[0.25em] text-xs md:text-sm">THEME 17–20</p>
+          <h2 class="mt-3 text-[clamp(1.4rem,3.6vw,2rem)] font-bold">Before the Name</h2>
+          <p class="text-white/60 mt-3 text-sm leading-relaxed">History had already begun before the names were fixed. “Before the Name” follows the prehistories of Fuji, Chichibu, Akkeshi, and Saburomaru, returning to moments when today’s brands and styles had not yet fully taken shape.</p>
+          <div class="w-40 h-px gold-divider mx-auto mt-5"></div>
+        </div>
+        <div class="theme-grid-prehistory grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-17-gotemba.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 17</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Before Fuji</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Wind Rises at Gotemba — Before Fuji</h3>
+            <p class="text-white/70 text-sm leading-relaxed">In the 1970s, Kirin entered the whisky market, and Fuji Gotemba absorbed the production logic of Malt, Grain, and Blended Whisky from its birth. From early Kirin bottlings to Robert Brown, this flight traces where Gotemba began before “Fuji” became the Fuji we know today.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Emblem Tokkyu</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">One of Kirin’s early blended whiskies, preserving the product form of the early Gotemba system.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Crescent Tokkyu</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Crescent from the era of Japan’s former “Tokkyu” liquor classification.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Crescent</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">The version after the “Tokkyu” designation was abolished. Tasted beside the previous glass, it shows the same product on either side of a regulatory change.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Robert Brown Ceramic Bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A representative Kirin blended whisky introduced in 1974. The ceramic presentation also preserves the form of premium gift whisky from the period.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">JAL 100th Anniversary Ceramic Bottle</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A Kirin-system commemorative ceramic whisky, showing another role of Japanese whisky as a high-end commemorative and gift product.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥4,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=17" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-18-goldenhorse.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 18</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Before Chichibu</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Golden Horse — Before Chichibu</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Today’s Chichibu Distillery began in 2008, but the story reaches further back through Toa Shuzo, Golden Horse, and Hanyu. From Golden Horse blends to an early “Chichibu” Single Malt, this flight looks for the prelude to the later Hanyu and Chichibu story.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse Blend, 1st Grade</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">42%. Delicate brown-sugar-water and honey-water sweetness, a light body, soft entry, and exceptionally comfortable drinkability.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse Blend, Tokkyu</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">43%. Darker sweetness reminiscent of black-sugar water, fuller and richer than the 1st Grade; tasted together, the two glasses make the differences of grade and era immediately visible.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse Precious</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">43%. Slightly sharp neat, then softer with water. Brown sugar, bourbon-cask notes, dried fruit, fruit candy, and a rum-like sugarcane character; later, sugarcane fiber and green-grass notes emerge. The residual aroma is sweet, elegant, and persistent.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Golden Horse Chichibu 8 Year Old Single Malt</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">A transition from blend to single malt. The “Chichibu” here is not the modern Chichibu Distillery established in 2008, but belongs to the earlier historical line of Golden Horse and Toa Shuzo.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥6,250</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=18" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-19-akkeshi.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 19</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Before Akkeshi</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">First Ripples of the Vast Sea — Before Akkeshi</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Akkeshi Distillery is located in Akkeshi, eastern Hokkaido, and began distillation in 2016. Its cool, humid maritime environment, together with Hokkaido barley, mizunara, peat, and different cask types, gradually formed its style. From 2018, the NEW BORN FOUNDATIONS documented the growth of the spirit; in 2020, Sarorunkamuy carried the story into a formal Single Malt, followed by the Twenty-Four Solar Terms series beginning with Kanro.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 1</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">60%. Unpeated Malt × Bourbon Cask, 5–14 months. Lemon, nuts, and honey, with vanilla sweetness and coffee bitterness on the finish.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 2</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">58%. 50 ppm peated Malt × Bourbon Cask, 8–17 months. Peat, citrus, light salinity, dark chocolate, and black pepper—the later Akkeshi identity begins to appear.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 3</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">55%. Unpeated Malt × Hokkaido mizunara cask, 8–23 months. Brown sugar, vanilla, melon, nutmeg, and aromatic wood.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">FOUNDATIONS 4</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">48%. Malt &amp; Grain, 13–30 months, with Malt over 60% and a substantial proportion of sherry-cask whisky. Mandarin, raisins, banana, maple syrup, salted caramel, and dark chocolate.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Sarorunkamuy Single Malt</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Akkeshi’s first Single Malt composed of whiskies matured for at least three years. The name comes from the Ainu language and refers to the red-crowned crane that inhabits wetlands. Here the experimental NEW BORN period crosses into the stage of mature Single Malt.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥9,000 / 10 ml</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=19" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
+          <div class="glass-card rounded-xl p-6" style="--theme-img: url('../images/flight-20-moonglow.jpg')">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-gold text-xs tracking-[0.2em]">THEME 20</p>
+              <span class="text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold/80">Before Saburomaru</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">First Chapter Under the Moon — Before Saburomaru</h3>
+            <p class="text-white/70 text-sm leading-relaxed">Wakatsuru Shuzo obtained a whisky production license in 1952. Moon Glow sits at the junction between old Wakatsuru and the new Saburomaru. All three bottles use precious Saburomaru Malt distilled in 1960, and received the highest Japan-area honor in their category at WWA 2018, 2019, and 2020 in three consecutive years.</p>
+            <p class="mt-2 flex items-center gap-1.5 text-white/45 text-xs"><i class="fa fa-clock-o text-gold/60"></i><span>approx. 45–75 min</span></p>
+            <details class="mt-4 rounded-lg border border-gold/25 bg-gold/5 p-4">
+              <summary class="cursor-pointer list-none text-sm font-semibold text-gold/95 flex items-center justify-between">
+                Show bottle details
+                <span class="text-white/50 text-xs">Click to collapse</span>
+              </summary>
+              <div class="mt-3 grid gap-3 text-sm">
+                <div class="rounded-lg border border-white/10 bg-black/20 p-4 space-y-2">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Moon Glow First Release</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1960 Malt × whiskies matured for 10+ years. Old cedar, hinoki cypress, orange, vanilla, and peat. WWA 2018 Japan-area Best Whisky.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Moon Glow 2018 Crescent</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">Wakatsuru Shuzo 100th anniversary release. 1960 Malt × Grain finished in Toyama mizunara; vanilla cream, smoke, peat, and chestnut. WWA 2019 Japan-area Best Whisky.</p>
+                  </details>
+                  <details class="rounded-lg border border-white/10 bg-black/25 p-3">
+                    <summary class="cursor-pointer list-none text-sm font-semibold text-gold/90">Moon Glow 2019 Half Moon</summary>
+                    <p class="mt-2 text-xs text-white/75 leading-relaxed">1960 Malt × whiskies matured for 10+ years × PX-cask marriage; red apple, caramel, honey, ash, and grape skin. WWA 2020 Japan-area Category Winner. First Release → Crescent → Half Moon. The moon waxes, and a new Saburomaru is taking shape.</p>
+                  </details>
+                  
+                </div>
+              </div>
+            </details>
+            <div class="mt-4 grid grid-cols-1 gap-3 text-sm">
+              <div class="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Regular</p>
+                <p class="mt-1 font-semibold text-gold">¥6,800</p>
+              </div>
+            </div>
+            <a href="booking.html?theme=20" class="mt-4 flex items-center justify-center gap-2 w-full rounded-lg border border-gold/40 bg-gold/5 hover:bg-gold/15 text-gold text-xs font-medium py-2.5 transition-colors"><i class="fa fa-whatsapp text-sm"></i>Book this theme</a>
+          </div>
         </div>
       </div>
     </section>
@@ -866,7 +1478,7 @@
           <div class="glass-card rounded-xl p-6">
             <p class="text-gold font-semibold mb-2">STEP 1</p>
             <h3 class="text-xl font-semibold mb-2">Pick a Theme</h3>
-            <p class="text-white/75">Choose from 8 routes — Hibiki, Yamazaki, Nikka, Taketsuru, Chichibu, Akkeshi, Saburomaru SAB., or Saburomaru Tarot.</p>
+            <p class="text-white/75">Choose from 20 tasting routes — classic houses, regional terroir, and the prehistories gathered in Before the Name.</p>
           </div>
           <div class="glass-card rounded-xl p-6">
             <p class="text-gold font-semibold mb-2">STEP 2</p>
