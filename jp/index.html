@@ -20,7 +20,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お酒の美術館 - ワンコインで世界の佳酿を</title>
+    <title>お酒の美術館 - ワンコインで世界の銘酒を</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -79,8 +79,9 @@
                 </a>
                 <div class="flex space-x-8 items-center">
                     <a href="#banner" class="hover:text-cream transition-colors">ホーム</a>
-                    <a href="#second-floor" class="hover:text-cream transition-colors">2F 個室</a>
+                    <a href="#tasting-flights" class="hover:text-cream transition-colors">テイスティング</a>
                     <a href="#first-floor" class="hover:text-cream transition-colors">1F 大広間</a>
+                    <a href="#second-floor" class="hover:text-cream transition-colors">2F 個室</a>
                     <a href="#info" class="hover:text-cream transition-colors">営業情報</a>
 
                     <!-- 语言切换 -->
@@ -100,8 +101,9 @@
         <div id="mobileMenu" class="hidden md:hidden bg-wood/95 bg-blur">
             <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
                 <a href="#banner" class="py-2 hover:text-cream transition-colors">ホーム</a>
-                <a href="#second-floor" class="py-2 hover:text-cream transition-colors">2F 個室</a>
+                <a href="#tasting-flights" class="py-2 hover:text-cream transition-colors">テイスティング</a>
                 <a href="#first-floor" class="py-2 hover:text-cream transition-colors">1F 大広間</a>
+                <a href="#second-floor" class="py-2 hover:text-cream transition-colors">2F 個室</a>
                 <a href="#info" class="py-2 hover:text-cream transition-colors">営業情報</a>
                 
                 <!-- 移动端语言切换 -->
@@ -136,7 +138,7 @@
         <div class="container mx-auto px-4 z-10 text-center text-white">
             <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold mb-4 text-shadow">お酒の美術館</h1>
             <p class="text-[clamp(1rem,3vw,1.5rem)] mb-8 max-w-2xl mx-auto text-shadow">
-                ワンコイン（500円）で世界の佳酿を楽しむ、立飲・昼飲み無負担、充電無料でさらに快適
+                京都・四条大宮で出会う、希少なジャパニーズウイスキーとオールドボトル<br>テイスティング・フライト · 希少なオールドボトル · 世界のスピリッツ ¥500～ · 充電無料
             </p>
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xs sm:max-w-none mx-auto">
                 <a href="booking.html" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
@@ -157,11 +159,148 @@
         </div>
     </section>
 
-    <!-- 2F 個室板块 -->
-    <section id="second-floor" class="py-20 bg-white">
+    <!-- テイスティング・フライト -->
+        <section id="tasting-flights" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">テイスティング・フライト</h2>
+                <div class="w-24 h-1 bg-wine mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="./whisky-tasting.html" class="group rounded-xl overflow-hidden shadow-lg bg-wood/5 hover:shadow-xl transition-shadow">
+                    <img src="../images/15.webp" alt="響" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-wood text-lg mb-2">歳月成響 ～ 響</h3>
+                        <p class="text-wood/70 text-sm mb-3">ヴィンテージ響から初期の高熟成へ。日本のプレミアムブレンドの層を辿ります。</p>
+                        <p class="text-wine font-semibold">from ¥19,800</p>
+                    </div>
+                </a>
+                <a href="./whisky-tasting.html" class="group rounded-xl overflow-hidden shadow-lg bg-wood/5 hover:shadow-xl transition-shadow">
+                    <img src="../images/30.webp" alt="山崎12" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-wood text-lg mb-2">百年一脈 ～ 山崎12</h3>
+                        <p class="text-wood/70 text-sm mb-3">ラベルと世代を並べ、同じ山崎12がどう書き換わったかを見ます。</p>
+                        <p class="text-wine font-semibold">from ¥19,800</p>
+                    </div>
+                </a>
+                <a href="./whisky-tasting.html" class="group rounded-xl overflow-hidden shadow-lg bg-wood/5 hover:shadow-xl transition-shadow">
+                    <img src="../images/flight-11-nikka.jpg" alt="Nikka" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-wood text-lg mb-2">一花五葉 ～ Nikka</h3>
+                        <p class="text-wood/70 text-sm mb-3">余市・宮城峡と国民的ブレンド。Nikkaの体系を一杯で。</p>
+                        <p class="text-wine font-semibold">from ¥11,380</p>
+                    </div>
+                </a>
+                <a href="./whisky-tasting.html" class="group rounded-xl overflow-hidden shadow-lg bg-wood/5 hover:shadow-xl transition-shadow">
+                    <img src="../images/flight-19-akkeshi.jpg" alt="厚岸" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-wood text-lg mb-2">寒海時節 ～ 厚岸</h3>
+                        <p class="text-wood/70 text-sm mb-3">北海道東岸の海霧と二十四節気を、グラスへ。</p>
+                        <p class="text-wine font-semibold">from ¥11,800</p>
+                    </div>
+                </a>
+                <a href="./whisky-tasting.html" class="group rounded-xl overflow-hidden shadow-lg bg-wood/5 hover:shadow-xl transition-shadow">
+                    <img src="../images/flight-20-moonglow.jpg" alt="三郎丸" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-wood text-lg mb-2">花火北陸 ～ 三郎丸</h3>
+                        <p class="text-wood/70 text-sm mb-3">雪国、晩霞、スモーク。飲みやすいブレンドから三郎丸へ。</p>
+                        <p class="text-wine font-semibold">from ¥4,500</p>
+                    </div>
+                </a>
+                <a href="./whisky-tasting.html" class="group rounded-xl overflow-hidden shadow-lg bg-wood/5 hover:shadow-xl transition-shadow">
+                    <img src="../images/flight-15-karuizawa.jpg" alt="軽井沢" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-wood text-lg mb-2">軽井沢 ～ 消えた蒸溜所</h3>
+                        <p class="text-wood/70 text-sm mb-3">閉じた蒸溜所はやり直せません。旗艦ブレンドから原酒へ。</p>
+                        <p class="text-wine font-semibold">from ¥66,900</p>
+                    </div>
+                </a>
+            </div>
+            <p class="text-center text-wood/80 mt-10 leading-relaxed">店内では、さらに多彩なテイスティングをご用意しています。<br>希少な銘柄やオールドボトルについて詳しく知りたい方は、下記リンクをご覧いただくか、スタッフまでお気軽にお尋ねください。</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+                <a href="./whisky-tasting.html" class="inline-flex items-center justify-center bg-wine hover:bg-wine/80 text-white font-semibold py-3 px-8 rounded-lg">すべてのテーマを見る</a>
+                <a href="booking.html" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-8 rounded-lg">WhatsAppで予約</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="first-floor" class="py-20 bg-wood/5">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">2F 個室 - プライベートな歓聚空間</h2>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">1F 大広間 - リラックスできる社交空間</h2>
+                <div class="w-24 h-1 bg-wine mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-xl overflow-hidden shadow-xl">
+                    <img src="../images/2.webp" alt="1F大広間店内風景" class="w-full h-auto transform hover:scale-105 transition-transform duration-700">
+                </div>
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-lightbulb-o text-wine mr-3 text-xl"></i> 雰囲気
+                        </h3>
+                        <p class="text-lg">
+                            開放的なレイアウトに暖色系の照明とアンティーク調の酒棚を組み合わせた、落ち着いた空間。一人飲みや友人との集まり、仕事帰りの一杯など、さまざまなシーンにおすすめです。
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-glass text-wine mr-3 text-xl"></i> お酒の特徴
+                        </h3>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>日本ウイスキー、スコットランドウイスキー、ブランデーなど国内外の名酒</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>希少オールドボトルとオリジナルブレンド（専門ソムリエ監修）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
+                                <span>ワンコイン（500円）から、チャージ無料</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
+                            <i class="fa fa-calendar text-wine mr-3 text-xl"></i> 推奨シーン
+                        </h3>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">平日の一杯</span>
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">仕事帰り</span>
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">友人との集まり</span>
+                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">週末リラックス</span>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="booking.html" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span>WhatsAppで予約</span>
+                            </a>
+                            
+                            <a href="#info" class="inline-flex items-center justify-center bg-wine hover:bg-wine/80 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                                <i class="fa fa-info-circle mr-2"></i>
+                                <span>予約先を確認</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 营业信息板块 -->
+
+<section id="second-floor" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">2F 個室 - プライベートな寛ぎ空間</h2>
                 <div class="w-24 h-1 bg-wine mx-auto"></div>
             </div>
 
@@ -197,7 +336,7 @@
                             <i class="fa fa-home text-wine mr-3 text-xl"></i> 雰囲気
                         </h3>
                         <p class="text-lg">
-                            独立したプライベート空間で、2～8人用の個室を提供。和風の雅とモダンなコンフォートを融合し、騒がしい環境から解放されます。
+                            2～8名様でご利用いただける、独立したプライベート空間です。和の趣とモダンな雰囲気を融合した、落ち着いた空間でゆっくりとお過ごしいただけます。
                         </p>
                     </div>
 
@@ -216,7 +355,7 @@
                             </div>
                             <p class="text-sm text-wood/70 mt-2">
                                 <i class="fa fa-gift text-wine mr-1"></i>
-                                貸切の場合、おつまみ2品サービス
+                                貸切の場合、おつまみ2品をサービスいたします。
                             </p>
                         </div>
                     </div>
@@ -232,7 +371,7 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
-                                <span>赤白ワイン、梅酒など多彩な品揃え</span>
+                                <span>赤・白ワイン、梅酒など多彩な品揃え</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
@@ -257,11 +396,11 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
-                                <span>深い会話や祝賀会に最適、デコレーション対応可能</span>
+                                <span>落ち着いた会話やお祝いの席に最適。各種デコレーションにも対応可能です。</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
-                                <span>専門スタッフの優先対応でスムーズな体験</span>
+                                <span>スタッフが丁寧にサポートし、快適なひとときをお楽しみいただけます。</span>
                             </li>
                         </ul>
                     </div>
@@ -323,78 +462,6 @@
     </section>
 
     <!-- 1F 大広間板块 -->
-    <section id="first-floor" class="py-20 bg-wood/5">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-wood mb-4">1F 大広間 - リラックスできる社交空間</h2>
-                <div class="w-24 h-1 bg-wine mx-auto"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="rounded-xl overflow-hidden shadow-xl">
-                    <img src="../images/2.webp" alt="1F大広間店内風景" class="w-full h-auto transform hover:scale-105 transition-transform duration-700">
-                </div>
-                <div>
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
-                            <i class="fa fa-lightbulb-o text-wine mr-3 text-xl"></i> 雰囲気
-                        </h3>
-                        <p class="text-lg">
-                            オープンなレイアウトに暖色系の照明と復古風の酒架を組み合わせ、一人飲み、友達との集まり、仕事帰りなど様々なシーンに最適です。
-                        </p>
-                    </div>
-
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
-                            <i class="fa fa-glass text-wine mr-3 text-xl"></i> 酒品の特徴
-                        </h3>
-                        <ul class="space-y-3 text-lg">
-                            <li class="flex items-start">
-                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
-                                <span>日本ウイスキー、スコットランドウイスキー、ブランデーなど国内外の名酒</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
-                                <span>希少オールドボトルとオリジナルブレンド（専門ソムリエ監修）</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check-circle text-wine mt-1 mr-3"></i>
-                                <span>ワンコイン（500円）から、チャージ無料</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-wood mb-3 flex items-center">
-                            <i class="fa fa-calendar text-wine mr-3 text-xl"></i> 推奨シーン
-                        </h3>
-                        <div class="flex flex-wrap gap-3 mb-6">
-                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">平日昼飲み</span>
-                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">仕事帰り</span>
-                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">友達小聚</span>
-                            <span class="bg-wood/10 text-wood px-4 py-2 rounded-full">週末リラックス</span>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="booking.html" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
-                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                                </svg>
-                                <span>WhatsAppで予約</span>
-                            </a>
-                            
-                            <a href="#info" class="inline-flex items-center justify-center bg-wine hover:bg-wine/80 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
-                                <i class="fa fa-info-circle mr-2"></i>
-                                <span>予約先を確認</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 营业信息板块 -->
     <section id="info" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -520,15 +587,11 @@
                                 <ul class="space-y-3">
                                     <li class="flex items-start">
                                         <i class="fa fa-circle text-wine text-xs mt-2 mr-3"></i>
-                                        <span class="text-lg">阪急京都線「四条大宮駅」より徒歩5分</span>
+                                        <span class="text-lg">阪急京都線「大宮駅」徒歩1分</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fa fa-circle text-wine text-xs mt-2 mr-3"></i>
-                                        <span class="text-lg">京都市営地下鉄「四条駅」より徒歩8分</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fa fa-circle text-wine text-xs mt-2 mr-3"></i>
-                                        <span class="text-lg">JR「京都駅」よりバス15分</span>
+                                        <span class="text-lg">嵐電「四条大宮駅」徒歩1分</span>
                                     </li>
                                 </ul>
                             </div>
@@ -580,7 +643,7 @@
                         <h3 class="text-2xl font-bold">お酒の美術館</h3>
                     </div>
                     <p class="text-cream/80 mb-4">
-                        ワンコインで世界の佳酿を楽しめる、京都の隠れた名店。立ち飲みから個室まで、あなたのスタイルに合わせてお酒をお楽しみいただけます。
+                        ワンコインから世界の銘酒を楽しめる、京都・四条大宮の隠れた一軒。立ち飲みからプライベートな個室まで、シーンに合わせてお楽しみいただけます。
                     </p>
                 </div>
 
@@ -588,8 +651,9 @@
                     <h4 class="text-xl font-semibold mb-4 text-wine">クイックリンク</h4>
                     <ul class="space-y-2">
                         <li><a href="#banner" class="text-cream/80 hover:text-cream transition-colors">ホーム</a></li>
-                        <li><a href="#second-floor" class="text-cream/80 hover:text-cream transition-colors">2F 個室</a></li>
+                        <li><a href="#tasting-flights" class="text-cream/80 hover:text-cream transition-colors">テイスティング</a></li>
                         <li><a href="#first-floor" class="text-cream/80 hover:text-cream transition-colors">1F 大広間</a></li>
+                        <li><a href="#second-floor" class="text-cream/80 hover:text-cream transition-colors">2F 個室</a></li>
                         <li><a href="#info" class="text-cream/80 hover:text-cream transition-colors">営業情報</a></li>
                     </ul>
                 </div>
